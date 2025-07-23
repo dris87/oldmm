@@ -1,0 +1,52 @@
+{% set id = "offer-apply-logged-modal" %}
+
+{% import 'common/helpers/collection_helper.html.twig' as self %}
+<div id="{{ id }}" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title text-center">{{ 'modal.offer.apply.logged.title'|trans }}</h4>
+            </div>
+            <div class="modal-body">
+
+
+                {% if cvs is not empty %}
+                    <div class="text-center">
+                        {{ 'modal.offer.apply.logged.message'|trans }}
+                    </div>
+
+                    {% set checked = false %}
+                    {% for cv in cvs %}
+
+                        {% if cv.status.value == 1 %}
+
+                            <div class="form-group">
+                                <div class="radio">
+                                    <label class="required">
+                                        <input type="radio" name="offer_apply_cv" required="required" data-action="{{ path('offer_apply',{'offerId':offer_id,'employeeCvId':cv.id}) }}" {% if checked == false %}checked="checked"{% endif %}>
+                                        <span class="label-text">{{ cv.id }} - {{ self.collectionToString(cv.searchCategories) }}</span>
+                                    </label>
+                                </div>
+                            </div>
+                            {% set checked = true %}
+                        {% endif %}
+                    {% endfor %}
+
+                    <hr/>
+                    <div class="text-center">
+                        <button id="offer-apply-logged-modal--button" class="btn btn-lg btn-primary">{{ 'modal.offer.apply.logged.submit'|trans }}</button>
+                    </div>
+                {% else %}
+                    <div class="text-center">
+                        {{ 'modal.offer.apply.logged.no_cv_message'|trans }}
+                    </div>
+                    <hr/>
+                    <div class="text-center">
+                        <a href="{{ path('employee_cv_new') }}" class="btn btn-lg btn-primary">{{ 'modal.offer.apply.logged.create_cv'|trans }}</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

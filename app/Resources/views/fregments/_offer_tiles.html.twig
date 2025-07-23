@@ -1,0 +1,61 @@
+{% macro simple( offers ) %}
+
+    {#
+        Get the array format, which tile listing needs
+    #}
+    {% set _offers = [] %}
+
+    {% import 'common/helpers/collection_helper.html.twig' as coll_helper %}
+    {% for offer in offers %}
+
+        {% set locations = coll_helper.collectionToString(offer.locations) %}
+
+        {% set _offers = _offers|merge(
+            [{
+                img : '/images/user_image.png' ,
+                topTitle : offer.firm.name ,
+                title : offer.title ,
+                desc : locations ,
+                link : path('show_offer', {slug: offer.slug}) ,
+                text : 'label.show'
+            }]
+            ) %}
+
+    {% endfor %}
+
+    {% import "modules/molecules/widgets/tiles.html.twig" as tiles %}
+
+    {{ tiles.simple_tiles( _offers , '-') }}
+
+{% endmacro simple %}
+
+
+{% macro detailed( offers ) %}
+
+    {#
+        Get the array format, which tile listing needs
+    #}
+    {% set _offers = [] %}
+
+    {% import 'common/helpers/collection_helper.html.twig' as coll_helper %}
+    {% for offer in offers %}
+
+        {% set _offers = _offers|merge(
+            [{
+                img : '/images/user_image.png' ,
+                topTitle : offer.firm.name ,
+                title : offer.title ,
+                desc : offer.locations ,
+                lead : offer.lead ,
+                link : path('show_offer', {slug: offer.slug}) ,
+                text : 'label.details'
+            }]
+            ) %}
+
+    {% endfor %}
+
+    {% import "modules/molecules/widgets/tiles.html.twig" as tiles %}
+
+    {{ tiles.detailed_list_tiles( _offers , ', ') }}
+
+{% endmacro detailed %}

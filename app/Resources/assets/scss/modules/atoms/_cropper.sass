@@ -1,0 +1,37 @@
+.cropper
+  position: relative
+  height: 110px
+  margin: 0 -15px
+  > .row
+    margin: 0px
+    > .col-md-12
+      position: absolute
+      bottom: 0px
+  .cropper-local
+    position: absolute
+    z-index: 10
+    width: 100%
+    button
+      width: 100%
+      border: 2px dashed #B6B9BE
+      background: #fcfcfc82
+      color: $ua-dark-blue
+      padding: 20px 20px
+      height: 116px
+      @include transition(all .2s ease)
+      &:hover,
+      &:active,
+      &:focus
+        background: #FCFCFC
+        color: $ua-blue
+      span
+        font-size: 20px
+        padding: 20px 30px
+        display: block
+  .cropper-canvas-container
+    position: absolute
+    width: 100%
+    text-align: center
+    z-index: 9
+    canvas
+      @include border-radius(3px)

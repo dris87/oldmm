@@ -1,0 +1,67 @@
+.select2-dropdown,
+.select2-container--default .select2-selection--multiple,
+.select2-container--default.select2-container--focus .select2-selection--multiple
+    @include border-radius(0)
+    border-color: $ua-light-grey
+    background: white
+    width: 100%
+    box-sizing: border-box
+    height: auto
+    font-size: 13px
+    padding: 5px 10px
+    outline: none
+    position: relative
+
+.select2-container--open .select2-dropdown
+    height: auto
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice
+    border: none
+    background: $brand-primary
+    @include border-radius(1px)
+    padding: 0px 8px
+    color: $white
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove
+    color: $white
+    &:hover,
+    &:active,
+    &:focus
+        color: $white
+.select2-container--default .select2-selection--multiple .select2-selection__choice
+    line-height: 28px
+
+.select2-container--default .select2-results__option--highlighted[aria-selected]
+    background: $brand-primary
+
+.select2-container--open .select2-dropdown
+    padding: 0px
+
+.select2-results__option
+    line-height: 25px
+
+
+
+.select2-container--default .select2-selection--single
+    background: white
+    width: 100%
+    border: 1px solid $ua-light-grey
+    border-radius: 1px
+    box-sizing: border-box
+    height: 40px
+    line-height: 40px
+    font-size: 11px
+    padding: 5px 5px
+    outline: none
+    position: relative
+.select2-container--default .select2-selection--single .select2-selection__arrow
+    top: 7px
+    border-left: 1px solid $ua-light-grey
+    width: 30px
+.select2-dropdown
+    width: 304px
+    @include border-radius(0px)
+    border-color: #ccc
+.select2-container
+    padding-right: 5px
+.select2-container:last-child
+    padding-right: 0px    

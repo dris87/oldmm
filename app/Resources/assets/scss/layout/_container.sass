@@ -1,0 +1,89 @@
+/* This will help us keep the footer on the bottom  */
+.l-wrapper
+  min-height: calc(100vh - 241px)
+  position: relative
+  padding: 0 0
+  margin-top: 70px
+.no-header .l-wrapper
+  margin-top: 0
+  min-height: calc(100vh - 241px)
+@media (max-width: $screen-md-min)
+  .l-wrapper
+    margin-top: 0
+@media (min-width: $screen-md-min)
+  .no-header .l-wrapper
+    margin-top: 0
+    min-height: calc(100vh - #{$footer-height-md} - 1px)
+@media (max-width: $screen-sm-max)
+  .no-header .l-wrapper
+    margin-top: 0
+    min-height: calc(100vh - #{$footer-height-sm} - 40px)
+@media (max-width: $screen-xs-max)
+  .no-header .l-wrapper
+    margin-top: 0
+    min-height: calc(100vh - #{$footer-height-xs} - 40px)
+.no-header .l-content
+  padding: 0
+.l-push
+  height: $footer-height
+
+.l-container,
+.l-content
+  overflow: hidden
+  position: static
+  min-height: 100vh
+  @include backface-visibility(hidden)
+
+.l-content
+  padding-top: $nav-height
+  background: $color-background
+  &--overlay
+    position: fixed
+    top: 0
+    z-index: 99999999
+    left: 0
+    right: 0
+    bottom: 0
+    background: rgba(0,0,0,0.3)
+    cursor: pointer
+    display: none
+  &.m--open
+    .l-content--overlay
+      display: block
+
+@media (max-width: $screen-md-min)
+  .l-content
+    padding-top: 0px
+    height: auto
+    overflow-y: auto
+    overflow-x: none
+    &.m--open
+      height: 130vh
+      overflow-y: scroll
+      transform: translate(-120px, -100px) scale(0.5)
+      @include animation(open .2s ease-out)
+    &.m--close
+      height: auto
+      overflow-y: auto
+      transform: translate(0,0px) scale(1)
+      @include animation(close .2s ease-in)
+
+@-webkit-keyframes open
+  0%
+    transform: translate(0,0px) scale(1)
+  100%
+    transform: translate(-120px, -100px) scale(0.5)
+
+@-webkit-keyframes close
+  0%
+    height: 130vh
+    overflow-y: scroll
+    transform: translate(-120px, -100px) scale(0.5)
+  99%
+    height: 130vh
+    overflow-y: scroll
+    -webkit-transform: translate3d(0,0,0) scale(1)
+  100%
+    height: auto
+    overflow-y: auto
+    transform: translate(0,0px) scale(1)

@@ -1,0 +1,27 @@
+{% import 'modules/atoms/icon.html.twig' as icons %}
+<script type="text/html" id="employee-education-timeline-item-template">
+
+    <article class="panel panel-primary clearfix" data-id="id">
+    
+        <div class="panel-icon"></div>
+
+        <div class="col-sm-12 col-md-8">
+            <div class="panel-heading">
+                <h3 class="panel-sub-title" data-content="sub-title"></h3>
+                <h2 class="panel-title" data-content="title"></h2>
+                <h3 class="panel-date" data-content="date"></h3>
+            </div>
+       
+            <div class="panel-body" data-content="comment"></div>
+        </div>
+        <div class="col-sm-12 col-md-4 text-right">
+            <a class="btn btn-default btn-outline cv_education-modify-button" data-id="id">
+                {{ 'label.update'|trans|upper }} 
+            </a>
+            <a class="btn btn-default cv_education-delete-button" data-id="id">
+                {{ icons.fa('trash') }}
+            </a>
+        </div>
+    </article>
+
+</script>

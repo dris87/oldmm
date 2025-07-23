@@ -1,0 +1,104 @@
+[2025-03-24 20:06:29] HIBA: Túl alacsony pontszám: 0.1
+
+[2025-03-24 20:06:49] HIBA: Túl alacsony pontszám: 0.2
+
+[2025-03-24 20:07:09] HIBA: Túl alacsony pontszám: 0
+
+[2025-03-25 12:52:16] HIBA: Túl alacsony pontszám: 0
+
+[2025-03-25 12:52:24] HIBA: Túl alacsony pontszám: 0.1
+
+[2025-03-25 12:52:26] HIBA: Túl alacsony pontszám: 0.1
+
+[2025-03-26 15:54:22] HIBA: Túl alacsony pontszám: 0.1
+
+[2025-03-28 22:32:58] HIBA: Érvénytelen reCAPTCHA token
+
+[2025-03-28 22:33:26] HIBA: Érvénytelen reCAPTCHA token
+
+[2025-04-01 08:20:31] HIBA: Túl alacsony pontszám: 0.1
+
+[2025-04-02 18:26:39] HIBA: Érvénytelen reCAPTCHA token
+
+[2025-04-02 18:27:10] HIBA: Érvénytelen reCAPTCHA token
+
+[2025-04-13 13:08:53] HIBA: Túl alacsony pontszám: 0
+
+[2025-04-13 13:09:56] HIBA: Túl alacsony pontszám: 0.2
+
+[2025-04-13 13:10:24] HIBA: Túl alacsony pontszám: 0.2
+
+[2025-04-13 13:10:42] HIBA: Túl alacsony pontszám: 0.2
+
+[2025-04-13 13:10:47] HIBA: Túl alacsony pontszám: 0.2
+
+[2025-04-14 14:56:58] HIBA: Túl alacsony pontszám: 0
+
+[2025-04-14 14:57:14] HIBA: Túl alacsony pontszám: 0.1
+
+[2025-05-16 19:41:56] HIBA: Túl alacsony pontszám: 0.2
+
+[2025-05-26 17:17:20] HIBA: Érvénytelen reCAPTCHA token
+
+[2025-05-26 17:20:55] HIBA: Érvénytelen reCAPTCHA token
+
+[2025-05-26 17:21:24] HIBA: Érvénytelen reCAPTCHA token
+
+[2025-06-05 15:48:11] HIBA: Túl alacsony pontszám: 0.1
+
+[2025-06-05 15:48:27] HIBA: Túl alacsony pontszám: 0.1
+
+[2025-06-12 20:13:42] HIBA: Az API hívás nem sikerült
+HTTP kód: 503
+Hibaüzenet: {
+  "error": {
+    "code": 503,
+    "message": "The service is currently unavailable.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+
+[2025-06-12 20:34:26] HIBA: Az API hívás nem sikerült
+HTTP kód: 503
+Hibaüzenet: {
+  "error": {
+    "code": 503,
+    "message": "Visibility check was unavailable. Please retry the request and contact support if the problem persists",
+    "status": "UNAVAILABLE"
+  }
+}
+
+
+[2025-06-12 20:34:57] HIBA: Az API hívás nem sikerült
+HTTP kód: 500
+Hibaüzenet: {
+  "error": {
+    "code": 500,
+    "message": "Internal error encountered.",
+    "status": "INTERNAL"
+  }
+}
+
+
+[2025-06-12 20:48:41] HIBA: Az API hívás nem sikerült
+HTTP kód: 503
+Hibaüzenet: {
+  "error": {
+    "code": 503,
+    "message": "The service is currently unavailable.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+
+[2025-06-19 11:40:16] HIBA: Túl alacsony pontszám: 0.1
+
+[2025-07-17 09:09:20] HIBA: Érvénytelen reCAPTCHA token
+
+[2025-07-23 12:30:54] HIBA: Túl alacsony pontszám: 0.1
+
+[2025-07-23 12:31:07] HIBA: Túl alacsony pontszám: 0.2
+
+[2025-07-23 12:31:23] HIBA: Túl alacsony pontszám: 0.2
+

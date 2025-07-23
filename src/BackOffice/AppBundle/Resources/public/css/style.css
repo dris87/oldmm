@@ -1,0 +1,170 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin: 0;
+    padding: 0;
+    /*height: calc(3 * 29.7cm);*/
+    height: 74cm;
+}
+
+.white {
+    width: 70%;
+    padding-right: 15px;
+    padding-left: 40px;
+}
+
+.grey {
+    width: 30%;
+    background-color: #F2F2F2;
+    padding-right: 40px;
+    padding-left: 15px;
+}
+
+.parts {
+    margin-top: 240px;
+    position: relative;
+}
+
+.personal {
+    width: 100%;
+    position: absolute;
+    top: -70px;
+}
+
+.greybar {
+    width: 100%;
+    height: 50px;
+    background-color: #333333;
+    color: white;
+    position: absolute;
+    top: 100px;
+}
+
+.greybar h2 {
+    margin-left: 40px;
+}
+
+.part {
+    /*width: 100%;*/
+    /*margin: 10px 0 10px 0;*/
+    /*border-top-color: yellow;*/
+    /*border-top-style: solid;*/
+    /*border-top-width: 2px;*/
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    table-layout: fixed;
+    height: 100%;
+}
+
+tbody, tr {
+    width: 100%;
+    height: 100%;
+}
+
+td {
+    height: 100%;
+    vertical-align: top;
+}
+
+.left {
+    width: 30%;
+}
+
+.right {
+    width: 70%;
+}
+
+/* NAgy részek címei */
+
+.part .title {
+    position: relative;
+    color: #FBB03B;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.part .title span {
+    padding-right: 10px;
+}
+
+.white .part .title span {
+    background-color: white;
+}
+
+.grey .part .title span {
+    background-color: #F2F2F2;
+}
+
+.part .title span:after {
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0.5em;
+    border-top: 1px solid #FBB03B;
+    z-index: -1;
+}
+
+/* Kisebb Blockok címei */
+
+.block .title {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    color: black;
+}
+
+.list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Experience, study */
+
+.date {
+    text-align: center;
+    font-weight: bold;
+}
+
+.date > div {
+    display: inline-block;
+}
+
+.date > div > div {
+    margin-bottom: 10px;
+}
+
+.date .start-date {
+    margin-right: 10px;
+}
+
+.date .end-date {
+    margin-left: 10px;
+}
+
+.date .right-caret {
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+    border-left: 4px solid #FBB03B;
+    display: inline-block;
+    height: 0;
+    /*opacity: 0.3;*/
+    vertical-align: top;
+    width: 0;
+}
+
+.description span {
+    display: block;
+    font-size: 10px;
+}
+
+.pagenotbreak {
+    page-break-inside: avoid !important;
+}

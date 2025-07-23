@@ -1,0 +1,10 @@
+{% extends '@SonataAdmin/CRUD/base_list_field.html.twig' %}
+
+{% block field %}
+    {% if object.slug is defined and object.slug is not null %}
+        {% set url = 'https://mumi.hu/hu/allas/' ~ object.slug %}
+        <a href="{{ url }}" target="_blank">{{ object.title }}</a>
+    {% else %}
+        {{ object.title }}
+    {% endif %}
+{% endblock %}

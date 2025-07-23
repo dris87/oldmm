@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <title>{{ cv.employee.fullName|replace({' ':'-'})|lower }}-önéletrajz-{{ "now"|date("Y-m-d-h-i-s") }}-mumi.hu</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ root }}/src/BackOffice/AppBundle/Resources/public/cv/orbit/plugins/font-awesome/css/font-awesome.css">
+    <link id="theme-style" rel="stylesheet" href="{{ root }}/src/BackOffice/AppBundle/Resources/public/cv/orbit/css/styles-0.css">
+</head>
+
+<body>
+<div class="wrapper">
+    {% import '@BackOfficeApp/employee/cv/orbit/_macros.html.twig' as self %}
+    <div class="sidebar-wrapper">
+        <div class="profile-container">
+            {% if not isLight and cv.employee.profileImage is defined %}
+                <img class="profile" src="https://scontent-vie1-1.xx.fbcdn.net/v/t1.0-9/17190895_420312058306641_1784769838684974918_n.jpg?_nc_cat=0&oh=fe13d4bab58cd64b2580419782c2695a&oe=5B6C760E{#{{ root }}/web/images/cv/{% if cv.employee.gender.value == 1 %}male{% else %}female{% endif %}.png#}" alt="" />
+            {% endif %}
+            <h1 class="name">{% if not isLight %}{{ cv.employee.firstName }} {{ cv.employee.lastName }}{% endif %}</h1>
+        </div><!--//profile-container-->
+
+        <div class="contact-container container-block">
+            <ul class="list-unstyled contact-list">
+                {% if not isLight %}
+                    <li class="email"><i class="fa fa-envelope"></i><a href="mailto: {{ cv.employee.email }}">{{ cv.employee.email }}</a></li>
+                {% endif %}
+                {% if not isLight %}
+                    <li class="phone"><i class="fa fa-phone"></i><a href="tel: {{ cv.employee.phoneNumberReadable }}">{{ cv.employee.phoneNumberReadable }}</a></li>
+                {% endif %}
+
+                <li class="gender">
+                    <i class="fa fa-venus-mars"></i>
+                    {% if cv.employee.gender.value == 1 %}Férfi{% else %}Nő{% endif %}
+                </li>
+
+                <li class="nationality">
+                    <i class="fa fa-flag"></i>
+                    {% for nation in cv.employee.nationality %}
+                        {{ nation.value }}{% if loop.index != loop.last %}, {% endif %}
+                    {% endfor %}
+                </li>
+                <li class="birth-day">
+                    <i class="fa fa-birthday-cake"></i>
+                    {{ cv.employee.birthDate|date("Y-m-d") }}
+                </li>
+                <li class="location">
+                    <i class="fa fa-map-marker"></i>
+                    {{ cv.employee.location.zip.value }}, {{ cv.employee.location.city.value }}
+                </li>
+            </ul>
+        </div>
+        {% if
+            cv.drivingLicenses is not empty or
+            cv.personalStrengths is not empty or
+            cv.languages is not empty or
+            cv.softwareExperiences is not empty or
+            cv.itExperiences is not empty
+        %}
+            <div class="education-container container-block">
+                <h2 class="container-block-title">Egyéb adatok</h2>
+                {{ self.sidebar_item_collection('Nyelvismeret', cv.languages) }}
+                {{ self.sidebar_item_collection('Jogosítvány', cv.drivingLicenses) }}
+                {{ self.sidebar_item_collection('Személyes kompetenciák', cv.personalStrengths) }}
+            </div>
+        {% endif %}
+        {% if cv.lifestyles is not empty or cv.supports is not empty or cv.companyHelps is not empty %}
+            <div class="education-container container-block">
+                <h2 class="container-block-title">Extra igények</h2>
+                {{ self.sidebar_item_collection('Életvitel', cv.lifestyles) }}
+                {{ self.sidebar_item_collection('Eszközök', cv.companyHelps) }}
+                {{ self.sidebar_item_collection('Támogatás', cv.supports) }}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="main-wrapper">
+
+        <div class="heading">
+            <table style="width: 100%;">
+                <tr>
+                    <td style="text-align: left; vertical-align: middle;">
+                        <img src="{{ root }}/web/images/logo/mumi_logo-blue_dark.png"/>
+                    </td>
+                    <td style="text-align: left; vertical-align: middle;">
+                        Az önéletrajz az MUMI.HU weboldalán keresztül jött létre. <br>
+                        Önéletrajz létrehozásnak dátuma: {{ date|date('Y.m.d') }}
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <section class="section projects-section">
+            <h2 class="section-title"><i class="fa fa-archive"></i>Álláskeresési adatok</h2>
+            {{ self.print_item('Munkaidő',cv.shifts) }}
+            {{ self.print_item('Szerződés típusa',cv.jobForms) }}
+            {{ self.print_will_to_travel(cv.willToTravelLocations, cv.willToTravelDistance) }}
+            {{ self.print_will_to_move(cv.willToMoveLocations, cv.willToMove) }}
+            {{ self.print_item('Jelenlegi körülmények',cv.marketStatuses,cv.extraComment) }}
+        </section>
+
+        <section class="section experiences-section">
+            <h2 class="section-title"><i class="fa fa-briefcase"></i>Szakmai tapasztalatok</h2>
+            {% if cv.experiences is not empty %}
+                {{ self.print_experiences_or_education(cv.experiences) }}
+            {% else %}
+                <p>Nem rendelkezem munkatapasztalattal.</p>
+            {% endif %}
+        </section>
+
+        <section class="section education-section">
+            <h2 class="section-title"><i class="fa fa-graduation-cap"></i>Tanulmányok</h2>
+            {% if cv.educations is not empty %}
+                {{ self.print_experiences_or_education(cv.educations) }}
+            {% else %}
+                <p>Kevesebb végzettségem van mint 8 általános</p>
+            {% endif %}
+        </section>
+
+        <section class="skills-section section">
+            <h2 class="section-title"><i class="fa fa-rocket"></i>Számítógépes &amp; IT ismeretek</h2>
+            <div class="skillset">
+
+                {{ self.print_skill(cv.softwareExperiences) }}
+                {{ self.print_skill(cv.itExperiences) }}
+
+            </div>
+        </section>
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends '@SonataAdmin/CRUD/base_list_field.html.twig' %}
+
+{% block field %}
+    <div>
+        {% if value is not empty %}
+
+            <b><a href="{{ path('bo_firm_colleague_admin_show',{'id':object.firmColleague.id}) }}">{{ object.firmColleague.fullName }}</a></b><br/>
+            <b><a href="mailto:{{ object.firmColleague.email }}">{{ object.firmColleague.email }}</a></b><br/>
+            {{ object.firmColleague.phoneNumberReadable }}
+        {% endif %}
+    </div>
+{% endblock %}

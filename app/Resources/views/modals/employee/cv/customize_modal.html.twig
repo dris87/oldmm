@@ -1,0 +1,36 @@
+{% set id = "emplyoee-cv-customize-modal" %}
+
+<div id="{{ id }}" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title text-center">{{ 'modal.employee.cv.customize.title'|trans }}</h4>
+            </div>
+            <div class="modal-body">
+                <div class="m-section-header" style="margin-top: -10px">
+                    <span>
+                        {{ 'modal.employee.cv.customize.sub_title'|trans }}
+                    </span>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-4 box">
+                            <img src="{{ asset('images/cv/ujallas-orange.jpg') }}" alt="..." class="img-thumbnail m-img-check">
+                            <input type="radio" name="chk1" id="item4" value="val1" class="hidden" autocomplete="off">
+                        </div>
+                        <div class="col-md-4 box">
+                            <img src="{{ asset('images/cv/orbit-blue.jpg') }}" alt="..." class="img-thumbnail m-img-check">
+                            <input type="radio" name="chk1" id="item4" value="val2" class="hidden" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">{{ 'label.cancel'|trans }}</button>
+                <button type="button" class="btn btn-success m-employee-cv-customize-modal-generate-and-save">{{ 'modal.employee.cv.customize.save.button'|trans }}</button>
+                <button type="button" class="btn btn-primary m-employee-cv-customize-modal-save">{{ 'modal.employee.cv.customize.generate_and_save.button'|trans }}</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,137 @@
+$m-mobile-menu--cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99)
+$m-mobile-menu--items: 12
+$m-mobile-menu--z-index: 200
+
+$m-mobile-menu--search-easing: cubic-bezier(.25,1.7,.35,.8)
+$m-mobile-menu--search-duration: 0.6s
+
+.m-mobile-menu
+  &--header
+    position: fixed
+    display: block
+    bottom: 0
+    left: 0
+    overflow: hidden
+    right: 0
+    height: 60px
+    background: rgba(#1b75bc,1)
+    transition: all 0.5s ease-out, background 1s ease-out
+    transition-delay: 0.2s
+    z-index: $m-mobile-menu--z-index
+    text-align: right
+  &--burger-container,
+  &--search
+    position: fixed
+    bottom: 0
+    left: 50%
+    margin-left: -25px
+    display: inline-block
+    height: 50px
+    width: 50px
+    cursor: pointer
+    transform: rotate(0deg)
+    transition: all 0.3s $m-mobile-menu--cubic
+    user-select: none
+    z-index: 999999
+    -webkit-tap-highlight-color: transparent
+  &--burger
+    width: 18px
+    height: 8px
+    position: relative
+    display: block
+    margin: -4px auto 0
+    top: 50%
+    &--bar
+      width: 100%
+      height: 1px
+      display: block
+      position: relative
+      background: $white
+      transition: all 0.3s $m-mobile-menu--cubic
+      transition-delay: 0s
+      &--top
+        transform: translateY(0px) rotate(0deg)
+      &--bottom
+        transform: translateY(6px) rotate(0deg)
+  &--search-container
+    height: 0
+    background: $color-background
+    padding: 0
+    opacity: 1
+    display: block
+    text-align: left
+    transition: all 0.10s ease
+    .clearfix
+      margin-bottom: 30px
+    h2
+      opacity: 0
+      transition: transform 0.2s $m-mobile-menu--cubic, opacity 0.2s $m-mobile-menu--cubic
+      transition-delay: 0.1s
+    .form-group
+      margin-top: 5px
+      padding: 0px 25px
+      transform: scale(1.15) translateY(-30px)
+      opacity: 0
+      transition: transform 0.2s $m-mobile-menu--cubic, opacity 0.2s $m-mobile-menu--cubic
+      @for $i from $m-mobile-menu--items through 1
+        &:nth-child(#{$i})
+          transition-delay: #{0.2 - ($i * 0.03)}s
+      &:first-child
+        margin-top: 20px
+      &:last-child
+        margin-bottom: 20px
+  &--search
+    color: $white
+    left: 25px
+    padding: 13px
+    img
+      height: 20px
+  &--container
+    height: calc(100% - 98px)
+    transition: all 0.5s ease
+    &:after
+      content: ""
+      display: inline-block
+      height: 100%
+      vertical-align: bottom
+    ul
+      position: relative
+      display: inline-block
+      padding: 0 20px 0
+      width: calc(100% - 5px)
+      text-align: center
+      margin: 0
+      list-style: none
+      vertical-align: bottom
+      li
+        border-bottom: 1px solid #333
+        margin-top: 5px
+        transform: scale(1.15) translateY(-30px)
+        opacity: 0
+        text-align: center
+        transition: transform 0.5s $m-mobile-menu--cubic, opacity 0.6s $m-mobile-menu--cubic
+        @for $i from $m-mobile-menu--items through 1
+          &:nth-child(#{$i})
+            transition-delay: #{0.2 - ($i * 0.03)}s
+        a
+          display: block
+          position: relative
+          color: #FFF
+          text-decoration: none
+          font-size: 22px
+          line-height: 2.35
+          font-weight: 200
+          width: 100%
+          strong
+            display: block
+            margin-top: 20px
+            line-height: 19px
+          span
+            margin-left: 10px
+            display: block
+            line-height: 30px
+            margin-bottom: 20px
+
+@media (min-width: $screen-sm-max)
+  .m-mobile-menu--header
+    display: none

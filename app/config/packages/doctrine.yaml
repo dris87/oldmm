@@ -1,0 +1,91 @@
+#parameters:
+#    # Adds a fallback DATABASE_URL if the env var is not set. This allows you
+#    # to run cache:warmup even if your environment variables are not available
+#    # yet. You should not need to change this value.
+#    env(DATABASE_URL): ''
+
+doctrine:
+    dbal:
+        driver: 'pdo_mysql'
+        charset: utf8mb4
+
+        url: '%database_url%'
+        types:
+            # Blog enums
+            all4one_bundle_news_category_status_enum: All4One\NewsBundle\Doctrine\DBAL\Types\NewsCategoryStatusEnumerationType
+            all4one_bundle_news_post_status_enum: All4One\NewsBundle\Doctrine\DBAL\Types\NewsPostStatusEnumerationType
+            # Documentation enum
+            development_documentation_item_alert_type_enum: Common\CoreBundle\Doctrine\DBAL\Types\Development\Documentation\DocumentationItemAlertTypeEnumeratorType
+            development_documentation_item_code_type_enum: Common\CoreBundle\Doctrine\DBAL\Types\Development\Documentation\DocumentationItemCodeTypeEnumeratorType
+            development_documentation_topic_type_enum: Common\CoreBundle\Doctrine\DBAL\Types\Development\Documentation\DocumentationTopicTypeEnumeratorType
+            # Dictionary enum
+            dictionary_status_enum: Common\CoreBundle\Doctrine\DBAL\Types\Dictionary\DictionaryStatusEnumeratorType
+            # Employee enums
+            employee_cover_letter_status_enum: Common\CoreBundle\Doctrine\DBAL\Types\Employee\CoverLetterStatusEnumeratorType
+            # Employee cv enums
+            employee_cv_status_enum: Common\CoreBundle\Doctrine\DBAL\Types\Employee\Cv\EmployeeCvStatusEnumeratorType
+            employee_cv_style_enum: Common\CoreBundle\Doctrine\DBAL\Types\Employee\Cv\EmployeeCvStyleEnumeratorType
+            employee_cv_will_to_travel_enum: Common\CoreBundle\Doctrine\DBAL\Types\Employee\Cv\EmployeeCvWillToTravelEnumeratorType
+            employee_cv_will_to_move_enum: Common\CoreBundle\Doctrine\DBAL\Types\Employee\Cv\EmployeeCvWillToMoveEnumeratorType
+            # Firm enums
+            firm_status_enum: Common\CoreBundle\Doctrine\DBAL\Types\Firm\FirmStatusEnumeratorType
+            # Order enums
+            firm_order_status_enum: Common\CoreBundle\Doctrine\DBAL\Types\Firm\Order\FirmOrderStatusEnumeratorType
+            # Package enums
+            firm_package_service_enum: Common\CoreBundle\Doctrine\DBAL\Types\Firm\Package\FirmPackageServiceEnumeratorType
+            # Payment enums
+            firm_payment_method_enum: Common\CoreBundle\Doctrine\DBAL\Types\Firm\Payment\FirmPaymentMethodEnumeratorType
+            # Migration enums
+            migration_sync_type_enum: Common\CoreBundle\Doctrine\DBAL\Types\Migration\MigrationSyncTypeEnumeratorType
+            migration_type_enum: Common\CoreBundle\Doctrine\DBAL\Types\Migration\MigrationTypeEnumeratorType
+            migration_status_enum: Common\CoreBundle\Doctrine\DBAL\Types\Migration\MigrationStatusEnumeratorType
+            migration_algorithm_enum: Common\CoreBundle\Doctrine\DBAL\Types\Migration\MigrationAlgorithmEnumeratorType
+            migration_frequency_enum: Common\CoreBundle\Doctrine\DBAL\Types\Migration\MigrationFrequencyEnumeratorType
+            # Offer enums
+            offer_status_enum: Common\CoreBundle\Doctrine\DBAL\Types\Offer\OfferStatusEnumeratorType
+            offer_candidate_status_enum: Common\CoreBundle\Doctrine\DBAL\Types\Offer\OfferCandidateStatusEnumeratorType
+            offer_candidate_type_enum: Common\CoreBundle\Doctrine\DBAL\Types\Offer\OfferCandidateTypeEnumeratorType
+            offer_service_status_enum: Common\CoreBundle\Doctrine\DBAL\Types\Offer\OfferServiceStatusEnumeratorType
+            # User enums
+            user_gender_enum: Common\CoreBundle\Doctrine\DBAL\Types\User\UserGenderEnumeratorType
+            user_status_enum: Common\CoreBundle\Doctrine\DBAL\Types\User\UserStatusEnumeratorType
+            deleted_user_reason_status_enum: Common\CoreBundle\Doctrine\DBAL\Types\User\DeletedUserReasonStatusEnumeratorType
+            deleted_user_type_enum: Common\CoreBundle\Doctrine\DBAL\Types\User\DeletedUserTypeEnumeratorType
+            # Util enums
+            contact_status_enum: Common\CoreBundle\Doctrine\DBAL\Types\Util\ContactStatusEnumeratorType
+            tracked_token_status_enum: Common\CoreBundle\Doctrine\DBAL\Types\Util\TrackedTokenStatusEnumeratorType
+            tracked_token_type_enum: Common\CoreBundle\Doctrine\DBAL\Types\Util\TrackedTokenTypeEnumeratorType
+            # Other bundle enums
+            phone_number: Misd\PhoneNumberBundle\Doctrine\DBAL\Types\PhoneNumberType
+            # All4One Admin bundle types
+            all4one_bundle_setting_status_enum: All4One\SettingBundle\Doctrine\DBAL\Types\SettingStatusEnumeratorType
+    orm:
+        auto_generate_proxy_classes: '%kernel.debug%'
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        auto_mapping: true
+        mappings:
+            ApplicationSonataUserBundle:
+                type: annotation
+            SonataUserBundle:
+                type: annotation
+#            CommonCoreBundle:
+#                is_bundle: false
+#                type: annotation
+#                dir: '%kernel.project_dir%/src/Common/CoreBundle/Entity'
+#                prefix: 'Common\CoreBundle\Entity'
+#                alias: App
+
+#        mappings:
+#            BackOfficeAppBundle:
+#                type: ~
+#                dir: 'Entity'
+#                prefix: 'BackOfficeAppBundle\Entity'
+#                is_bundle: ~
+
+stof_doctrine_extensions:
+    default_locale: '%default_locale%'
+    orm:
+        default:
+            timestampable: true
+            softdeleteable: true
+            sortable: true

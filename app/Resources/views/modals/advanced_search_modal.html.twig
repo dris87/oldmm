@@ -1,0 +1,13 @@
+{% set id = "advanced-search-modal" %}
+
+<div id="{{ id }}" class="m-modal-full-page modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="m-section-header m-section-header--center"><span>{{ 'page.offer.search.advanced_search.title'|trans }}</span></div>
+
+                {#% include 'form/offer/advanced_search_form.html.twig' with {'form': advanced_offer_search } %#}
+            </div>
+        </div>
+    </div>
+</div>

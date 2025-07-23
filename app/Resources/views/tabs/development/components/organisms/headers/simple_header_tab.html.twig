@@ -1,0 +1,38 @@
+<h2>Include</h2>
+{% verbatim %}
+<pre><code class="twig">{% set buttons = [
+    { href : path('security_login', { type: 'munkaado' }), id: 'firm-button', title: 'Munkaadóknak' },
+    { href : path('security_login', { type: 'munkavallalo' }), id: 'employee-button', title: 'BÉLÉPÉS' , subtitle: 'MUNKAVÁLLALÓKNAK' }
+] %}
+
+{% include 'modules/organisms/headers/simple_header.html.twig' with {  buttons : buttons } %}</code></pre>
+    {% endverbatim  %}
+<hr/>
+
+<h2>Withouth wallpaper</h2>
+{% set buttons = [
+    { href : path('security_login', { type: 'munkaado' }), id: 'firm-button', title: 'Munkaadóknak' },
+    { href : path('security_login', { type: 'munkavallalo' }), id: 'employee-button', title: 'BÉLÉPÉS' , subtitle: 'MUNKAVÁLLALÓKNAK' }
+] %}
+
+{% include 'modules/organisms/headers/simple_header.html.twig' with { buttons : buttons } %}
+<hr/>
+
+<h2>With wallpaper</h2>
+{% verbatim %}
+<pre><code class="twig">{% set buttons = [
+    { href : path('security_login', { type: 'munkaado' }), id: 'firm-button', title: 'Munkaadóknak' },
+    { href : path('security_login', { type: 'munkavallalo' }), id: 'employee-button', title: 'BÉLÉPÉS' , subtitle: 'MUNKAVÁLLALÓKNAK' }
+] %}
+
+{% include 'modules/organisms/headers/simple_header.html.twig' with { title : 'test szöveg' , buttons : buttons , wallpaper : 'topimg2'} %}</code></pre>
+    {% endverbatim  %}
+<hr/>
+
+{% set buttons = [
+    { href : path('security_login', { type: 'munkaado' }), id: 'firm-button', title: 'Munkaadóknak' },
+    { href : path('security_login', { type: 'munkavallalo' }), id: 'employee-button', title: 'BÉLÉPÉS' , subtitle: 'MUNKAVÁLLALÓKNAK' }
+] %}
+
+{% include 'modules/organisms/headers/simple_header.html.twig' with { title : 'test szöveg' , buttons : buttons , wallpaper : 'topimg2'} %}
+<hr/>

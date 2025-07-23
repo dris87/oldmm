@@ -1,0 +1,30 @@
+ul.pagination
+  margin: 0px
+  background: white
+  border: 1px solid #ECECEC
+  border-radius: 3px
+  padding: 4px 10px
+  white-space: nowrap
+  overflow: hidden
+  .prev,
+  .next
+    &.disabled
+      display: none
+    a
+      background: #F5BE39
+      color: white
+      border: none
+  li
+    a
+      color: $black
+      background: none
+      border: none
+      line-height: 22px
+      margin-right: 5px
+    &.active
+      span
+        border: 1px solid #DEDEDE
+        border-radius: 2px
+        background: none
+        color: $black
+        margin-right: 5px

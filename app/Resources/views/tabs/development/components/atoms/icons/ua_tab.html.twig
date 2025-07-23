@@ -1,0 +1,44 @@
+{% import 'modules/atoms/icon.html.twig' as icon %}
+{% import 'modules/atoms/bootstrap/tables.html.twig' as tables %}
+
+<h2>Import</h2>
+{% verbatim %}
+<pre><code class="twig">{% import 'modules/atoms/icon.html.twig' as icon %}</code></pre>
+{% endverbatim  %}
+<hr/>
+
+<h2>The macro</h2>
+<code>
+    {% verbatim %}
+        {{ icon.icon( name , size, color ) }}
+    {% endverbatim  %}
+</code>
+
+<h4>Description</h4>
+{{ tables.table(
+[ { html : 'Field' } , { html : 'Type' } , { html : 'Description' } ],
+[   {cols : [ { html : 'name' } , { html : 'string' } , { html : 'Name of font (witout ua-font- prefix)' } ]},
+    {cols : [ { html : 'size' } , { html : 'string' } , { html : 'Size of font. xs,sm,md,lg' } ]},
+    {cols : [ { html : 'color' } , { html : 'string' } , { html : 'Color of font. orange,grey(default),black,white' } ]}
+],'striped') }}
+
+<h2>UA icons</h2>
+{% set ua_icons = [
+    'cart',
+    'business',
+    'man',
+    'money',
+    'money-1',
+    'people',
+    'security'
+]%}
+
+<div class="clearfix">
+    {% for name in ua_icons %}
+        <div class="col-md-4">
+            {{ icon.icon( name ) }}
+            <pre><code>{% verbatim %}{{ icon.icon({% endverbatim  %} '{{ name }}' {% verbatim %}) }}{% endverbatim  %}</code></pre>
+        </div>
+    {% endfor %}
+
+</div>

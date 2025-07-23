@@ -1,0 +1,7 @@
+{% extends '@SonataAdmin/CRUD/base_list_field.html.twig' %}
+
+{% block field %}
+    {% if object.minimalPackage %}
+        <span class="badge bg-info">Minimál</span>
+    {% endif %}
+{% endblock %}

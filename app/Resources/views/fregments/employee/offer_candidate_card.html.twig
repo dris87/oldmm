@@ -1,0 +1,53 @@
+<div class="m-tiles-detailed-list--content clearfix">
+
+    <div class="m-tiles-detailed-list--logo clearfix">
+        <img src="{{ asset('uploads/firm/logo/' ~ candidate.offer.firm.realLogoName) }}"/>
+    </div>
+
+    <div class="m-tiles-detailed-list--body clearfix">
+
+        <strong class="m-tiles-detailed-list--title">
+            {{ candidate.offer.title }}
+
+            {% if candidate.offer.locations is iterable %}
+
+                {% for location in candidate.offer.locations %}
+
+                    {% if loop.first %}({% endif %}
+
+                    {% if not loop.first %} - {% endif %} {{ location }}
+
+                    {% if loop.last %}){% endif %}
+
+                {% endfor %}
+
+            {% else %} {{ candidate.offer.location }} {% endif %}
+
+        </strong>
+
+        <div class="m-tiles-detailed-list--desc mt-20 mb-50">
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 text-center">
+                    <div class="mb-5">
+                        <strong class="mb-20">{{ 'label.offer_apply.createAt'|trans }}</strong>
+                    </div>
+                    {{ candidate.createdAt|localizeddate('medium', 'medium', null, 'CET', 'Y-MM-dd HH:mm') }}
+                </div>
+                <div class="col-xs-12 col-sm-6 text-center">
+                    <div class="mb-5">
+                        <strong>{{ 'label.offer_apply.cv_name'|trans }}</strong>
+                    </div>
+                    {{ candidate.employeeCv.name }}
+                </div>
+            </div>
+        </div>
+
+        <div class="m-tiles-detailed-list--footer text-right clearfix">
+            <a href="{{ path('show_offer', {slug: candidate.offer.slug}) }}" class="btn btn-default mb-5">
+                <span class="hidden-xs">{{ 'label.show'|trans }}</span>
+                <i class="fa fa-eye visible-xs" style="font-size:17px"></i>
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<h2>Include</h2>
+{% verbatim %}
+<pre><code class="twig">{% set buttons = [
+    { href : path('security_login', { type: 'munkaado' }), id: 'firm-button', title: 'Munkaadóknak' },
+    { href : path('security_login', { type: 'munkavallalo' }), id: 'employee-button', title: 'BÉLÉPÉS' , subtitle: 'MUNKAVÁLLALÓKNAK' }
+] %}
+{% include 'modules/organisms/headers/extended_header.html.twig' with { title : 'MUNKALEHETŐSÉG <strong>MINDENKINEK!</strong>' , buttons : buttons } %}</code></pre>
+{% endverbatim  %}
+<hr/>
+
+<h2>Look</h2>
+
+    {% set buttons = [
+        { href : path('security_login', { type: 'munkaado' }), id: 'firm-button', title: 'Munkaadóknak' },
+        { href : path('security_login', { type: 'munkavallalo' }), id: 'employee-button', title: 'BÉLÉPÉS' , subtitle: 'MUNKAVÁLLALÓKNAK' }
+    ] %}
+
+    {% include 'modules/organisms/headers/extended_header.html.twig' with { title : 'Teszt szöveg' , buttons : buttons } %}
+<hr/>

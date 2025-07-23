@@ -1,0 +1,3 @@
+all4_one_szamlazzhu:
+    username: '%szamlazzhu.username%'
+    password: '%szamlazzhu.password%'

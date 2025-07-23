@@ -1,0 +1,459 @@
+imports:
+    - { resource: services.yaml }
+
+services:
+    # Employee admin classes
+    admin.employee:
+        class: BackOffice\AppBundle\Admin\Employee\EmployeeAdmin
+        arguments:
+            - null
+            - Common\CoreBundle\Entity\Employee\Employee
+            - BackOffice\AppBundle\Controller\EmployeeCRUDController
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Munkavállalók, label: Lista , icon: '<i class="fa fa-user"></i>'}
+        public: true
+        calls:
+            - [ addChild, [ "@admin.employee.cv" ]]
+
+    admin.employee.cv:
+        class: BackOffice\AppBundle\Admin\Employee\EmployeeCvAdmin
+        arguments:
+         - null
+         - Common\CoreBundle\Entity\Employee\Cv\EmployeeCv
+         - BackOffice\AppBundle\Controller\EmployeeCVCRUDController
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Munkavállalók, label: Önéletrajzok , pager_type: "simple"}
+        public: true
+
+    admin.employee.delete:
+        class: BackOffice\AppBundle\Admin\User\DeletedUserAdmin
+        arguments:
+            - null
+            - Common\CoreBundle\Entity\User\DeletedUser
+            - ~
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Munkavállalók, label: Törölt fiókok , icon: '<i class="fa fa-user-times"></i>'}
+        public: true
+    admin.employee.delete.reasons:
+        class: BackOffice\AppBundle\Admin\User\DeletedUserReasonAdmin
+        arguments:
+            - null
+            - Common\CoreBundle\Entity\Employee\DeletedEmployeeReason
+            - ~
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Munkavállalók, label: Törlési Kérdések , icon: '<i class="fa fa-user-times"></i>'}
+        public: true
+
+    # Offer admin classes
+    admin.offer:
+        class: BackOffice\AppBundle\Admin\Offer\OfferAdmin
+        arguments:
+            - null
+            - Common\CoreBundle\Entity\Offer\Offer
+            - BackOffice\AppBundle\Controller\OfferCRUDController
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Hirdetések, label: Lista , icon: '<i class="fa fa-file-text-o"></i>'}
+        public: true
+        calls:
+            - [ addChild, [ "@admin.offer.candidate" ]]
+            - [ setTemplate, [ "list", "BackOfficeAppBundle:CRUD:offer_list_with_modal.html.twig" ]]
+
+    admin.offer.candidate:
+        class: BackOffice\AppBundle\Admin\Offer\OfferCandidateAdmin
+        arguments:
+         - null
+         - Common\CoreBundle\Entity\Offer\OfferCandidate
+         - BackOffice\AppBundle\Controller\OfferCandidateCRUDController
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Hirdetések, label: Jelentkezések }
+        public: true
+
+    # Firm admin classes
+    admin.firm:
+        class: BackOffice\AppBundle\Admin\Firm\FirmAdmin
+        arguments: [~, Common\CoreBundle\Entity\Firm\Firm, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Cégek, label: Lista , icon: '<i class="fa fa-building"></i>'}
+        public: true
+
+    admin.firm_colleague:
+        class: BackOffice\AppBundle\Admin\Firm\FirmColleagueAdmin
+        arguments:
+         - null
+         - Common\CoreBundle\Entity\Firm\FirmColleague
+         - BackOffice\AppBundle\Controller\FirmColleagueCRUDController
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Munkatársak, label: Munkatársak }
+        public: true
+    admin.firm_colleague.delete:
+        class: BackOffice\AppBundle\Admin\User\DeletedUserAdmin
+        arguments:
+            - null
+            - Common\CoreBundle\Entity\Firm\DeletedFirmColleague
+            - ~
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Munkatársak, label: Törölt fiókok , icon: '<i class="fa fa-user-times"></i>'}
+        public: true
+    admin.firm_colleague.delete.reasons:
+        class: BackOffice\AppBundle\Admin\User\DeletedUserReasonAdmin
+        arguments:
+            - null
+            - Common\CoreBundle\Entity\Firm\DeletedFirmColleagueReason
+            - ~
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Munkatársak, label: Törlési Kérdések , icon: '<i class="fa fa-user-times"></i>'}
+        public: true
+
+    admin.firm_order:
+        class: BackOffice\AppBundle\Admin\Order\OrderAdmin
+        arguments: [~, Common\CoreBundle\Entity\Firm\Order\FirmOrder, BackOfficeAppBundle:OrderCRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Cégek, label: Vásárlások }
+        public: true
+
+    # Migration admin classes
+    admin.migration.offer:
+        class: BackOffice\AppBundle\Admin\Migration\OfferMigrationAdmin
+        arguments:
+            - null
+            - Common\CoreBundle\Entity\Offer\OfferMigration
+            - BackOffice\AppBundle\Controller\MigrationCRUDController
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Külső források, label: Hirdetések , icon: '<i class="fa fa-cloud"></i>'}
+        public: true
+
+    # Blog admin classes
+    admin.news_posts:
+        class: All4One\NewsBundle\Admin\NewsPostAdmin
+        arguments:
+            - null
+            - All4One\NewsBundle\Entity\NewsPost
+            - ~
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Hírek, label: Cikkek , icon: '<i class="fa fa-newspaper-o"></i>'}
+        public: true
+    admin.news_categories:
+        class: All4One\NewsBundle\Admin\NewsCategoryAdmin
+        arguments:
+            - null
+            - All4One\NewsBundle\Entity\NewsCategory
+            - ~
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Hírek, label: Kategóriák , icon: '<i class="fa fa-newspaper-o"></i>'}
+        public: true
+
+    # User admin classes
+    admin.user:
+        class: BackOffice\AppBundle\Admin\User\UserAdmin
+        arguments:
+            - null
+            - Common\CoreBundle\Entity\User\User
+            - ~
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Rendszer, label: Felhasználói lista , icon: '<i class="fa fa-user"></i>'}
+        public: true
+    admin.setting:
+        class: All4One\SettingBundle\Admin\SettingAdmin
+        arguments:
+            - null
+            - All4One\SettingBundle\Entity\Setting
+            - ~
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Rendszer, label: Változók , icon: '<i class="fa fa-cog"></i>'}
+        public: true
+    admin.setting.group:
+        class: All4One\SettingBundle\Admin\SettingGroupAdmin
+        arguments:
+            - null
+            - All4One\SettingBundle\Entity\SettingGroup
+            - ~
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Rendszer, label: Változó Csoportok , icon: '<i class="fa fa-cog"></i>'}
+        public: true
+    admin.tracked_token:
+        class: BackOffice\AppBundle\Admin\TrackedToken\TrackedTokenAdmin
+        arguments:
+            - null
+            - Common\CoreBundle\Entity\Util\TrackedToken
+            - ~
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Rendszer, label: Követett tokenek , icon: '<i class="fa fa-map-marker"></i>'}
+        public: true
+    # Documentation admin classes
+    # admin.documentation:
+    #     class: BackOffice\AppBundle\Admin\Development\Documentation\DocumentationTopicsAdmin
+    #     arguments:
+    #         - null
+    #         - Common\CoreBundle\Entity\Development\Documentation\DocumentationTopic
+    #         - ~
+    #     tags:
+    #         - { name: sonata.admin, manager_type: orm, group: Rendszer, label: Dokumentáció topikok , icon: '<i class="fa fa-book"></i>'}
+    #     public: true
+
+    # admin.documentation_groups:
+    #     class: BackOffice\AppBundle\Admin\Development\Documentation\DocumentationGroupsAdmin
+    #     arguments:
+    #         - null
+    #         - Common\CoreBundle\Entity\Development\Documentation\DocumentationGroup
+    #         - ~
+    #     tags:
+    #         - { name: sonata.admin, manager_type: orm, group: Rendszer, label: Dokumentáció csoportok , icon: '<i class="fa fa-book"></i>'}
+    #     public: true
+
+    # admin.documentation_items:
+    #     class: BackOffice\AppBundle\Admin\Development\Documentation\DocumentationItemsAdmin
+    #     arguments:
+    #         - null
+    #         - Common\CoreBundle\Entity\Development\Documentation\DocumentationItem
+    #         - ~
+    #     tags:
+    #         - { name: sonata.admin, manager_type: orm, group: Rendszer, label: Dokumentáció elemek , icon: '<i class="fa fa-book"></i>'}
+    #     public: true
+
+    #Admin definition for location:
+    admin.dic_full_location:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DicFullLocationAdmin
+        arguments: [null, Common\CoreBundle\Entity\Dictionary\DicLocation, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Város-Irányítószám-Megye , icon: '<i class="fa fa-sticky-note"></i>'}
+        public: true
+
+    admin.dic_location:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DicLocationAdmin
+        arguments: [null, Common\CoreBundle\Entity\Dictionary\Dictionary, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Települések }
+        public: true
+
+    #Admin definitions for dictionaries:
+    admin.dic_detail:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicDetail, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Hirdetés - Amit kínálunk }
+        public: true
+
+    admin.dic_advantage:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicAdvantage, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Hirdetés - Előnyök }
+        public: true
+    admin.dic_expectation:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicExpectation, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Hirdetés - Elvárások }
+        public: true
+
+    admin.dic_task:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicTask, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Hirdetés - Feladatok }
+        public: true
+
+    admin.dic_category:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicCategory, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Kategóriák }
+        public: true
+
+    admin.dic_subcategory:
+            class: BackOffice\AppBundle\Admin\Autocomplete\DicSubCategoryAdmin
+            arguments: [~, Common\CoreBundle\Entity\Dictionary\DicCategory, ~]
+            tags:
+                - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Alkategóriák }
+            public: true
+
+    admin.dic_city:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicCity, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Települések }
+        public: true
+
+    admin.dic_company_help:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicCompanyHelp, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Céges eszközök }
+        public: true
+
+    admin.dic_county:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicCounty, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Megyék }
+        public: true
+
+    admin.dic_document_type:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicDocumentType, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Dokumentum tipusok }
+        public: true
+
+    admin.dic_driving_licence:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicDrivingLicence, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Jogosítványok }
+        public: true
+
+    admin.dic_education:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicEducation, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Végzettségek }
+        public: true
+
+    admin.dic_experience:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicExperience, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Tapasztalatok }
+        public: true
+
+    admin.dic_industry:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicIndustry, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Iparágak }
+        public: true
+
+    admin.dic_it_experience:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicItExperience, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: IT tapasztalat }
+        public: true
+
+    admin.dic_job_form:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicJobForm, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Munkavégzés tipusa }
+        public: true
+
+    admin.dic_language:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicLanguage, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Nyelv }
+        public: true
+
+    admin.dic_life_style:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicLifeStyle, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Jelenlegi körülményei }
+        public: true
+
+    admin.dic_market_status:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicMarketStatus, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Álláspiaci státuszok }
+        public: true
+
+    admin.dic_nationality:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicNationality, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Nemzetiségek }
+        public: true
+
+    admin.dic_personal_strength:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicPersonalStrength, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Személyes kompetenciák }
+        public: true
+
+    admin.dic_position:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicPosition, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Pozíciók }
+        public: true
+
+    admin.dic_school:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicSchool, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Iskolák }
+        public: true
+
+    admin.dic_shift:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicShift, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Munkaidők }
+        public: true
+
+    admin.dic_software_experience:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicSoftwareExperience, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Szoftverismeretek }
+        public: true
+
+    admin.dic_support:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicSupport, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Támogatások }
+        public: true
+
+    admin.dic_zip:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicZip, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Irányítószámok }
+        public: true
+
+    admin.dic_experience_level:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicExperienceLevel, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótár Szintek, label: Tapasztalat szintek }
+        public: true
+    admin.dic_education_level:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicEducationLevel, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótár Szintek, label: Végzettség szintek }
+        public: true
+
+    admin.dic_it_experience_level:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicItExperienceLevel, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótár Szintek, label: It tapasztalat szintek }
+        public: true
+
+    admin.dic_language_level:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicLanguageLevel, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótár Szintek, label: Nyelvi szintek }
+        public: true
+
+    admin.dic_software_experience_level:
+        class: BackOffice\AppBundle\Admin\Autocomplete\DictionaryAdmin
+        arguments: [~, Common\CoreBundle\Entity\Dictionary\DicSoftwareExperienceLevel, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm,group: Szótárak, label: Szoftverismeret szintek }
+        public: true
+
+
+    sonata.admin.controller.admin:
+        class: BackOffice\AppBundle\Controller\HelperController
+        public: true
+        arguments:
+            - '@twig'
+            - '@sonata.admin.pool'
+            - '@sonata.admin.helper'
+            - '@validator'

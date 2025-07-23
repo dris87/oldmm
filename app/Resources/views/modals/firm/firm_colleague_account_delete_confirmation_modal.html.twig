@@ -1,0 +1,33 @@
+{% if id is not defined %}
+
+    {% set id = "firm-colleague-account-delete-confirmation-modal" %}
+
+{% endif %}
+<div id="{{ id }}" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">{{ 'modal.firm_colleague.account.delete.title'|trans }}</h4>
+            </div>
+            {{ form_start(form) }}
+            <div class="modal-body">
+
+                <h4 class="m-heading">{{ 'form.firm_colleague.account.delete.heading'|trans|upper }}</h4>
+
+                {{ 'form.firm_colleague.account.delete.message'|trans|raw }}
+
+                </hr>
+
+                {% include 'form/firm_colleague/firm_colleague_account_delete_form.html.twig' with {'form':form} %}
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">{{ 'label.cancel'|trans }}</button>
+                <button type="submit" class="btn btn-danger confirm-deletion-button">{{ 'form.firm_colleague.account.delete.submit'|trans|upper }}</button>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+</div>
+

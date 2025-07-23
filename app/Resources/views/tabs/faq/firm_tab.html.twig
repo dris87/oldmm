@@ -1,0 +1,11 @@
+{% set firm_tab_accordion_items = [] %}
+
+{% for i in 0..19 %}
+    {% if i not in [4,7,13,19] %}
+        {% set firm_tab_accordion_items = firm_tab_accordion_items|merge( [ { id : 'firm-accordion-item-' ~ i , title : 'page.faq.firm.' ~ i ~ '.title' , content : 'page.faq.firm.' ~ i ~ '.content' } ] ) %}
+    {% endif %}
+{% endfor %}
+
+{% import 'modules/atoms/bootstrap/accordion.html.twig' as accordion %}
+
+{{ accordion.accordion( firm_tab_accordion_items , 'firm-faq-accordion' ) }}

@@ -1,0 +1,4687 @@
+{
+    "86603": {
+        "timestamp": "2025-02-18 22:16:26",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "86874": {
+        "timestamp": "2025-02-18 22:16:28",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "87933": {
+        "timestamp": "2025-02-18 22:16:31",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "90084": {
+        "timestamp": "2025-02-18 22:16:35",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "91657": {
+        "timestamp": "2025-02-18 22:16:37",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "93485": {
+        "timestamp": "2025-02-18 22:16:39",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "94014": {
+        "timestamp": "2025-02-18 22:16:40",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "94335": {
+        "timestamp": "2025-02-18 22:16:45",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "94541": {
+        "timestamp": "2025-02-18 22:16:47",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "94566": {
+        "timestamp": "2025-02-18 22:16:49",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "94585": {
+        "timestamp": "2025-02-18 22:16:52",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "95162": {
+        "timestamp": "2025-02-18 22:16:55",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "95328": {
+        "timestamp": "2025-02-18 22:16:56",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "96465": {
+        "timestamp": "2025-02-18 22:16:58",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "96926": {
+        "timestamp": "2025-02-18 22:16:59",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "97309": {
+        "timestamp": "2025-02-18 22:17:02",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "98600": {
+        "timestamp": "2025-02-18 22:17:04",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "98866": {
+        "timestamp": "2025-02-18 22:17:05",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "98913": {
+        "timestamp": "2025-02-18 22:17:07",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "99318": {
+        "timestamp": "2025-02-18 22:17:10",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "99502": {
+        "timestamp": "2025-02-18 22:17:13",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "99993": {
+        "timestamp": "2025-02-18 22:17:16",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "hello@momentin.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "100700": {
+        "timestamp": "2025-02-18 22:17:22",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "allas@lugex.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "100888": {
+        "timestamp": "2025-02-18 22:17:24",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "101300": {
+        "timestamp": "2025-02-18 22:17:28",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "101887": {
+        "timestamp": "2025-02-18 22:17:31",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "101898": {
+        "timestamp": "2025-02-18 22:17:33",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "104183": {
+        "timestamp": "2025-02-18 22:17:34",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "104732": {
+        "timestamp": "2025-02-18 22:17:36",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "105828": {
+        "timestamp": "2025-02-18 22:17:37",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "106906": {
+        "timestamp": "2025-02-18 22:17:39",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "106930": {
+        "timestamp": "2025-02-18 22:17:40",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "107553": {
+        "timestamp": "2025-02-18 22:17:41",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "109105": {
+        "timestamp": "2025-02-18 22:17:44",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "109342": {
+        "timestamp": "2025-02-18 22:17:47",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "110810": {
+        "timestamp": "2025-02-18 22:17:50",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "segito.szov012@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "111293": {
+        "timestamp": "2025-02-18 22:17:52",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "112774": {
+        "timestamp": "2025-02-18 22:17:55",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "113039": {
+        "timestamp": "2025-02-18 22:17:57",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "115969": {
+        "timestamp": "2025-02-18 22:17:59",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "116321": {
+        "timestamp": "2025-02-18 22:18:02",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "allas@log-x.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "116795": {
+        "timestamp": "2025-02-18 22:18:04",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "tar.csilla@ftszv.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "116937": {
+        "timestamp": "2025-02-18 22:18:06",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "117734": {
+        "timestamp": "2025-02-18 22:18:08",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "119768": {
+        "timestamp": "2025-02-18 22:18:10",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "120370": {
+        "timestamp": "2025-02-18 22:18:13",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "120611": {
+        "timestamp": "2025-02-18 22:18:16",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "csilla.mihalicz@gruposese.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "123026": {
+        "timestamp": "2025-02-18 22:18:20",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "127277": {
+        "timestamp": "2025-02-18 22:18:23",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "128879": {
+        "timestamp": "2025-02-18 22:18:24",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "129314": {
+        "timestamp": "2025-02-18 22:23:00",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "137349": {
+        "timestamp": "2025-02-18 22:23:02",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "139347": {
+        "timestamp": "2025-02-18 22:23:03",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "139704": {
+        "timestamp": "2025-02-18 22:23:08",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "hello@momentin.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "139721": {
+        "timestamp": "2025-02-18 22:23:10",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "140519": {
+        "timestamp": "2025-02-18 22:23:11",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "145560": {
+        "timestamp": "2025-02-18 22:23:15",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "147839": {
+        "timestamp": "2025-02-18 22:23:16",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "148816": {
+        "timestamp": "2025-02-18 22:23:17",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "150305": {
+        "timestamp": "2025-02-18 22:23:20",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "150344": {
+        "timestamp": "2025-02-18 22:23:22",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "150796": {
+        "timestamp": "2025-02-18 22:23:24",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "151114": {
+        "timestamp": "2025-02-18 22:23:27",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "151514": {
+        "timestamp": "2025-02-18 22:23:29",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "hello@momentin.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "151890": {
+        "timestamp": "2025-02-18 22:23:30",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "152326": {
+        "timestamp": "2025-02-18 22:23:33",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "153101": {
+        "timestamp": "2025-02-18 22:23:35",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "beresgumi@beresgumi.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "153327": {
+        "timestamp": "2025-02-18 22:23:38",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "nericlean72@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "153935": {
+        "timestamp": "2025-02-18 22:23:40",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "154108": {
+        "timestamp": "2025-02-18 22:23:43",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "154160": {
+        "timestamp": "2025-02-18 22:23:46",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "154189": {
+        "timestamp": "2025-02-18 22:23:49",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "154315": {
+        "timestamp": "2025-02-18 22:23:53",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "155829": {
+        "timestamp": "2025-02-18 22:23:55",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "158756": {
+        "timestamp": "2025-02-18 22:23:56",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "159122": {
+        "timestamp": "2025-02-18 22:23:58",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "nericlean72@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "161077": {
+        "timestamp": "2025-02-18 22:24:00",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "161593": {
+        "timestamp": "2025-02-18 22:24:03",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "nericlean72@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "162115": {
+        "timestamp": "2025-02-18 22:24:05",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "162342": {
+        "timestamp": "2025-02-18 22:24:06",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "163138": {
+        "timestamp": "2025-02-18 22:24:07",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "164624": {
+        "timestamp": "2025-02-18 22:24:09",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "166072": {
+        "timestamp": "2025-02-18 22:24:10",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "166431": {
+        "timestamp": "2025-02-18 22:24:12",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "166477": {
+        "timestamp": "2025-02-18 22:24:16",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "hajnal.gaba28@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "167272": {
+        "timestamp": "2025-02-18 22:24:18",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "167510": {
+        "timestamp": "2025-02-18 22:24:19",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "170931": {
+        "timestamp": "2025-02-18 22:24:22",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "172070": {
+        "timestamp": "2025-02-18 22:24:25",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "172266": {
+        "timestamp": "2025-02-18 22:24:27",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "174017": {
+        "timestamp": "2025-02-18 22:24:29",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "174733": {
+        "timestamp": "2025-02-18 22:24:31",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "178498": {
+        "timestamp": "2025-02-18 22:24:35",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "179795": {
+        "timestamp": "2025-02-18 22:24:40",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "j.vali1981@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "181407": {
+        "timestamp": "2025-02-18 22:24:41",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "183799": {
+        "timestamp": "2025-02-18 22:24:44",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "segito.szov012@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "184129": {
+        "timestamp": "2025-02-18 22:24:49",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "allas@lugex.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "184551": {
+        "timestamp": "2025-02-18 22:24:50",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "185005": {
+        "timestamp": "2025-02-18 22:24:55",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "185338": {
+        "timestamp": "2025-02-18 22:24:58",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "185898": {
+        "timestamp": "2025-02-18 22:26:48",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "187165": {
+        "timestamp": "2025-02-18 22:26:50",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "187714": {
+        "timestamp": "2025-02-18 22:26:54",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "188753": {
+        "timestamp": "2025-02-18 22:26:57",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "189921": {
+        "timestamp": "2025-02-18 22:27:01",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "allas@log-x.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "190132": {
+        "timestamp": "2025-02-18 22:27:04",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "tar.csilla@ftszv.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "190849": {
+        "timestamp": "2025-02-18 22:27:05",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "192280": {
+        "timestamp": "2025-02-18 22:27:07",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "193116": {
+        "timestamp": "2025-02-18 22:27:10",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "194917": {
+        "timestamp": "2025-02-18 22:27:13",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "197261": {
+        "timestamp": "2025-02-18 22:27:14",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "198207": {
+        "timestamp": "2025-02-18 22:27:19",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "199456": {
+        "timestamp": "2025-02-18 22:27:22",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "200732": {
+        "timestamp": "2025-02-18 22:27:25",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "202401": {
+        "timestamp": "2025-02-18 22:27:27",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "203265": {
+        "timestamp": "2025-02-18 22:27:31",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "203886": {
+        "timestamp": "2025-02-18 22:27:33",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "andrea.fekete-leko@teknikum.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "204484": {
+        "timestamp": "2025-02-18 22:27:36",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "204937": {
+        "timestamp": "2025-02-18 22:27:37",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "205302": {
+        "timestamp": "2025-02-18 22:27:38",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "205330": {
+        "timestamp": "2025-02-18 22:27:40",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "205405": {
+        "timestamp": "2025-02-18 22:27:41",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "205990": {
+        "timestamp": "2025-02-18 22:27:42",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "206690": {
+        "timestamp": "2025-02-18 22:27:46",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "hello@momentin.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "206918": {
+        "timestamp": "2025-02-18 22:27:48",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "magyarzsolt77@gmail.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "207422": {
+        "timestamp": "2025-02-18 22:27:50",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "207520": {
+        "timestamp": "2025-02-18 22:27:53",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "208117": {
+        "timestamp": "2025-02-18 22:27:55",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "208313": {
+        "timestamp": "2025-02-18 22:27:57",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "209041": {
+        "timestamp": "2025-02-18 22:27:59",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "209342": {
+        "timestamp": "2025-02-18 22:28:02",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "209566": {
+        "timestamp": "2025-02-18 22:28:05",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "j.vali1981@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "209618": {
+        "timestamp": "2025-02-18 22:28:07",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "210365": {
+        "timestamp": "2025-02-18 22:28:08",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "210379": {
+        "timestamp": "2025-02-18 22:28:11",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "210548": {
+        "timestamp": "2025-02-18 22:28:15",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "210582": {
+        "timestamp": "2025-02-18 22:28:19",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "210621": {
+        "timestamp": "2025-02-18 22:28:21",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "211104": {
+        "timestamp": "2025-02-18 22:28:22",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "211171": {
+        "timestamp": "2025-02-18 22:28:25",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "211249": {
+        "timestamp": "2025-02-18 22:28:28",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "211450": {
+        "timestamp": "2025-02-18 22:28:30",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "211668": {
+        "timestamp": "2025-02-18 22:28:32",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "211943": {
+        "timestamp": "2025-02-18 22:28:35",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "212537": {
+        "timestamp": "2025-02-18 22:28:36",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "212611": {
+        "timestamp": "2025-02-18 22:28:38",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "213642": {
+        "timestamp": "2025-02-18 22:28:41",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "214584": {
+        "timestamp": "2025-02-18 22:28:44",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "214615": {
+        "timestamp": "2025-02-18 22:28:48",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "j.vali1981@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "214764": {
+        "timestamp": "2025-02-18 22:28:51",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "j.vali1981@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "215515": {
+        "timestamp": "2025-02-18 22:30:20",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "beresgumi@beresgumi.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "215668": {
+        "timestamp": "2025-02-18 22:30:23",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "j.vali1981@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "215933": {
+        "timestamp": "2025-02-18 22:30:26",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "215968": {
+        "timestamp": "2025-02-18 22:30:28",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "215987": {
+        "timestamp": "2025-02-18 22:30:31",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "216232": {
+        "timestamp": "2025-02-18 22:30:34",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "216544": {
+        "timestamp": "2025-02-18 22:30:36",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "216654": {
+        "timestamp": "2025-02-18 22:30:37",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "216710": {
+        "timestamp": "2025-02-18 22:30:39",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "216732": {
+        "timestamp": "2025-02-18 22:30:43",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "217165": {
+        "timestamp": "2025-02-18 22:30:44",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "217655": {
+        "timestamp": "2025-02-18 22:30:47",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "217676": {
+        "timestamp": "2025-02-18 22:30:49",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "217808": {
+        "timestamp": "2025-02-18 22:30:50",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "218594": {
+        "timestamp": "2025-02-18 22:30:52",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "219379": {
+        "timestamp": "2025-02-18 22:30:54",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "221679": {
+        "timestamp": "2025-02-18 22:30:55",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "222363": {
+        "timestamp": "2025-02-18 22:30:57",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "allas@log-x.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "222909": {
+        "timestamp": "2025-02-18 22:30:59",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "223312": {
+        "timestamp": "2025-02-18 22:31:01",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "nericlean72@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "223826": {
+        "timestamp": "2025-02-18 22:31:03",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "223876": {
+        "timestamp": "2025-02-18 22:31:05",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "224295": {
+        "timestamp": "2025-02-18 22:31:07",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "224539": {
+        "timestamp": "2025-02-18 22:31:08",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "224753": {
+        "timestamp": "2025-02-18 22:31:10",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "225121": {
+        "timestamp": "2025-02-18 22:31:12",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "225158": {
+        "timestamp": "2025-02-18 22:31:15",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "225161": {
+        "timestamp": "2025-02-18 22:31:18",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "nericlean72@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "225683": {
+        "timestamp": "2025-02-18 22:31:21",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "225786": {
+        "timestamp": "2025-02-18 22:31:23",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "226192": {
+        "timestamp": "2025-02-18 22:31:24",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "226521": {
+        "timestamp": "2025-02-18 22:31:27",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "227596": {
+        "timestamp": "2025-02-18 22:31:29",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "toth.masszazs@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "228469": {
+        "timestamp": "2025-02-18 22:31:33",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "229259": {
+        "timestamp": "2025-02-18 22:31:35",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "230677": {
+        "timestamp": "2025-02-18 22:31:38",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "231133": {
+        "timestamp": "2025-02-18 22:31:39",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "231160": {
+        "timestamp": "2025-02-18 22:31:40",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "231202": {
+        "timestamp": "2025-02-18 22:31:43",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "231936": {
+        "timestamp": "2025-02-18 22:31:44",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "232320": {
+        "timestamp": "2025-02-18 22:31:46",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "toth.masszazs@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "232741": {
+        "timestamp": "2025-02-18 22:31:48",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "232802": {
+        "timestamp": "2025-02-18 22:31:51",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "232934": {
+        "timestamp": "2025-02-18 22:31:55",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "233108": {
+        "timestamp": "2025-02-18 22:31:57",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "233147": {
+        "timestamp": "2025-02-18 22:31:59",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "233243": {
+        "timestamp": "2025-02-18 22:32:02",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "233292": {
+        "timestamp": "2025-02-18 22:32:03",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "233439": {
+        "timestamp": "2025-02-18 22:32:06",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "234454": {
+        "timestamp": "2025-02-18 22:32:07",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "235140": {
+        "timestamp": "2025-02-18 22:32:47",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "mzsconstruct@mzsconstruct.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "235344": {
+        "timestamp": "2025-02-18 22:32:48",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "235828": {
+        "timestamp": "2025-02-18 22:32:52",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "235891": {
+        "timestamp": "2025-02-18 22:32:53",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "236460": {
+        "timestamp": "2025-02-18 22:32:55",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "237591": {
+        "timestamp": "2025-02-18 22:32:57",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "238112": {
+        "timestamp": "2025-02-18 22:32:59",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "238339": {
+        "timestamp": "2025-02-18 22:33:03",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "238357": {
+        "timestamp": "2025-02-18 22:33:06",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "j.vali1981@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "238495": {
+        "timestamp": "2025-02-18 22:33:07",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "238500": {
+        "timestamp": "2025-02-18 22:33:08",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "240953": {
+        "timestamp": "2025-02-18 22:33:10",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "241546": {
+        "timestamp": "2025-02-18 22:33:11",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "241886": {
+        "timestamp": "2025-02-18 22:33:14",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "242008": {
+        "timestamp": "2025-02-18 22:33:16",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "242607": {
+        "timestamp": "2025-02-18 22:33:18",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "nericlean72@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "243129": {
+        "timestamp": "2025-02-18 22:33:20",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "243195": {
+        "timestamp": "2025-02-18 22:33:22",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "243312": {
+        "timestamp": "2025-02-18 22:33:28",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "j.vali1981@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "243465": {
+        "timestamp": "2025-02-18 22:33:30",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "hello@momentin.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "243466": {
+        "timestamp": "2025-02-18 22:33:31",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "243514": {
+        "timestamp": "2025-02-18 22:33:34",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "243645": {
+        "timestamp": "2025-02-18 22:33:36",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "243690": {
+        "timestamp": "2025-02-18 22:33:38",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "243939": {
+        "timestamp": "2025-02-18 22:33:40",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "244126": {
+        "timestamp": "2025-02-18 22:33:41",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "244650": {
+        "timestamp": "2025-02-18 22:33:44",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "245938": {
+        "timestamp": "2025-02-18 22:33:46",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "246673": {
+        "timestamp": "2025-02-18 22:33:47",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "246721": {
+        "timestamp": "2025-02-18 22:33:49",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "246939": {
+        "timestamp": "2025-02-18 22:33:50",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "247124": {
+        "timestamp": "2025-02-18 22:33:51",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "247404": {
+        "timestamp": "2025-02-18 22:33:55",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "hello@momentin.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "248797": {
+        "timestamp": "2025-02-18 22:33:56",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "249046": {
+        "timestamp": "2025-02-18 22:33:58",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "249481": {
+        "timestamp": "2025-02-18 22:33:59",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "250074": {
+        "timestamp": "2025-02-18 22:34:02",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "250162": {
+        "timestamp": "2025-02-18 22:34:04",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "250769": {
+        "timestamp": "2025-02-18 22:34:07",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "bardossy@cellkabel.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "250771": {
+        "timestamp": "2025-02-18 22:34:10",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "250802": {
+        "timestamp": "2025-02-18 22:34:12",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "250927": {
+        "timestamp": "2025-02-18 22:34:16",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251246": {
+        "timestamp": "2025-02-18 22:34:21",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "j.vali1981@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251267": {
+        "timestamp": "2025-02-18 22:34:23",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251289": {
+        "timestamp": "2025-02-18 22:34:26",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251416": {
+        "timestamp": "2025-02-18 22:34:27",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251551": {
+        "timestamp": "2025-02-18 22:34:30",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251552": {
+        "timestamp": "2025-02-18 22:34:32",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251553": {
+        "timestamp": "2025-02-18 22:34:33",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251554": {
+        "timestamp": "2025-02-18 22:34:34",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251555": {
+        "timestamp": "2025-02-18 22:35:41",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "nericlean72@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251556": {
+        "timestamp": "2025-02-18 22:35:42",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251557": {
+        "timestamp": "2025-02-18 22:35:45",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251558": {
+        "timestamp": "2025-02-18 22:35:48",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251560": {
+        "timestamp": "2025-02-18 22:35:50",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251561": {
+        "timestamp": "2025-02-18 22:35:52",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251562": {
+        "timestamp": "2025-02-18 22:35:55",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "j.vali1981@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251563": {
+        "timestamp": "2025-02-18 22:35:57",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251566": {
+        "timestamp": "2025-02-18 22:35:58",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251567": {
+        "timestamp": "2025-02-18 22:36:00",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251568": {
+        "timestamp": "2025-02-18 22:36:02",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251569": {
+        "timestamp": "2025-02-18 22:36:04",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251570": {
+        "timestamp": "2025-02-18 22:36:06",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251571": {
+        "timestamp": "2025-02-18 22:36:09",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251572": {
+        "timestamp": "2025-02-18 22:36:10",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251573": {
+        "timestamp": "2025-02-18 22:36:12",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251574": {
+        "timestamp": "2025-02-18 22:36:15",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251575": {
+        "timestamp": "2025-02-18 22:36:17",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251576": {
+        "timestamp": "2025-02-18 22:36:18",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251577": {
+        "timestamp": "2025-02-18 22:36:20",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "j.vali1981@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251578": {
+        "timestamp": "2025-02-18 22:36:23",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251579": {
+        "timestamp": "2025-02-18 22:36:25",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251580": {
+        "timestamp": "2025-02-18 22:36:27",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251581": {
+        "timestamp": "2025-02-18 22:36:28",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251582": {
+        "timestamp": "2025-02-18 22:36:29",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251583": {
+        "timestamp": "2025-02-18 22:36:31",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251584": {
+        "timestamp": "2025-02-18 22:36:34",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "nagyniro@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251585": {
+        "timestamp": "2025-02-18 22:36:37",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "hello@momentin.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251586": {
+        "timestamp": "2025-02-18 22:36:39",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "beresgumi@beresgumi.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251587": {
+        "timestamp": "2025-02-18 22:36:41",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "magyarzsolt77@gmail.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251588": {
+        "timestamp": "2025-02-18 22:36:44",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251589": {
+        "timestamp": "2025-02-18 22:36:46",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251590": {
+        "timestamp": "2025-02-18 22:36:48",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251591": {
+        "timestamp": "2025-02-18 22:36:50",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251592": {
+        "timestamp": "2025-02-18 22:36:53",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "csilla.mihalicz@gruposese.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251593": {
+        "timestamp": "2025-02-18 22:36:54",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251594": {
+        "timestamp": "2025-02-18 22:36:57",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251595": {
+        "timestamp": "2025-02-18 22:36:58",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251596": {
+        "timestamp": "2025-02-18 22:37:01",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251597": {
+        "timestamp": "2025-02-18 22:37:05",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "j.vali1981@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251598": {
+        "timestamp": "2025-02-18 22:37:07",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251599": {
+        "timestamp": "2025-02-18 22:37:10",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251600": {
+        "timestamp": "2025-02-18 22:37:12",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251601": {
+        "timestamp": "2025-02-18 22:37:13",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251602": {
+        "timestamp": "2025-02-18 22:37:17",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "csilla.mihalicz@gruposese.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251603": {
+        "timestamp": "2025-02-18 22:37:19",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251604": {
+        "timestamp": "2025-02-18 22:37:20",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251605": {
+        "timestamp": "2025-02-18 22:37:23",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251606": {
+        "timestamp": "2025-02-18 22:37:25",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "hello@momentin.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251607": {
+        "timestamp": "2025-02-18 22:37:27",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251608": {
+        "timestamp": "2025-02-18 22:39:06",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "bardossy@cellkabel.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251609": {
+        "timestamp": "2025-02-18 22:39:08",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251610": {
+        "timestamp": "2025-02-18 22:39:09",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251611": {
+        "timestamp": "2025-02-18 22:39:10",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251612": {
+        "timestamp": "2025-02-18 22:39:13",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "halomfonover@halomotthon.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251613": {
+        "timestamp": "2025-02-18 22:39:16",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251614": {
+        "timestamp": "2025-02-18 22:39:17",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251615": {
+        "timestamp": "2025-02-18 22:39:18",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251616": {
+        "timestamp": "2025-02-18 22:39:19",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251617": {
+        "timestamp": "2025-02-18 22:39:21",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251618": {
+        "timestamp": "2025-02-18 22:39:23",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251620": {
+        "timestamp": "2025-02-18 22:39:25",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251621": {
+        "timestamp": "2025-02-18 22:39:27",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251622": {
+        "timestamp": "2025-02-18 22:39:30",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251623": {
+        "timestamp": "2025-02-18 22:39:31",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251624": {
+        "timestamp": "2025-02-18 22:39:32",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251625": {
+        "timestamp": "2025-02-18 22:39:34",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251626": {
+        "timestamp": "2025-02-18 22:39:36",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251627": {
+        "timestamp": "2025-02-18 22:39:38",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251628": {
+        "timestamp": "2025-02-18 22:39:40",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251629": {
+        "timestamp": "2025-02-18 22:39:41",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251630": {
+        "timestamp": "2025-02-18 22:39:42",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251631": {
+        "timestamp": "2025-02-18 22:39:44",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251632": {
+        "timestamp": "2025-02-18 22:39:45",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251633": {
+        "timestamp": "2025-02-18 22:39:46",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251634": {
+        "timestamp": "2025-02-18 22:39:49",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251635": {
+        "timestamp": "2025-02-18 22:39:50",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251636": {
+        "timestamp": "2025-02-18 22:39:51",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251637": {
+        "timestamp": "2025-02-18 22:39:54",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "hello@momentin.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251638": {
+        "timestamp": "2025-02-18 22:39:55",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251639": {
+        "timestamp": "2025-02-18 22:40:00",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "j.vali1981@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251640": {
+        "timestamp": "2025-02-18 22:40:01",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251641": {
+        "timestamp": "2025-02-18 22:40:04",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251642": {
+        "timestamp": "2025-02-18 22:40:06",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "j.vali1981@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251643": {
+        "timestamp": "2025-02-18 22:40:08",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251644": {
+        "timestamp": "2025-02-18 22:40:10",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251645": {
+        "timestamp": "2025-02-18 22:40:12",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251646": {
+        "timestamp": "2025-02-18 22:40:13",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251647": {
+        "timestamp": "2025-02-18 22:40:16",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251648": {
+        "timestamp": "2025-02-18 22:40:17",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251649": {
+        "timestamp": "2025-02-18 22:40:19",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251650": {
+        "timestamp": "2025-02-18 22:40:23",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251651": {
+        "timestamp": "2025-02-18 22:40:24",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251652": {
+        "timestamp": "2025-02-18 22:40:25",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251653": {
+        "timestamp": "2025-02-18 22:40:31",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "toth.masszazs@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251654": {
+        "timestamp": "2025-02-18 22:40:32",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251655": {
+        "timestamp": "2025-02-18 22:40:35",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251657": {
+        "timestamp": "2025-02-19 19:11:07",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "magyarzsolt77@gmail.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251658": {
+        "timestamp": "2025-02-19 19:13:09",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251659": {
+        "timestamp": "2025-02-19 19:13:11",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "j.vali1981@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251660": {
+        "timestamp": "2025-02-19 19:13:12",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251661": {
+        "timestamp": "2025-02-19 19:13:16",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251662": {
+        "timestamp": "2025-02-19 19:13:21",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251663": {
+        "timestamp": "2025-02-19 19:13:22",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251664": {
+        "timestamp": "2025-02-19 19:13:25",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "beresgumi@beresgumi.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251665": {
+        "timestamp": "2025-02-19 19:13:26",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251666": {
+        "timestamp": "2025-02-19 19:13:27",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251667": {
+        "timestamp": "2025-02-19 19:13:29",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251668": {
+        "timestamp": "2025-02-19 19:13:31",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "magyarzsolt77@gmail.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251669": {
+        "timestamp": "2025-02-19 19:13:32",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251670": {
+        "timestamp": "2025-02-19 19:13:35",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "hello@momentin.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251671": {
+        "timestamp": "2025-02-19 19:13:37",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251672": {
+        "timestamp": "2025-02-19 19:13:39",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "j.vali1981@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251673": {
+        "timestamp": "2025-02-19 19:13:41",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251674": {
+        "timestamp": "2025-02-19 19:13:44",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251675": {
+        "timestamp": "2025-02-19 19:13:45",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251676": {
+        "timestamp": "2025-02-19 19:13:47",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251677": {
+        "timestamp": "2025-02-19 19:13:48",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251678": {
+        "timestamp": "2025-02-19 19:13:49",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251679": {
+        "timestamp": "2025-02-19 19:13:52",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251680": {
+        "timestamp": "2025-02-19 19:13:54",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "j.vali1981@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251681": {
+        "timestamp": "2025-02-19 19:13:57",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "j.vali1981@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251682": {
+        "timestamp": "2025-02-19 19:13:59",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251683": {
+        "timestamp": "2025-02-19 19:14:02",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251684": {
+        "timestamp": "2025-02-19 19:14:04",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251685": {
+        "timestamp": "2025-02-19 19:14:06",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251686": {
+        "timestamp": "2025-02-19 19:14:07",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251687": {
+        "timestamp": "2025-02-19 19:14:09",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251688": {
+        "timestamp": "2025-02-19 19:14:11",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251689": {
+        "timestamp": "2025-02-19 19:14:14",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251690": {
+        "timestamp": "2025-02-19 19:14:15",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251691": {
+        "timestamp": "2025-02-19 19:14:16",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251692": {
+        "timestamp": "2025-02-19 19:14:18",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251693": {
+        "timestamp": "2025-02-19 19:14:21",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "bardossy@cellkabel.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251694": {
+        "timestamp": "2025-02-19 19:14:22",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251695": {
+        "timestamp": "2025-02-19 19:14:25",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251696": {
+        "timestamp": "2025-02-19 19:14:28",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251697": {
+        "timestamp": "2025-02-19 19:14:29",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251698": {
+        "timestamp": "2025-02-19 19:14:32",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "j.vali1981@gmail.com"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251699": {
+        "timestamp": "2025-02-19 19:14:34",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "allas@lugex.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251700": {
+        "timestamp": "2025-02-19 19:14:35",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251701": {
+        "timestamp": "2025-02-19 19:14:37",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251702": {
+        "timestamp": "2025-02-19 19:14:41",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251703": {
+        "timestamp": "2025-02-19 19:14:43",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251704": {
+        "timestamp": "2025-02-19 19:14:45",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "tar.csilla@ftszv.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251705": {
+        "timestamp": "2025-02-19 19:14:47",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251707": {
+        "timestamp": "2025-02-19 19:14:50",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251708": {
+        "timestamp": "2025-02-19 19:14:52",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251709": {
+        "timestamp": "2025-02-19 19:17:08",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251710": {
+        "timestamp": "2025-02-19 19:17:09",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251711": {
+        "timestamp": "2025-02-19 19:17:11",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "magyarzsolt77@gmail.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251712": {
+        "timestamp": "2025-02-19 19:17:13",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251713": {
+        "timestamp": "2025-02-19 19:17:14",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251714": {
+        "timestamp": "2025-02-19 19:17:17",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251715": {
+        "timestamp": "2025-02-19 19:17:18",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251786": {
+        "timestamp": "2025-02-19 19:23:25",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251787": {
+        "timestamp": "2025-02-19 19:23:27",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251788": {
+        "timestamp": "2025-02-19 19:23:30",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251789": {
+        "timestamp": "2025-02-19 19:23:31",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251790": {
+        "timestamp": "2025-02-19 19:23:32",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251791": {
+        "timestamp": "2025-02-19 19:23:34",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "hello@momentin.hu"
+            ]
+        },
+        "fully_processed": true
+    },
+    "251792": {
+        "timestamp": "2025-02-19 19:23:36",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": []
+        },
+        "fully_processed": true
+    },
+    "251793": {
+        "timestamp": "2025-02-19 19:23:38",
+        "sent_emails": {
+            "applicant": true,
+            "admin_emails": [
+                "karrier@mumi.hu"
+            ],
+            "minimal_package_emails": [
+                "hello@momentin.hu"
+            ]
+        },
+        "fully_processed": true
+    }
+}

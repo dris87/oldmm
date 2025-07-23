@@ -1,0 +1,60 @@
+{% import 'modules/atoms/bootstrap/tables.html.twig' as tables %}
+{% import 'modules/atoms/bootstrap/accordion.html.twig' as accordion %}
+
+<h2>Import</h2>
+{% verbatim %}
+<pre><code class="twig">{% import 'modules/atoms/bootstrap/accordion.html.twig' as accordion %}</code></pre>
+{% endverbatim  %}
+<hr/>
+
+<h2>Accordion</h2>
+{% set test_accordion_items = [
+    { id : 'test-id' , title : 'Test title' , content : 'Test content' },
+    { id : 'test-id-2' , title : 'Test title 2' , content : 'Test content 2' },
+] %}
+{{ accordion.accordion( test_accordion_items , 'Test-accordion-id' ) }}
+
+</hr>
+<h4>Description</h4>
+{{ tables.table(
+    [ { html : 'Field' } , { html : 'Type' } , { html : 'Description' } ],
+    [   {cols : [ { html : 'items' } , { html : 'array' } , { html : 'Array of accordion_item instances' } ]},
+        {cols : [ { html : 'id' } , { html : 'string' } , { html : 'Unique id of accordion' } ]}
+    ],'striped') }}
+<code>
+    {% verbatim %}
+        {{ accordion.accordion( items , id ) }}
+    {% endverbatim  %}
+</code>
+<h4>Example</h4>
+{% verbatim %}
+<pre><code class="twig">{% import 'modules/atoms/bootstrap/accordion.html.twig' as accordion %}
+{% set test_accordion_items = [
+    { id : 'test-id' , title : 'Test title' , content : 'Test content' },
+    { id : 'test-id-2' , title : 'Test title 2' , content : 'Test content 2' },
+] %}
+{{ accordion.accordion( test_accordion_items , 'Test-accordion-id' ) }}</code></pre>{% endverbatim  %}
+<hr/>
+
+<h2>Accordion item</h2>
+{{ accordion.accordion_item( 'test-accordion-item-id' , 'test title',  'test content' ) }}
+
+</hr>
+<h4>Description</h4>
+{{ tables.table(
+    [ { html : 'Field' } , { html : 'Type' } , { html : 'Description' } ],
+    [
+        {cols : [ { html : 'id' } , { html : 'string' } , { html : 'Unique id of accordion' } ]},
+        {cols : [ { html : 'title' } , { html : 'string' } , { html : 'Title of accordion' } ]},
+        {cols : [ { html : 'content' } , { html : 'string' } , { html : 'Content of accordion' } ]}
+    ],'striped') }}
+<code>
+    {% verbatim %}
+        {{ accordion.accordion_item( id , title , content) }}
+    {% endverbatim  %}
+</code>
+<h4>Example</h4>
+{% verbatim %}
+<pre><code class="twig">{% import 'modules/atoms/bootstrap/accordion.html.twig' as accordion %}
+{{ accordion.accordion_item( 'test-id' , 'test title',  'test content' ) }}</code></pre>{% endverbatim  %}
+<hr/>

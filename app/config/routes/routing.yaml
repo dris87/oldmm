@@ -1,0 +1,58 @@
+   # routing for FOSUserBundle
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+sonata_user_admin_security:
+    resource: '@SonataUserBundle/Resources/config/routing/admin_security.xml'
+    prefix: /admin
+
+sonata_user_admin_resetting:
+    resource: '@SonataUserBundle/Resources/config/routing/admin_resetting.xml'
+    prefix: /admin/resetting
+
+# routing for SonataAdminBundle
+admin_area:
+    resource: "@SonataAdminBundle/Resources/config/routing/sonata_admin.xml"
+    prefix: /admin
+
+_sonata_admin:
+    resource: .
+    type: sonata_admin
+    prefix: /admin
+
+all4one_autocomplete:
+    resource: '@All4OneAutocompleteBundle/Resources/config/routing.yaml'
+
+
+homepage:
+    path: /{_locale}
+    defaults:
+        controller: All4One\AppBundle\Controller\IndexController
+        template: default/homepage.html.twig
+        _locale: '%locale%'
+    requirements:
+        _locale: '%app_locales%'
+
+controllers:
+    resource: '@All4OneAppBundle/Controller/'
+    type: 'annotation'
+    prefix: '/{_locale}'
+    defaults:
+        _locale: '%locale%'
+    requirements:
+        _locale: '%app_locales%'
+
+admin_controllers:
+    resource: '@BackOfficeAppBundle/Controller/'
+    type: annotation
+    prefix: '/app/admin'
+
+presta_image:
+    resource: "@PrestaImageBundle/Resources/config/routing.yml"
+
+frcho_cron_task:
+    resource: "@FrchoCrontaskBundle/Resources/config/routing.yml"
+
+all4one_robots_txt:
+    resource: "@All4OneRobotsTxtBundle/Controller/"
+    type:     annotation

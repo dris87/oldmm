@@ -1,0 +1,65 @@
+/** Variables
+
+// Configurations
+
+// $fix-mqs
+//
+// Define width for browsers w/out media query support
+//
+// $fix-mqs - {boolean}
+// @source  - http://jakearchibald.github.com/sass-ie/
+**/
+$fix-mqs:                     false !default;
+
+/* $old-ie
+//
+// Turn on/off IE specific styles
+//
+// $old-ie - {boolean}
+// @source  - http://jakearchibald.github.com/sass-ie/
+**/
+$old-ie:                      false !default;
+
+/* $breakpoints
+//
+// Define major breakpoints
+// There are no common breakpoints; examples based on the official Sass styleguide
+// You'll need to define your own breakpoints to suit your design
+//
+// $breakpoints - {map}
+**/
+$breakpoints: (
+  xsmall:                     null,
+  small:                      480,
+  medium:                     768,
+  large:                      1024,
+  xlarge:                     1280,
+);
+
+// $zindex
+//
+// Define z-indexes for various elements
+//
+// $zindex - {map}
+// @source - http://www.sitepoint.com/using-sass-maps/
+$zindex: (
+  overlay:                    900000,
+  dropdown:                   800000,
+  nav:                        700000,
+  nav-burger:                 700000,
+  full-page-modal:            700001,
+  menu:                       850000,
+  header:                     600000,
+  footer:                     500000,
+  pseduo:                     400000,
+  default:                    1,
+  bottomless-pit:             -10000
+);
+
+$footer-height: 240px;
+$footer-height-md: 240px;
+$footer-height-sm: 291px;
+$footer-height-xs: 427px;
+
+$nav-height: 70px;
+$nav-bg: $black;

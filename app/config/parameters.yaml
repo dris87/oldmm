@@ -1,0 +1,17 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_url: ''
+    error_log_email: 
+    fos_mailer_user: 
+    fos_mailer_name: 
+    email_sender: 
+    mailer_transport: smtp
+    mailer_host: smtp-relay.gmail.com
+    mailer_mode: login
+    router.request_context.host: mm.hu
+    router.request_context.scheme: https
+    router.request_context.base_url: web
+    secret: 67d829bf61dc5f87a73fd814e2c9f629
+    session_lifetime: 3600
+    szamlazzhu.username: test@gmail.com
+    szamlazzhu.password:

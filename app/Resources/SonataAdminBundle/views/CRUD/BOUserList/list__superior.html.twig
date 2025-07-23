@@ -1,0 +1,21 @@
+
+{% extends admin.getTemplate('base_list_field') %}
+
+{% block field %}
+   <div>
+       <b>
+           {% if value["superior"] %}
+               {{ value["superior"] }}
+           {% else %}
+               -
+           {% endif %}
+       </b><br>
+        (
+       {% if value["post"] %}
+           {{ value["post"] }}
+       {% else %}
+           -
+       {% endif %}
+        )
+   </div>
+{% endblock %}

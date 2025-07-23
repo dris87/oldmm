@@ -1,0 +1,7 @@
+{% extends '@SonataAdmin/CRUD/base_list_field.html.twig' %}
+
+{% block field %}
+    <div>
+        <a href="{{ path('admin_common_core_employee_employee_employee_cv_employeecv_list', {'id': object.id }) }}" class="btn btn-default">CV lista</a>
+    </div>
+{% endblock %}

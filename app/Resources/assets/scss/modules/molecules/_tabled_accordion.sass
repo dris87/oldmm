@@ -1,0 +1,29 @@
+.m-tabled-accordion
+  &.panel-group
+    .panel
+      padding: 0
+      border: none
+      @include box-shadow(0px 0px 8px -1px rgba(0,0,0,0.55))
+      .panel-heading
+        padding: 20px 30px
+        background: $ua-blue
+        border: none
+        color: $white
+        text-transform: uppercase
+        &.red
+          background: $ua-red
+        &.orange
+          background: $ua-orange
+        h4
+          font-size: 14px
+          strong
+            font-size: 12px
+            font-weight: bold
+        a
+          color: $white
+          &:hover,
+          &:focus,
+          &:active
+            color: $white
+      .panel-body
+        padding: 0px

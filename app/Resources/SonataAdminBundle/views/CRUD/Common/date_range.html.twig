@@ -1,0 +1,9 @@
+{% extends '@SonataAdmin/CRUD/base_list_field.html.twig' %}
+
+{% block field %}
+    <div style="text-align: center">
+        {% if value is not empty %}
+            {{ value.getFrom|date('Y.m.d') }} - {{ value.getUntil|date('Y.m.d') }}
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,112 @@
+# Sonata Admin Configuration
+sonata_user:
+    security_acl: false
+    manager_type: orm      # can be orm or mongodb
+
+    table:
+        user_group: "back_office_user_group"
+
+    impersonating:
+        route:                page_slug
+        parameters:           { path: / }
+
+    class:                  # Entity Classes
+        user:               Application\Sonata\UserBundle\Entity\User
+        group:              Application\Sonata\UserBundle\Entity\Group
+
+    admin:                  # Admin Classes
+        user:
+            class:          BackOffice\AppBundle\Admin\BOUser\BOUserAdmin
+            controller:     BackOfficeAppBundle:UserCRUD
+            translation:    SonataUserBundle
+
+        group:
+            class:          Sonata\UserBundle\Admin\Entity\GroupAdmin
+            controller:     SonataAdminBundle:CRUD
+            translation:    SonataUserBundle
+
+    profile:
+        default_avatar: 'bundles/sonatauser/default_avatar.png' # Default avatar displayed if user doesn't have one
+
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        # enable the SonataAdminBundle block
+        sonata.admin.block.admin_list:
+            contexts: [admin]
+        sonata.user.block.menu:    # used to display the menu in profile pages
+        sonata.user.block.account: # used to display menu option (login option)
+        sonata.block.service.text: # used to if you plan to use Sonata user routes
+
+sonata_admin:
+    persist_filters: true
+    options:
+        html5_validate: false
+    assets:
+        stylesheets:
+            - 'bundles/sonatacore/vendor/bootstrap/dist/css/bootstrap.min.css'
+            - 'bundles/sonatacore/vendor/components-font-awesome/css/font-awesome.min.css'
+            - 'bundles/sonatacore/vendor/ionicons/css/ionicons.min.css'
+            - 'bundles/sonataadmin/vendor/admin-lte/dist/css/AdminLTE.min.css'
+            - 'bundles/sonataadmin/vendor/admin-lte/dist/css/skins/skin-black.min.css'
+            - 'bundles/sonataadmin/vendor/iCheck/skins/square/blue.css'
+
+            - 'bundles/sonatacore/vendor/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css'
+
+            - 'bundles/sonataadmin/vendor/jqueryui/themes/base/jquery-ui.css'
+
+            - 'bundles/sonatacore/vendor/select2/select2.css'
+            - 'bundles/sonatacore/vendor/select2-bootstrap-css/select2-bootstrap.min.css'
+
+            - 'bundles/sonataadmin/vendor/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css'
+
+            - 'bundles/sonataadmin/css/styles.css'
+            - 'bundles/sonataadmin/css/layout.css'
+            - 'bundles/sonataadmin/css/tree.css'
+            - 'https://cdnjs.cloudflare.com/ajax/libs/cropper/4.0.0/cropper.css'
+            - 'bundles/prestaimage/css/cropper.css'
+
+            # saját css-ek:
+            - "bundles/backofficeapp/css/admin.css"
+        javascripts:
+
+            # The default javascript list:
+            - bundles/sonatacore/vendor/jquery/dist/jquery.min.js
+            - bundles/sonataadmin/vendor/jquery.scrollTo/jquery.scrollTo.min.js
+            - bundles/sonatacore/vendor/moment/min/moment.min.js
+            - bundles/sonatacore/vendor/bootstrap/dist/js/bootstrap.min.js
+            - bundles/sonataadmin/vendor/jqueryui/ui/minified/jquery-ui.min.js
+            - bundles/sonataadmin/vendor/jqueryui/ui/minified/i18n/jquery-ui-i18n.min.js
+            - bundles/sonatacore/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js
+            - bundles/sonataadmin/vendor/jquery-form/jquery.form.js
+            - bundles/sonataadmin/jquery/jquery.confirmExit.js
+            - bundles/sonataadmin/vendor/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.min.js
+            - bundles/sonatacore/vendor/select2/select2.min.js
+            - bundles/sonataadmin/vendor/admin-lte/dist/js/app.min.js
+            - bundles/sonataadmin/vendor/iCheck/icheck.min.js
+            - bundles/sonataadmin/vendor/slimScroll/jquery.slimscroll.min.js
+            - bundles/sonataadmin/vendor/waypoints/lib/jquery.waypoints.min.js
+            - bundles/sonataadmin/vendor/waypoints/lib/shortcuts/sticky.min.js
+            - bundles/sonataadmin/Admin.js
+            - bundles/sonataadmin/treeview.js
+            - bundles/sonataadmin/sidebar.js
+            - https://cdnjs.cloudflare.com/ajax/libs/cropper/4.0.0/cropper.js
+            - bundles/prestaimage/js/cropper.js
+            - bundles/backofficeapp/js/admin.js
+            - bundles/backofficeapp/js/bulk-locations.js
+    title:      Mumi.hu
+    title_logo: /images/logo/mumi_logo-blue_light.png
+    dashboard:
+      blocks:
+        - { position: left, type: sonata.admin.block.admin_list }
+        ##- { position: left, type: sonata.block.service.text, settings: { content: "<div class='panel panel-default'><div class='panel-heading'><h3 class='panel-title'>Welcome!</h3></div><div class='panel-body'>You can customize this dashboard by editing the <code>sonata_admin.yml</code> file. The current dashboard presents the recent items from the NewsBundle and a non-statistical e-commerce information.</div></div>"} }
+        ##- { position: left, type: sonata.news.block.recent_offers, settings: { title: Recent Posts, number: 7, mode: admin }}
+        ##- { position: left, type: sonata.news.block.recent_comments, settings: { title: Recent Comments, number: 7, mode: admin }}
+        ##- { position: right, type: sonata.order.block.recent_orders, settings: { title: Recent Orders, number: 5, mode: admin }}
+        ##- { position: right, type: sonata.customer.block.recent_customers, settings: { title: Recent Customers, number: 5, mode: admin }}
+        ##- { position: right, type: sonata.block.service.rss, settings: { title: Sonata Project's Feeds, url: http://sonata-project.org/blog/archive.rss, template: SonataAdminBundle:Block:block_rss_dashboard.html.twig }}
+
+#    security:
+#
+#        # the default value
+#        handler: sonata.admin.security.handler.role

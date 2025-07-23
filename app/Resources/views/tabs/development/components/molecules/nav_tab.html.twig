@@ -1,0 +1,61 @@
+{% import 'modules/atoms/bootstrap/navs.html.twig' as navs %}
+{% import 'modules/atoms/bootstrap/tables.html.twig' as tables %}
+
+<h2>Import</h2>
+    {% verbatim %}
+<pre><code class="twig">{% import 'modules/atoms/bootstrap/navs.html.twig' as navs %}</code></pre> 
+    {% endverbatim  %}
+<hr/>
+
+<h2>Tabs</h2>
+    {% set tabs = [
+        { dir: 'atoms', text: 'Tab', active: true },
+        { dir: 'molecules', text: 'Nav'},
+    ] %}
+    {{ navs.tabs(tabs, []) }}
+
+</hr>
+<h4>Description</h4>
+    {{ tables.table( 
+        [ { html : 'Field' } , { html : 'Type' } , { html : 'Description' } ],
+        [   
+            {cols : [ { html : 'items' } , { html : 'array' } , { html : 'Array containing the following keys [text|this will be displayed , active|true if the tab is active , dir|sub directory name(not mandatory)]' } ]},
+            {cols : [ { html : 'attributes' } , { html : 'object' } , { html : 'Object of attributes' } ]},
+            {cols : [ { html : 'isStacked' } , { html : 'boolean' } , { html : 'Stacked means vertical alignment' } ]},
+            {cols : [ { html : 'isJustified' } , { html : 'boolean' } , { html : 'will take all available horizontal space' } ]},
+            {cols : [ { html : 'class' } , { html : 'string' } , { html : 'class(es) added to the main ul tag' } ]},
+        ],'striped') }}
+    <code>
+       navs.tabs(items, attributes, isStacked, isJustified)
+    </code>
+<h4>Example</h4>
+    {% verbatim %}
+<pre><code class="twig">{% set tabs = [
+    { dir: 'atoms', text: 'Tab', active: true },
+    { dir: 'molecules', text: 'Nav'},
+] %}
+{{ navs.tabs(tabs, [], true) }}</code></pre> 
+    {% endverbatim  %}
+<hr/>
+<h2>Pills</h2>
+    {% set tabs = [
+        { dir: 'atoms', text: 'Tab', active: true },
+        { dir: 'molecules', text: 'Nav'},
+    ] %}
+    {{ navs.pills(tabs, []) }}
+
+</hr>
+<h4>Description</h4>
+    Same properties as the tab version
+    <code>
+       navs.pills(items, attributes, isStacked, isJustified)
+    </code>
+<h4>Example</h4>
+    {% verbatim %}
+<pre><code class="twig">{% set tabs = [
+    { dir: 'atoms', text: 'Tab', active: true },
+    { dir: 'molecules', text: 'Nav'},
+] %}
+{{ navs.pills(tabs, [], true) }}</code></pre> 
+    {% endverbatim  %}
+<hr/>

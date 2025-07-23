@@ -1,0 +1,5 @@
+doctrine_migrations:
+    dir_name: '%kernel.project_dir%/App/Migrations'
+    # namespace is arbitrary but should be different from All4One\AppBundle\Migrations
+    # as migrations classes should NOT be autoloaded
+    namespace: DoctrineMigrations

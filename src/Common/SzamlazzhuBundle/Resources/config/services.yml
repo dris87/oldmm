@@ -1,0 +1,8 @@
+services:
+    Common\SzamlazzhuBundle\Manager\InvoiceManager:
+        arguments:
+            - "%all4one.szamlazzhu.username%"
+            - "%all4one.szamlazzhu.password%"
+            - "%all4one.szamlazzhu.e_invoice%"
+            - "@filesystem"
+

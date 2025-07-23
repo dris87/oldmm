@@ -1,0 +1,31 @@
+<div class="m-tiles-detailed-list--content clearfix {% if is_granted('ROLE_OFFER_EXALTATION' , offer) %}m-tiles-detailed-list--highlighted {% endif %}">
+
+    {% if is_granted('ROLE_OFFER_EXALTATION' , offer) %}
+        <div class="m-tiles-detailed-list--highlighted-box">KIEMELT</div>
+    {% endif %}
+    <div class="m-tiles-detailed-list--logo clearfix"><img src="{{ asset('uploads/firm/logo/5e551f287b999.png') }}"/> </div>
+
+    <div class="m-tiles-detailed-list--body clearfix">
+
+        {% if not offer.anonim %}
+            <span class="m-tiles-detailed-list--top-title">Munkalehetőség Mindenkinek Kft.{# offer.firm.name #}</span>
+        {% endif %}
+
+        <strong class="m-tiles-detailed-list--title">
+            {{ offer.title }}
+
+           
+
+        </strong>
+
+        <div class="m-tiles-detailed-list--lead clearfix">
+            <div class="m-tiles-detailed-list--desc">
+                {{ offer.lead|striptags|truncate(150) }}
+            </div>
+
+        </div>
+        <div class="m-tiles-detailed-list--button-container clearfix">
+            <a href="{{ path('show_offer', {slug: offer.slug}) }}" class="m-tiles-detailed-list--button"> {{ 'label.details'|trans }} </a>
+        </div>
+    </div>
+</div>

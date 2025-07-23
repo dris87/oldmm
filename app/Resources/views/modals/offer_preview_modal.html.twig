@@ -1,0 +1,47 @@
+{% set id = "offer-preview-modal" %}
+
+<div id="{{ id }}" class="m-modal-full-page modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-title">{{ 'modal.offer.preview.title'|trans }}</span>
+
+                <button
+                        type="button"
+                        class="btn btn-warning pull-right  mr-10"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                        data-toggle="tooltip"
+                        data-placement="left"
+                        title="{{ 'modal.offer.preview.back_to_edit'|trans }}"
+                >
+                    <i class="fa fa-pencil"></i>
+                </button>
+                <button
+                        type="button"
+                        id="offer-preview-submit-button"
+                        class="btn btn-primary pull-right mr-10"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="{{ 'modal.offer.preview.submit'|trans }}"
+                >
+                    <i class="fa fa-share-square"></i>
+                </button>
+                <button
+                        type="button"
+                        id="offer-preview-save-button"
+                        class="btn btn-success pull-right mr-10"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="{{ 'modal.offer.preview.save'|trans }}"
+                >
+                    <i class="fa fa-save"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="m-offer-preview-template-container">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

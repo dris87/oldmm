@@ -1,0 +1,34 @@
+{# web/app/Resources/views/BackOfficeApp/Admin/Offer/list.html.twig #}
+
+{% extends 'SonataAdminBundle:CRUD:list.html.twig' %}
+
+{% block list_table %}
+    {# Statisztikák megjelenítése a táblázat előtt #}
+    {% if statistics is defined %}
+        <div style="margin-bottom: 20px; padding: 15px; background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px;">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h4 style="color: #28a745;">
+                        <i class="fa fa-check-circle"></i>
+                        Aktív: <span class="badge badge-success">{{ statistics.active }} db</span>
+                    </h4>
+                </div>
+                <div class="col-md-4">
+                    <h4 style="color: #dc3545;">
+                        <i class="fa fa-times-circle"></i>
+                        Inaktív: <span class="badge badge-danger">{{ statistics.inactive }} db</span>
+                    </h4>
+                </div>
+                <div class="col-md-4">
+                    <h4 style="color: #007bff;">
+                        <i class="fa fa-list"></i>
+                        Összes: <span class="badge badge-primary">{{ statistics.total }} db</span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+    {# Eredeti táblázat #}
+    {{ parent() }}
+{% endblock %}

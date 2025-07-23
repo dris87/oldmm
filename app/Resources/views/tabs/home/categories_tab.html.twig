@@ -1,0 +1,11 @@
+<div class="container">
+    {% for row in categories|batch(4) %}
+        <div class="row">
+            {% for category in row %}
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <a href='{{ path('list_offers') }}?search[categories]={"0":"{{ category.id }}","_labels":["{{ category.value }}"]}'>{{ category.value }}</a>
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>

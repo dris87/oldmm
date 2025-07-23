@@ -1,0 +1,40 @@
+// Generate margin and padding utility classes
+=generate-margins($value)
+  .m-#{$value}
+    margin: #{$value}px !important
+  .mt-#{$value}
+    margin-top: #{$value}px !important
+  .mb-#{$value}
+    margin-bottom: #{$value}px !important
+  .ml-#{$value}
+    margin-left: #{$value}px !important
+  .mr-#{$value}
+    margin-right: #{$value}px !important
+
+  .p-#{$value}
+    padding: #{$value}px !important
+  .pt-#{$value}
+    padding-top: #{$value}px !important
+  .pb-#{$value}
+    padding-bottom: #{$value}px !important
+  .pl-#{$value}
+    padding-left: #{$value}px !important
+  .pr-#{$value}
+    padding-right: #{$value}px !important
+
+// Generate classes
++generate-margins(0)
++generate-margins(1)
++generate-margins(2)
++generate-margins(3)
++generate-margins(4)
++generate-margins(5)
++generate-margins(10)
++generate-margins(15)
++generate-margins(20)
++generate-margins(25)
++generate-margins(30)
++generate-margins(35)
++generate-margins(40)
++generate-margins(45)
++generate-margins(50)

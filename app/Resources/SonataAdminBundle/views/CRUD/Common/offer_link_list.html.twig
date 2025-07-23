@@ -1,0 +1,9 @@
+{% extends '@SonataAdmin/CRUD/base_list_field.html.twig' %}
+
+{% block field %}
+    <div>
+        {% if value is not empty %}
+            <b><a href="{{ path('offer_show',{'id':object.offer.id}) }}">{{ value }}</a></b>
+        {% endif %}
+    </div>
+{% endblock %}

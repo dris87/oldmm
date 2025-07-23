@@ -1,0 +1,175 @@
+knp_snappy:
+    pdf:
+        enabled:    true
+        # On windows use this binary
+        #binary:     "\"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe\""
+        options:    []
+
+framework:
+    translator:
+        fallback: hu
+        enabled: true
+
+stfalcon_tinymce:
+    include_jquery: false
+    tinymce_jquery: true
+    selector: ".tinymce"
+    language: "%locale%"
+    theme:
+        simple: ~
+        advanced:
+            plugins:
+                - "advlist autolink lists link image charmap print preview hr anchor pagebreak"
+                - "searchreplace wordcount visualblocks visualchars code fullscreen"
+                - "insertdatetime media nonbreaking save table contextmenu directionality"
+                - "emoticons template paste textcolor"
+            toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+            toolbar2: "print preview media | forecolor backcolor emoticons | stfalcon | example"
+        bbcode:
+            plugins: ["bbcode, code, link, preview"]
+            menubar: false
+            toolbar1: "bold,italic,underline,undo,redo,link,unlink,removeformat,cleanup,code,preview"
+        minimal:
+            menubar: false
+            statusbar: false
+            plugins: 
+                - "link paste media code"
+            toolbar1: "bold italic underline link unlink media code"
+            branding: false
+            elementpath: false
+            forced_root_block: false
+            entity_encoding: "raw"
+            encoding: "UTF-8"
+            browser_spellcheck: true
+            document_base_url: "/"
+            width: "100%"
+            height: 400
+            convert_fonts_to_spans: false
+            convert_urls: false
+            language: "hu"
+            content_css: []
+            valid_elements: "strong/b,em/i,u,br,a[href|target|title],iframe[*]"
+            extended_valid_elements: "u,img[src|alt|width|height],a[href|target|title],iframe[src|width|height|frameborder|allowfullscreen|style|*]"
+            verify_html: true
+            inline_styles: true
+            relative_urls: false
+            remove_script_host: false
+            entities: "160,nbsp,38,amp,60,lt,62,gt"
+            tooltip: false
+            cleanup: false
+            verify_html: false
+            media_live_embeds: true
+            media_filter_html: false
+
+            # Paste specifikus beállítások
+            paste_as_text: false
+            paste_remove_styles: true
+            paste_remove_spans: true
+            paste_strip_class_attributes: true
+
+            # Speciális paste feldolgozás
+            setup: "function(editor) {
+                editor.on('PastePreProcess', function(e) {
+                    // Iframe elemek megtartása
+                    var iframes = [];
+                    var iframeRegex = /<iframe[^>]*>.*?<\\/iframe>/gi;
+                    var iframeMatch;
+                    
+                    // Iframe-ek kigyűjtése
+                    while ((iframeMatch = iframeRegex.exec(e.content)) !== null) {
+                        iframes.push(iframeMatch[0]);
+                    }
+
+                    // Span elemek eltávolítása
+                    e.content = e.content.replace(/<span[^>]*>(.*?)<\\/span>/gi, '$1');
+                    
+                    // Stílus attribútumok törlése (kivéve iframe-ben)
+                    var contentWithoutIframes = e.content.replace(/<iframe[^>]*>.*?<\\/iframe>/gi, '##IFRAME##');
+                    contentWithoutIframes = contentWithoutIframes.replace(/\\s*style=\"[^\"]*\"/gi, '');
+                    
+                    // Class attribútumok törlése (kivéve iframe-ben)
+                    contentWithoutIframes = contentWithoutIframes.replace(/\\s*class=\"[^\"]*\"/gi, '');
+                    
+                    // Iframe-ek visszahelyezése
+                    for (var i = 0; i < iframes.length; i++) {
+                        contentWithoutIframes = contentWithoutIframes.replace('##IFRAME##', iframes[i]);
+                    }
+                    
+                    e.content = contentWithoutIframes;
+                });
+
+                // Aláhúzás kezelése
+                editor.on('BeforeSetContent', function(e) {
+                    if (e.content) {
+                        e.content = e.content.replace(
+                            /<span style=\"text-decoration: underline;\">(.*?)<\\/span>/gi, 
+                            '<u>$1</u>'
+                        );
+                    }
+                });
+                
+                // Iframe kezelés
+                editor.on('ObjectResized', function(e) {
+                    if (e.target.nodeName === 'IFRAME') {
+                        console.log('Iframe resized', e);
+                    }
+                });
+                
+                // Iframe beillesztő gomb egyéni kezelése
+                editor.addButton('iframe', {
+                    icon: 'code',
+                    tooltip: 'Iframe beillesztése',
+                    onclick: function() {
+                        editor.windowManager.open({
+                            title: 'Iframe beillesztése',
+                            body: [
+                                {type: 'textbox', name: 'src', label: 'URL', value: 'https://'},
+                                {type: 'textbox', name: 'width', label: 'Szélesség', value: '100%'},
+                                {type: 'textbox', name: 'height', label: 'Magasság', value: '400px'},
+                                {type: 'checkbox', name: 'allowfullscreen', label: 'Teljes képernyő engedélyezése', checked: true}
+                            ],
+                            onsubmit: function(e) {
+                                var iframe = '<iframe src=\"' + e.data.src + '\" width=\"' + e.data.width + 
+                                    '\" height=\"' + e.data.height + '\" frameborder=\"0\"';
+                                
+                                if (e.data.allowfullscreen) {
+                                    iframe += ' allowfullscreen=\"allowfullscreen\"';
+                                }
+                                
+                                iframe += '></iframe>';
+                                editor.insertContent(iframe);
+                            }
+                        });
+                    }
+                });
+
+                editor.on('GetContent', function(e) {
+                    if (e.content) {
+                        e.content = e.content.replace(
+                            /<span style=\"text-decoration: underline;\">(.*?)<\\/span>/gi, 
+                            '<u>$1</u>'
+                        );
+                    }
+                });
+            }"
+
+            # Inicializáló callback
+            init_instance_callback: "function(editor) {
+                // Tooltip elemek eltávolítása
+                if (window.jQuery) {
+                    jQuery('.mce-tooltip').remove();
+                    jQuery('.mce-btn').removeAttr('title');
+                }
+
+                // CSS hozzáadása a tooltip elrejtéséhez és toolbar méretezéséhez
+                var style = document.createElement('style');
+                style.innerHTML = '\
+                    .mce-tooltip, .mce-tooltip-inner { display: none !important; visibility: hidden !important; } \
+                    .mce-toolbar-grp { padding: 0px !important; } \
+                    .mce-container-body .mce-flow-layout { padding: 0px !important; } \
+                    .mce-btn { margin: 0px !important; } \
+                    .mce-btn button { padding: 1px 2px !important; } \
+                    .mce-btn i { font-size: 14px !important; } \
+                ';
+                document.head.appendChild(style);
+            }"

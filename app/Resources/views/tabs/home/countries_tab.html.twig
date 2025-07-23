@@ -1,0 +1,11 @@
+<div class="container">
+    {% for row in counties|batch(4) %}
+        <div class="row">
+            {% for county in row %}
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <a href='{{ path('list_offers') }}?search[locations]={"0":"{{ county.id }}","_labels":["{{ county.value }}"]}'>{{ county.value }}</a>
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>

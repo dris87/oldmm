@@ -1,0 +1,116 @@
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+parameters:
+    locale: 'hu'
+    # This parameter defines the codes of the locales (languages) enabled in the application
+    app_locales: hu
+    app.notifications.email_sender: ugyfelszolgalat@mumi.hu
+
+    locales: '%app_locales%'
+    default_locale: '%locale%'
+    email_sender: '%app.notifications.email_sender%'
+#            $emailSender: '%app.notifications.email_sender%'
+    router.request_context.host:   mumi.hu
+    router.request_context.scheme: http
+
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        # automatically injects dependencies in your services
+        autowire: true
+        # automatically registers your services as commands, event subscribers, etc.
+        autoconfigure: true
+        # this means you cannot fetch services directly from the container via $container->get()
+        # if you need to do this, you can override this setting on individual services
+        public: false
+        # defines the scalar arguments once and apply them to any service defined/created in this file
+#        bind:
+#            $locales: '%app_locales%'
+#            $defaultLocale: '%locale%'
+#            $emailSender: '%app.notifications.email_sender%'
+
+    # makes classes in src/ available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+    All4One\AppBundle\:
+        resource: '../../../src/All4One/AppBundle/*'
+        # you can exclude directories or files
+        # but if a service is unused, it's removed anyway
+        exclude: '../../../src/All4One/AppBundle/{Entity,Form,Migrations,Tests}'
+
+    All4One\AppBundle\Form\Type\:
+        resource: '../../../src/All4One/AppBundle/Form/Type/*'
+
+    All4One\AppBundle\EventSubscriber\RedirectToPreferredLocaleSubscriber:
+        arguments:
+            $locales: '%locales%'
+
+    All4One\AppBundle\Manager\EmailManager:
+        arguments:
+            $emailSender: '%email_sender%'
+
+    All4One\AppBundle\Twig\AppExtension:
+        arguments:
+            $locales: '%locales%'
+
+    # makes classes in src/ available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+    BackOffice\AppBundle\:
+        resource: '../../../src/BackOffice/AppBundle/*'
+        # you can exclude directories or files
+        # but if a service is unused, it's removed anyway
+        exclude: '../../../src/BackOffice/AppBundle/{Admin,Form,Migrations,Tests}'
+
+    # controllers are imported separately to make sure they're public
+    # and have a tag that allows actions to type-hint services
+    BackOffice\AppBundle\Controller\:
+        resource: '../../../src/BackOffice/AppBundle/Controller/*'
+        public: true
+        tags: ['controller.service_arguments']
+
+    # add more services, or override services that need manual wiring
+    # AppBundle\Service\ExampleService:
+    #     arguments:
+    #         $someArgument: 'some_value'
+    Knp\Snappy\GeneratorInterface: '@knp_snappy.pdf'
+
+    app.menu_builder:
+        class: All4One\AppBundle\Menu\MenuBuilder
+        arguments: ["@knp_menu.factory"]
+        tags:
+            - { name: knp_menu.menu_builder, method: createLoggedLeftSideMenu, alias: logged_left_side }
+            - { name: knp_menu.menu_builder, method: createLoggedDropdownMenu, alias: logged_dropdown }
+            - { name: knp_menu.menu_builder, method: createNotLoggedRightSide, alias: not_logged_right_side }
+            - { name: knp_menu.menu_builder, method: createNotLoggedLeftSide, alias: not_logged_left_side }
+            - { name: knp_menu.menu_builder, method: mobileMenu, alias: mobile_menu }
+
+    back_office.user_crud_controller:
+            class:     BackOffice\AppBundle\Controller\UserCRUDController
+            arguments: ['@UserManagerInterface', '@EventDispatcherInterface']
+
+    authentication.success.listener:
+            class: All4One\AppBundle\EventListener\AuthenticationEventListener
+            arguments: ['@router', '@service_container']
+
+    app.sitemap.subscriber:
+            class: All4One\AppBundle\EventSubscriber\SitemapSubscriber
+            arguments:
+                - "@router"
+                - "@doctrine"
+            tags:
+                - { name: "kernel.event_subscriber", priority: 100 }
+
+    All4One\AppBundle\EventListener\SecurityEventListener:
+        arguments:
+            $logger: '@logger'
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }
+
+    backoffice.admin.user:
+        class: BackOffice\AppBundle\Admin\BOUser\BOUserAdmin
+        arguments:
+            - ~
+            - Application\Sonata\UserBundle\Entity\User
+            - ~
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Felhasználók", label: "Felhasználók", show_in_dashboard: true }
+

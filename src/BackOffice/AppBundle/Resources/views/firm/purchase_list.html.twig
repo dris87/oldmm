@@ -1,0 +1,235 @@
+{% extends '@SonataAdmin/standard_layout.html.twig' %}
+
+{% block title %}
+    Vásárlások
+{% endblock %}
+
+{% block breadcrumb %}
+    <div class="hidden-xs">
+        <ol class="nav navbar-top-links breadcrumb">
+            <li>
+                <a href="{{ path('sonata_admin_dashboard') }}">{{ 'link_breadcrumb_dashboard' | trans({}, 'SonataAdminBundle') | raw }}</a>
+            </li>
+            {% if block('breadcrumb_between') is defined %}
+                {{ block('breadcrumb_between') }}
+            {% endif %}
+            <li class="active"><span>{{ block('title') }}</span></li>
+        </ol>
+    </div>
+{% endblock %}
+
+{% block actions %}
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            <a class="sonata-action-element" href="{{ path('back_to_firm_list') }}">
+                <i class="fa fa-list" aria-hidden="true"></i>
+                Vissza a cégek listájára
+            </a>
+        </li>
+    </ul>
+{% endblock %}
+
+{% block navbar_title %}
+    {{ block('title') }}
+{% endblock %}
+
+{% block list_table %}
+    <div class="col-xs-12 col-md-12">
+        <div class="box box-primary">
+            <div class="box-header">
+                <h4 class="box-title">
+                    Cég adatok
+                </h4>
+            </div>
+            <div class="box-body table-responsive no-padding">
+                <table class="table">
+                    <tbody>
+                    <tr class="sonata-ba-view-container">
+                        <th>Cég neve</th>
+                        <td>{{ firm.name }}</td>
+                    </tr>
+                    <tr class="sonata-ba-view-container">
+                        <th>Cím</th>
+                        <td>{{ firm.getAddress}}</td>
+                    </tr>
+                    <tr class="sonata-ba-view-container">
+                        <th>Adószám</th>
+                        <td>{{ firm.taxNumber}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        {% set orders = firm.orders %}
+        <div class="box box-primary" style="margin-bottom: 100px;">
+            <div class="box-body {% if orders|length > 0 %}table-responsive no-padding{% endif %}">
+                {% block list_header %}{% endblock %}
+
+                {% if orders|length > 0 %}
+                    <table class="table table-bordered table-striped sonata-ba-list financial">
+                        {% block table_header %}
+                            <thead>
+                            <tr class="sonata-ba-list-field-header">
+                                <th class="sonata-ba-list-field-header-text">
+                                    Megrendelés
+                                </th>
+                                <th class="sonata-ba-list-field-header-text">
+                                    Fizetés típusa
+                                </th>
+                                <th class="sonata-ba-list-field-header-text">
+                                    Rendelés azonosító
+                                </th>
+                                <th class="sonata-ba-list-field-header-text">
+                                    Kelte
+                                </th>
+                                <th class="sonata-ba-list-field-header-text">
+                                    Aktiváció ideje
+                                </th>
+                                <th class="sonata-ba-list-field-header-text">
+                                    Rendelés státusza
+                                </th>
+                                <th class="sonata-ba-list-field-header-text text-center">
+                                    Opciók
+                                </th>
+                            </tr>
+                            </thead>
+                        {% endblock %}
+
+                        {% block table_body %}
+
+                            {#ORDERS begin#}
+                            <tbody>
+                            {% for order in orders %}
+                                <tr class="invoice">
+                                    <td>{{ order.id}} - {{ order.firm.name }}</td>
+                                    {% set payment_method_transable = 'label.payment_type.' ~ order.paymentMethod %}
+                                    <td>{{ payment_method_transable|trans }}</td>
+                                    <td>{{ order.invoiceSerial}} </td>
+                                    <td>{{ order.createdAt|date('Y.m.d h:i') }}</td>
+                                    <td>{{ order.activatedAt|date('Y.m.d h:i') }}</td>
+                                    <td>{{ order.status|trans }}</td>
+                                    <td class="text-center">
+                                        {% if order.status.value == 0 %}
+                                            <a href="{{ url('firm_purchases_accept', {'order' : order.id}) }}" class="btn btn-success btn-xs pull-left btn-expand" style="margin-right: 10px;" >
+                                                Elfogadás
+                                            </a>
+                                            <a href="{{ url('firm_purchases_cancel', {'order' : order.id}) }}" class="btn btn-danger btn-xs pull-left btn-expand" >
+                                                Elutasítás
+                                            </a>
+                                        {% endif %}
+                                        <button class="btn btn-primary btn-xs pull-right btn-expand" data-target="#order_{{ order.id }}">
+                                            Tételek
+                                        </button>
+                                    </td>
+                                </tr>
+                                {#ITEMS begin#}
+                                <tr id="order_{{ order.id }}" class="orderItems" style="display: none;">
+                                    <td align="center" colspan="6">
+                                        <table class="table table-bordered table-striped sonata-ba-list financial">
+                                            <thead>
+                                            <tr class="sonata-ba-list-field-header">
+                                                <th class="sonata-ba-list-field-header-text">
+                                                    Vásárolt tételek
+                                                </th>
+                                                <th class="sonata-ba-list-field-header-text">
+                                                    Nettó ár
+                                                </th>
+                                                <th class="sonata-ba-list-field-header-text">
+                                                    Bruttó ár
+                                                </th>
+                                                <th class="sonata-ba-list-field-header-text">
+                                                    Account
+                                                </th>
+                                                <th class="sonata-ba-list-field-header-text">
+                                                    Vásárlás módja
+                                                </th>
+                                                <th class="sonata-ba-list-field-header-text">
+                                                    Rendelés azonosító
+                                                </th>
+                                                <th class="sonata-ba-list-field-header-text">
+                                                    Rendelés státusza
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% set length = order.items|length %}
+                                            {% set priceNet = 0 %}
+                                            {% set priceGross = 0 %}
+                                            {% for item in order.items %}
+                                                {% set priceNet = priceNet + item.package.price * item.count %}
+                                                {% set priceGross = priceGross + item.package.price * item.count * 1.27 %}
+                                                <tr>
+                                                    <td>{{ item.package.name }}</td>
+                                                    <td>{{ (item.package.price * item.count)|localizedcurrency('HUF') }}</td>
+                                                    {#FIXME#}
+                                                    <td>{{ (item.package.price * item.count * 1.27)|localizedcurrency('HUF') }}</td>
+                                                    {% if loop.first %}
+                                                    <td rowspan="{{ length }}">{{ order.firm.name }}</td>
+                                                    <td rowspan="{{ length }}">{{ order.paymentMethod|trans }}</td>
+                                                    <td rowspan="{{ length }}">{{ order.invoiceSerial }}</td>
+                                                    <td rowspan="{{ length }}">{{ order.status|trans }}</td>
+                                                    {% endif %}
+                                                </tr>
+                                            {% endfor %}
+                                                <tr>
+                                                    <td><b>Összesen</b></td>
+                                                    <td><b>{{ order.priceNet|localizedcurrency('HUF') }}</b></td>
+                                                    <td><b>{{ order.priceGross|localizedcurrency('HUF') }}</b></td>
+                                                    {#<td><b>{{ priceNet }}</b></td>#}
+                                                    {#<td><b>{{ priceGross }}</b></td>#}
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                {#ITEMS end#}
+                            {% endfor %}
+                            {#ORDERS end#}
+                            </tbody>
+                        {% endblock %}
+
+                        {% block table_footer %}
+                        {% endblock %}
+                    </table>
+                {% else %}
+                    {% block no_result_content %}
+                        <div class="info-box">
+                            <span class="info-box-icon bg-aqua"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">{{ 'no_result'|trans({}, 'SonataAdminBundle') }}</span>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 0%"></div>
+                                </div>
+                                <span class="progress-description">
+                                </span>
+                            </div><!-- /.info-box-content -->
+                        </div>
+                    {% endblock %}
+                {% endif %}
+
+            </div>
+            {% block list_footer %}
+                {% if orders|length > 0 %}
+                    <div class="box-footer">
+                        <div class="form-inline clearfix">
+
+                        </div>
+                    </div>
+                {% endif %}
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script>
+        $(function () {
+            $('.btn-expand').on('click', function () {
+                $($(this).data('target')).toggle();
+            });
+        });
+    </script>
+{% endblock %}

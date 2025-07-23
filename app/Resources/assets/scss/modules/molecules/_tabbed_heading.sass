@@ -1,0 +1,33 @@
+.m-tabbed-heading
+  background: #e8e8e8
+  @include box-shadow(0px 0px 5px -1px rgba(0,0,0,0.15) inset)
+  &--tab
+    @include linearGradient(#fefefe, #eeeeee)
+    text-align: center
+    height: 130px
+    @include box-shadow(0px 0px 5px -1px rgba(0,0,0,0.15) inset)
+    h3
+      color: $black
+      line-height: 0px
+      font-weight: bold
+      font-size: 16px
+      margin-top: 50px
+    span
+      color: $ua-orange
+      font-weight: bold
+      font-size: 17px
+  &--image
+    background: url(../images/bg_small/bg_small_counting.png) no-repeat center center
+    background-size: cover
+    &--count
+      background: url(../images/bg_small/bg_small_counting.png) no-repeat center center
+      background-size: cover
+    &--laptop
+      background: url(../images/bg_small/bg_small_laptop.png) no-repeat center center
+      background-size: cover
+    &--employee-search
+      background: url(../images/bg_small/bg_small_employee_search.png) no-repeat center center
+      background-size: cover
+    &--calendar
+      background: url(../images/bg_small/bg_small_calendar.png) no-repeat center center
+      background-size: cover

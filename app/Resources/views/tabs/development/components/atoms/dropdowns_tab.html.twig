@@ -1,0 +1,110 @@
+{% import 'modules/atoms/bootstrap/dropdowns.html.twig' as dropdown %}
+{% import 'modules/atoms/bootstrap/tables.html.twig' as tables %}
+
+<h2>Import</h2>
+    {% verbatim %}
+<pre><code class="twig">{% import 'modules/atoms/bootstrap/dropdowns.html.twig' as dropdowns %}</code></pre> 
+    {% endverbatim  %}
+<hr/>
+
+<h2>Dropdown</h2>
+{{ dropdown.dropdown('Pick an action', [
+    'Some Header',
+    {href: '#', text: 'My Profile', active: true},
+    {href: '#', text: 'Options'},
+    {href: '#', text: 'Disabled Entry', disabled: true},
+    'separator',
+    {href: '#', text: 'Logout'}
+], 'btn-danger', false) }}
+
+</hr>
+<h4>Description</h4>
+    {{ tables.table( 
+        [ { html : 'Field' } , { html : 'Type' } , { html : 'Description' } ],
+        [   {cols : [ { html : 'text' } , { html : 'string' } , { html : 'The text of the dropdown button' } ]},
+            {cols : [ { html : 'items' } , { html : 'array' } , { html : 'Array of Dropdown Item' } ]},
+            {cols : [ { html : 'btnClass' } , { html : 'string' } , { html : '	The class for the Button' } ]},
+            {cols : [ { html : 'isDropup' } , { html : 'boolean' } , { html : 'If true, the menu will be open upwards' } ]},
+        ],'striped') }}
+    <code>
+       bootstrap.dropdown(text, items, btnClass, isDropup)
+    </code>
+<h4>Example</h4>
+    {% verbatim %}
+<pre><code class="twig">{{ bootstrap.dropdown('Pick an action', [
+    'Some Header',
+    {href: '#', text: 'My Profile', active: true},
+    {href: '#', text: 'Options'},
+    {href: '#', text: 'Disabled Entry', disabled: true},
+    'separator',
+    {href: '#', text: 'Logout'}
+], 'btn-danger', false) }}</code></pre> 
+    {% endverbatim  %}
+
+<hr/>
+
+<h2>Single Button Dropdown</h2>
+{{ dropdown.singleButtonDropdown({text: 'Pick an action', class: 'btn-danger'}, [
+    'Some Header',
+    {href: '#', text: 'My Profile', active: true},
+    {href: '#', text: 'Options'},
+    'separator',
+    {href: '#', text: 'Logout'}
+], false) }}
+</hr>
+<h4>Description</h4>
+    {{ tables.table( 
+        [ { html : 'Field' } , { html : 'Type' } , { html : 'Description' } ],
+        [   {cols : [ { html : 'button' } , { html : 'dictionary' } , { html : 'Instance of Button Element' } ]},
+            {cols : [ { html : 'items' } , { html : 'array' } , { html : 'Array of Dropdown Item' } ]},
+            {cols : [ { html : 'isDropup' } , { html : 'boolean' } , { html : 'If true, the menu will be open upwards' } ]},
+        ],'striped') }}
+    <code>
+        bootstrap.singleButtonDropdown(text, items, btnClass, isDropup)
+    </code>
+<h4>Example</h4>
+    {% verbatim %}
+<pre><code class="twig">{{ dropdown.singleButtonDropdown({text: 'Pick an action', class: 'btn-danger'}, [
+    'Some Header',
+    {href: '#', text: 'My Profile', active: true},
+    {href: '#', text: 'Options'},
+    'separator',
+    {href: '#', text: 'Logout'}
+], false) }}</code></pre> 
+    {% endverbatim  %}
+
+<hr/>
+
+<h2>Split Button Dropdown</h2>
+
+{{ dropdown.splitButtonDropdown({text: 'Export as PNG', class: 'btn-primary'}, [
+    'Export as ...',
+    {href: '#', text: 'PDF'},
+    {href: '#', text: 'SVG'},
+    'separator',
+    {href: '#', text: 'Cancel'}
+], false) }}
+
+<h4>Description</h4>
+    {{ tables.table( 
+        [ { html : 'Field' } , { html : 'Type' } , { html : 'Description' } ],
+        [   {cols : [ { html : 'button' } , { html : 'dictionary' } , { html : 'Instance of Button Element' } ]},
+            {cols : [ { html : 'items' } , { html : 'array' } , { html : 'Array of Dropdown Item' } ]},
+            {cols : [ { html : 'isDropup' } , { html : 'boolean' } , { html : 'If true, the menu will be open upwards' } ]},
+        ],'striped') }}
+    <code>
+        bootstrap.dropdown(text, items, btnClass, isDropup)
+    </code>
+<h4>Example</h4>
+    {% verbatim %}
+<pre><code class="twig">{{ dropdown.splitButtonDropdown(
+    {text: 'Export as PNG', class: 'btn-primary'}, [
+        'Export as ...',
+        {href: '#', text: 'PDF'},
+        {href: '#', text: 'SVG'},
+        'separator',
+        {href: '#', text: 'Cancel'}
+    ], false) }}</code></pre> 
+    {% endverbatim  %}
+
+<hr/>

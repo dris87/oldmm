@@ -1,0 +1,19 @@
+{# {% import 'utils/builder.html.twig' as builder %} #}
+
+{% macro createHTMLTag(tagName, attributes, innerHtml, selfClosing) %}
+    {% set tmpAttributes = [] %}
+    {% if attributes is defined and attributes is iterable %}
+        {% for key, val in attributes %}
+            {% set tmpAttributes = tmpAttributes | merge(['%s="%s"' | format(key, val)]) %}
+        {% endfor %}
+    {% endif %}
+    <{{ tagName }} {{ tmpAttributes | join(' ') | raw }}>
+    {% if innerHtml is defined and innerHtml | length > 0 %}
+        {{ innerHtml | raw }}
+    {% endif %}
+    {% if selfClosing is defined and selfClosing == true %}
+        />
+    {% else %}
+        </{{ tagName }}>
+    {% endif %}
+{% endmacro %}

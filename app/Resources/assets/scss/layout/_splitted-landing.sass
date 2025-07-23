@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower')
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Unicase:600')
+.m-splitted-landing
+  position: relative
+  width: 100%
+  height: 100vh
+  &--logo
+    position: absolute
+    z-index: 9
+    top: 20px
+    left: 20px
+    height: 50px
+    img
+      height: 70px
+  &--left-container,
+  &--right-container
+    @media (max-width: $screen-sm-max)
+      width: 100%
+      height: 50vh
+    width: 50%
+    position: absolute
+    bottom: 0
+    top: 0
+    &:hover
+      .m-splitted-landing--overlay
+        background: rgba(0,0,0,0.6)
+      .m-splitted-landing--title::after
+        transform: scale(1.3, 1)
+        -ms-transform: scale(1.3, 1)
+        -webkit-transform: scale(1.3, 1)
+        opacity: 1
+  &--left-container
+    background: url(../images/bg/bg_firm.jpg) no-repeat center center
+    background-size: cover
+    left: 0
+    @media (max-width: $screen-sm-max)
+      left: auto
+      top: 0px
+    .m-splitted-landing--title,
+    strong
+      font-family: 'Cormorant Unicase', 'Roboto', 'Roboto Condensed'
+    strong
+      font-size: 20px
+  &--right-container
+    background: url(../images/bg/bg_main.jpg) no-repeat top center
+    background-size: cover
+    right: 0
+    @media (max-width: $screen-sm-max)
+      left: auto
+      bottom: 0px
+      top: auto
+    .m-splitted-landing--title,
+    strong
+      font-family: 'Indie Flower', 'Roboto', 'Roboto Condensed'
+    strong
+      font-size: 20px
+  &--content
+    width: 100%
+    height: 100%
+    position: relative
+    @include transition(all .2s ease)
+  &--overlay
+    width: 100%
+    position: absolute
+    bottom: 0
+    top: 0
+    background: rgba(0,0,0,0.5)
+    @include transition(all .5s ease)
+    -webkit-box-shadow: inset 0px 0px 35px -7px rgba(0,0,0,0.75)
+    -moz-box-shadow: inset 0px 0px 35px -7px rgba(0,0,0,0.75)
+    box-shadow: inset 0px 0px 35px -7px rgba(0,0,0,0.75)
+  &--title,
+  strong
+    -ms-transform: translate(0, -50%)
+    -webkit-transform: translate(0, -50%)
+    -moz-transform: translate(0, -50%)
+    transform: translate(0, -50%)
+    position: absolute
+    top: 45%
+    left: 0
+    width: 100%
+    min-width: 300px
+    color: $white
+    height: auto
+    text-align: center
+  &--title
+    font-size: 30px
+    text-align: center
+    color: white
+    z-index: 9
+    cursor: pointer
+    text-transform: uppercase
+    @include transition(all .5s ease)
+    &::after
+      @include transition(all .5s ease)
+      transform: scale(1, 1)
+      -ms-transform: scale(1, 1)
+      -webkit-transform: scale(1, 1)
+      -webkit-transform-origin: 50% 50%
+      -ms-transform-origin: 50% 50%
+      -moz-transform-origin: 50% 50%
+      transform-origin: 50% 50%
+      width: 200px
+      content: ""
+      position: relative
+      display: block
+      margin: 13px auto 23px
+      height: 1px
+      background: white
+  strong
+    margin-top: 80px

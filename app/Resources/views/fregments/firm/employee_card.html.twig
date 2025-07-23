@@ -1,0 +1,101 @@
+{% import 'common/helpers/collection_helper.html.twig' as coll %}
+<div class='m-employee-card'>
+    {% if cv.employee.pictureName is not empty and not is_granted('ROLE_CV_UNLOCK',cv) %}
+        {% set imageName = 'uploads/employee/picture/'~cv.employee.pictureName %}
+    {% else %}
+        {% if cv.employee.gender.value == 1 %}
+            {% set imageName = 'images/cv/male.png' %}
+        {% else %}
+            {% set imageName = 'images/cv/female.png' %}
+        {% endif %}
+    {% endif %}
+
+    <img src="{{ asset(imageName) }}" class='m-employee-card--image' width="200" height="200" />
+    <br/>
+    <h4 class='m-employee-card--name'>
+        {% if is_granted('ROLE_FIRM_CV_VIEW',cv) %}
+            {{ cv.employee.fullName }}
+        {% else %}
+
+        {% endif %}
+    </h4>
+
+    <div class='m-employee-card--content'>
+        <table class="m-employee-card--table">
+            <tbody>
+            <tr>
+                <td>{{ 'label.birth_date'|trans }}</td>
+                <td class="text-right">{{ cv.employee.birthDate|localizeddate('medium', 'medium', null, 'CET', 'Y-MM-dd') }}</td>
+            </tr>
+            <tr>
+                <td>{{ 'label.nationality'|trans }}</td>
+                <td class="text-right">{{ coll.collectionToString(cv.employee.nationality) }}</td>
+            </tr>
+            <tr>
+                <td>{{ 'label.gender'|trans }}</td>
+                <td class="text-right">
+                    {% if cv.employee.gender.value == 1 %}
+                        <i class="fa fa-male" aria-hidden="true"></i>
+                    {% elseif cv.employee.gender.value == 2 %}
+                        <i class="fa fa-female" aria-hidden="true"></i>
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>{{ 'label.location'|trans }}</td>
+                <td class="text-right">
+                    {{ cv.employee.location.city.value }}
+                </td>
+            </tr>
+            {% if offer is defined or cv.offerCandidate is defined %}
+            <tr>
+                <td>{{ 'label.candidate.type'|trans }}</td>
+                <td class="text-right">
+                    {% if offer is defined %}
+                        {% if cv.candidateByOffer(offer) is not empty and cv.candidateByOffer(offer).direct %}
+                            <span class="label label-info">{{ 'label.candidate.direct'|trans }}</span>
+                        {% elseif cv.candidateByOffer(offer) is not empty and cv.candidateByOffer(offer).moved %}
+                            <span class="label label-warning">{{ 'label.candidate.moved'|trans }}</span>
+                        {% else %}
+                            <span class="label label-success">{{ 'label.candidate.paired'|trans }}</span>
+                        {% endif %}
+                    {% elseif cv.offerCandidate is defined %}
+                        {% if cv.offerCandidate is empty %}
+                            <span class="label label-danger">{{ 'label.candidate.database_access'|trans }}</span>
+                        {% elseif cv.offerCandidate.direct %}
+                            <span class="label label-info">{{ 'label.candidate.direct'|trans }}</span>
+                        {% elseif cv.offerCandidate.moved %}
+                            <span class="label label-warning">{{ 'label.candidate.moved'|trans }}</span>
+                        {% else %}
+                            <span class="label label-success">{{ 'label.candidate.paired'|trans }}</span>
+                        {% endif %}
+                    {% endif %}
+                </td>
+            </tr>
+            {% endif %}
+            </tbody>
+        </table>
+
+        <div class="m-employee-card--footer text-right">
+            {% if is_granted('ROLE_CV_UNLOCK',cv) %}
+                {% if offer is defined %}
+                    {% set action =  path('firm_offer_cv_unlock',{employeeCvId: cv.id,offerId: offer.id}) %}
+                {% else %}
+                    {% set action =  path('firm_cv_unlock',{id: cv.id})%}
+                {% endif %}
+                <button data-action="{{ action }}" data- class="btn btn-primary pull-left mb-5 firm-candidate-unlock">
+                    {{ 'label.dissolve'|trans }}
+                </button>
+            {% endif %}
+            {% if orders|length > 0 %}
+            <a href="{{ path('firm_generate_pdf', {id: cv.id}) }}" target="_blank" class="btn btn-default mb-5">
+                {{ 'label.candidate.pdf.download'|trans }}
+            </a>
+            {% else %}
+              <a href="{{ path('firm_services_index') }}" target="_blank" class="btn btn-default mb-5">
+                  {{ 'label.candidate.pdf.download'|trans }}
+              </a>
+            {% endif %}
+        </div>
+    </div>
+</div>

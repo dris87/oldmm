@@ -1,0 +1,7 @@
+{% if admin.hasRoute('duplicate') and admin.hasAccess('create', object) %}
+    <a href="{{ admin.generateObjectUrl('duplicate', object) }}" 
+       class="btn btn-sm btn-default duplicate_link"
+       title="Hirdetés duplikálása">
+        <i class="fa fa-copy"></i>
+    </a>
+{% endif %}

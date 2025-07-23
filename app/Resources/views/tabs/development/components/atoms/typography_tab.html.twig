@@ -1,0 +1,90 @@
+{% import 'modules/atoms/bootstrap/typography.html.twig' as typography %}
+{% import 'modules/atoms/bootstrap/tables.html.twig' as tables %}
+
+<h2>Import</h2>
+    {% verbatim %}
+<pre><code class="twig">{% import 'modules/atoms/bootstrap/typography.html.twig' as typography %}</code></pre> 
+    {% endverbatim  %}
+<hr/>
+
+<h2>Breadcrumbs</h2>
+{{ typography.breadcrumbs([
+    {href: '#', text: 'Home'},
+    {href: '#', text: 'Account'},
+    {href: '#', text: 'Settings'}
+], true) }}
+
+</hr>
+<h4>Description</h4>
+    {{ tables.table( 
+        [ { html : 'Field' } , { html : 'Type' } , { html : 'Description' } ],
+        [   {cols : [ { html : 'items' } , { html : 'array' } , { html : 'Array of Link' } ]}
+        ],'striped') }}
+    <code>
+       typography.breadcrumbs(items)
+    </code>
+<h4>Example</h4>
+    {% verbatim %}
+<pre><code class="twig">{{ typography.breadcrumbs([
+    {href: '#', text: 'Home'},
+    {href: '#', text: 'Account'},
+    {href: '#', text: 'Settings'}
+], true) }}</code></pre> 
+    {% endverbatim  %}
+
+<hr/>
+
+<h2>Jumbotron</h2>
+{{ typography.jumbotron(
+    'Hello World',
+    ['Nice to meet you'],
+    {
+        text: 'An action Button',
+        class: 'btn-primary'
+    })
+}}
+
+<hr/>
+<h4>Description</h4>
+    {{ tables.table( 
+        [ { html : 'Field' } , { html : 'Type' } , { html : 'Description' } ],
+        [   { cols : [ { html : 'heading' } , { html : 'string' } , { html : 'The heading of the jumbotron' } ] },
+            { cols : [ { html : 'paragraphs' } , { html : 'array' } , { html : 'Array of string; Jumbotron Content' } ] },
+            { cols : [ { html : 'actionButton' } , { html : 'dictionary' } , { html : 'Instance of Button Element' } ] },
+        ],'striped') }}
+    <code>
+       typography.jumbotron(heading, paragraphs, actionButton)
+    </code>
+<h4>Example</h4>
+    {% verbatim %}
+<pre><code class="twig">{{ typography.jumbotron(
+    'Hello World',
+    ['Nice to meet you'],
+    {
+        text: 'An action Button',
+        class: 'btn-primary'
+    })
+}}</code></pre> 
+    {% endverbatim  %}
+
+<hr/>
+
+<h2>Page Header</h2>
+{{ typography.pageHeader('Example page header', 'Subtext for header') }}
+
+<hr/>
+<h4>Description</h4>
+    {{ tables.table( 
+        [ { html : 'Field' } , { html : 'Type' } , { html : 'Description' } ],
+        [   { cols : [ { html : 'title' } , { html : 'string' } , { html : 'The Heading' } ] },
+            { cols : [ { html : 'subtext' } , { html : 'string' } , { html : 'A Subtext' } ] }
+        ],'striped') }}
+    <code>
+       typography.pageHeader(title, subtext)
+    </code>
+<h4>Example</h4>
+    {% verbatim %}
+<pre><code class="twig">{{ typography.pageHeader('Example page header', 'Subtext for header') }}</code></pre> 
+    {% endverbatim  %}
+
+<hr/>

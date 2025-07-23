@@ -1,0 +1,8 @@
+CopyUser-agent: SemrushBot
+Disallow: /
+
+User-agent: bingbot
+Disallow: /
+
+User-agent: *
+Allow: /

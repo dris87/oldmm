@@ -1,0 +1,33 @@
+employee_cv.author: 'Az önéletrajz a MUMI.HU weboldalán keresztül jött létre.'
+employee_cv.create_date: 'Önéletrajz létrehozásnak dátuma:'
+employee_cv.requirements.main_title: 'Álláskeresési adatok'
+employee_cv.requirements.work_hour: Munkaidő
+employee_cv.requirements.contract_type: 'Szerződés típusa'
+employee_cv.requirements.will_to_travel.main_title: 'Utazási hajlandóság'
+employee_cv.requirements.will_to_travel.distance: 'Ha szükséges, a lakhelyemtől számítva utazom <strong>%distance%km</strong>-t'
+employee_cv.requirements.will_to_travel.locations: 'Ha szükséges, utazom az alábbi településekre:'
+employee_cv.requirements.will_to_move.main_title: 'Költözési hajlandóság'
+employee_cv.requirements.will_to_move.locations: 'Ha szükséges, költözöm az alábbi településekre:'
+employee_cv.requirements.current_environments.main_title: 'Jelenlegi körülmények'
+employee_cv.work_experiences.main_title: 'Szakmai tapasztalatok'
+employee_cv.work_experiences.currently: 'Jelenleg is'
+employee_cv.studies.main_title: Tanulmányok
+employee_cv.studies.currently: 'Jelenleg is'
+employee_cv.hobby.main_title: 'Szabadidő, Hobbi'
+employee_cv.interesting_positions.main_title: 'Keresett pozicíók'
+employee_cv.salary.main_title: 'Nettó bérigény adatok'
+employee_cv.salary.cafeteria.yes: Igen
+employee_cv.salary.cafeteria.no: Nem
+employee_cv.other_information.main_title: 'Egyéb adatok'
+employee_cv.other_information.driving_licence: Jogosítvány
+employee_cv.other_information.personal_strengths: 'Személyes kompetenciák'
+employee_cv.other_information.languages: Nyelvismeret
+employee_cv.other_information.software_experience: 'Számítógépes ismeretek'
+employee_cv.other_information.it_expereience: 'IT Szakismeretek'
+employee_cv.extra_needs.main_title: 'Extra igények'
+employee_cv.extra_needs.way_of_life: Életvitel
+employee_cv.extra_needs.equipments: Eszközök
+employee_cv.extra_needs.benefits: Támogatás
+employee_cv.page: oldal
+employee_cv.posy: 'munkába állítjuk elképzeléseit!'
+employee_cv.link: www.mumi.hu

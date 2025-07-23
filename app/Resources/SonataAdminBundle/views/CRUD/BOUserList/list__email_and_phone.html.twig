@@ -1,0 +1,10 @@
+{% import '@SonataAdmin/CRUD/base_array_macro.html.twig' as list %}
+
+{% extends admin.getTemplate('base_list_field') %}
+
+{% block field %}
+    <div>
+        <b><a href="mailto:{{ value['email'] }}">{{ value['email'] }}</a></b><br/>
+        {{ object.phone }}
+    </div>
+{% endblock %}

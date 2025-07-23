@@ -1,0 +1,12 @@
+{% extends '@SonataAdmin/CRUD/base_show_field.html.twig' %}
+{% block field %}
+    {% if value %}
+        <div class="offer-lead-img">
+            <img src="/offer_img/{{ object.id }}/{{ value }}" 
+                 alt="Hirdetés kép" 
+                 style="max-width: 300px; max-height: 300px; border: 1px solid #ddd; border-radius: 4px;" />
+        </div>
+    {% else %}
+        <span class="text-muted">Nincs kép feltöltve</span>
+    {% endif %}
+{% endblock %}

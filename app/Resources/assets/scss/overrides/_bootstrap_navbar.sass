@@ -1,0 +1,138 @@
+header .navbar-default .navbar-nav > li > a.btn
+    display: inline-block
+    border-radius: 2px
+    font-size: 12px
+    text-transform: uppercase
+    margin-left: 0px
+    line-height: 20px
+    letter-spacing: 0.7px
+    border: 0px
+    font-size: 12px
+    padding: 25px 15px
+    width: 100%
+    text-transform: uppercase
+    font-weight: 200
+    @include border-radius(0)
+    @include transition(all .3s ease)
+    &:hover,
+    &:active,
+    &:focus
+        color: $white
+        background: darken( $ua-dark-blue , 35)
+    @media (max-width: $screen-md-max)
+        font-size: 11px
+header .dropdown
+    margin-left: 0px
+header .navbar-default .navbar-nav > li.icon
+    a 
+        padding: 0px
+        img
+            height: 40px
+            margin: 12px 0px
+
+.navbar-default 
+    background: $black
+    color: $white
+    margin: 0px
+    .navbar-toggle
+        margin: 18px
+        background-color: transparent
+        @include transition(all .2s ease)
+        &:hover,
+        &:focus,
+        &:active
+            border-color: $ua-orange
+            background: transparent
+            .icon-bar
+                background-color: $ua-orange
+        .icon-bar
+            background-color: $white
+            @include transition(all .2s ease)
+    .navbar-collapse, 
+    .navbar-form
+        background: $black
+        text-align: center
+        border-color: $black
+
+.navbar-header
+    height: 70px
+.navbar-brand
+    color: #777
+    height: 70px
+    margin-left: 10px
+    margin-right: 10px
+    padding: 5px 0px
+    img
+        height: 100%
+
+.navbar-default .navbar-nav > .open
+    &> a
+        background: $white
+        color: $black
+        &:hover,
+        &:active,
+        &:focus
+        background: $white
+        color: $black
+
+header .navbar-default .navbar-nav > li.dropdown 
+    > a
+        padding: 25px 20px
+        height: auto
+        @include border-radius(0px)
+        margint-op: 11px
+        color: #656F88
+        @include transition(all .2s ease)
+        border-left: 1px solid darken( $ua-dark-blue , 25)
+        &:hover,
+        &:active,
+        &:focus
+            color: $white
+            background: darken( $ua-dark-blue , 35)
+        span
+            color: $ua-dark-blue
+            text-transform: none
+        .fa
+            color: $ua-light-blue
+        img
+            height: 25px
+            width: 25px
+            margin-top: -2px
+            margin-bottom: -5px
+            float: left
+    &.open
+        a
+            background: #3C3C47
+    .dropdown-menu
+        background: #3C3C47
+        width: 100%
+        border: none
+        padding: 5px 10px
+        li 
+            > a
+                display: block
+                padding: 9px 0px
+                clear: both
+                font-weight: normal
+                line-height: 1.42857
+                color: #D1D1D3
+                white-space: nowrap
+                border-bottom: 1px solid #4B4B55
+                text-align: center
+                text-transform: uppercase
+                font-size: 12px
+                &:hover,
+                &:focus,
+                &:active
+                    background: transparent
+                    color: $white
+            &:last-child > a
+                border-bottom: 0px
+.m-extended-header .navbar-default .navbar-collapse, .navbar-default .navbar-form
+    background: none
+#homepage 
+    header 
+        .navbar 
+            .container
+                width: 100%
+                padding: 0px 40px

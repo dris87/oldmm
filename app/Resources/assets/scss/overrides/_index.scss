@@ -1,0 +1,22 @@
+// Overrides
+//
+// [These styles override] all other layers, and has the power
+// to override anything at all that has gone before it. It is
+// inelegant and heavy-handed, and contains utility and helper
+// classes, and hacks.
+//
+// @source - http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528
+
+// Since we use bootstrap we need to override a few styles
+@import 'bootstrap_btn';
+@import 'bootstrap_input';
+@import 'bootstrap_pagination';
+@import 'bootstrap_modal';
+@import 'bootstrap_accordion';
+@import 'bootstrap_nav';
+@import 'bootstrap_navbar';
+@import 'bootstrap_radio.scss';
+@import 'select2.sass';
+@import 'smartwizard';
+@import 'bootstrap';
+@import 'sf-minitoolbar';

@@ -1,0 +1,6 @@
+services:
+    spirit.sonata.model_manager.initialize_subscriber:
+        class: Spirit\ModelManagerBundle\Doctrine\EventListener\InitializeModelSubscriber
+        tags:
+            - { name: 'doctrine.event_subscriber'}
+

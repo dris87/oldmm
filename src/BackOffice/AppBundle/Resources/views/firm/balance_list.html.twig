@@ -1,0 +1,142 @@
+{% extends '@SonataAdmin/standard_layout.html.twig' %}
+
+{% block title %}
+    Egyenleg
+{% endblock %}
+
+{% block breadcrumb %}
+    <div class="hidden-xs">
+        <ol class="nav navbar-top-links breadcrumb">
+            <li>
+                <a href="{{ path('sonata_admin_dashboard') }}">{{ 'link_breadcrumb_dashboard' | trans({}, 'SonataAdminBundle') | raw }}</a>
+            </li>
+            {% if block('breadcrumb_between') is defined %}
+                {{ block('breadcrumb_between') }}
+            {% endif %}
+            <li class="active"><span>{{ block('title') }}</span></li>
+        </ol>
+    </div>
+{% endblock %}
+
+{% block actions %}
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            <a class="sonata-action-element" href="{{ path('back_to_firm_list') }}">
+                <i class="fa fa-list" aria-hidden="true"></i>
+                Vissza a listára
+            </a>
+        </li>
+    </ul>
+{% endblock %}
+
+{% block navbar_title %}
+    {{ block('title') }}
+{% endblock %}
+
+{% block list_table %}
+    <div class="col-xs-12 col-md-12">
+        <div class="box box-primary">
+            <div class="box-header">
+                <h4 class="box-title">
+                    Cég adatok
+                </h4>
+            </div>
+            <div class="box-body table-responsive no-padding">
+                <table class="table">
+                    <tbody>
+                    <tr class="sonata-ba-view-container">
+                        <th>Cég neve</th>
+                        <td>{{ firm.name }}</td>
+                    </tr>
+                    <tr class="sonata-ba-view-container">
+                        <th>Cím</th>
+                        <td>{{ firm.getAddress}}</td>
+                    </tr>
+                    <tr class="sonata-ba-view-container">
+                        <th>Adószám</th>
+                        <td>{{ firm.taxNumber}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        {% set balances = firm.balances %}
+        <div class="box box-primary" style="margin-bottom: 100px;">
+            <div class="box-body {% if balances|length > 0 %}table-responsive no-padding{% endif %}">
+                {% block list_header %}{% endblock %}
+
+                {% if balances|length > 0 %}
+                    <table class="table table-bordered table-striped sonata-ba-list financial">
+                        {% block table_header %}
+                            <thead>
+                            <tr class="sonata-ba-list-field-header">
+                                <th class="sonata-ba-list-field-header-text">
+                                    Megnevezés
+                                </th>
+                                <th class="sonata-ba-list-field-header-text">
+                                    Lejárat dátuma
+                                </th>
+                                <th class="sonata-ba-list-field-header-text">
+                                    Kredit
+                                </th>
+                            </tr>
+                            </thead>
+                        {% endblock %}
+
+                        {% block table_body %}
+                            <tbody>
+                            {% for balance in balances %}
+                                <tr class="invoice">
+                                    <td>{{ balance.name }}</td>
+                                    <td>{{ balance.expiredAt|date('Y.m.d') }}</td>
+                                    <td>
+                                    </td>
+                                </tr>
+                                {% for item in balance.items %}
+                                    <tr class="payment">
+                                        {% set item_transable = 'service.name.' ~ item.type %}
+                                        <td colspan="2" style="text-indent: 30px">{{ item_transable|trans }}</td>
+                                        <td>
+                                            {{ item.credit }}
+                                            <a href="{{ path('admin_firm_balance_item_edit', {'balanceItem': item.id}) }}"
+                                               class="btn btn-primary btn-xs pull-right">Módosítás</a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            {% endfor %}
+                            </tbody>
+                        {% endblock %}
+
+                        {% block table_footer %}
+                        {% endblock %}
+                    </table>
+                {% else %}
+                    {% block no_result_content %}
+                        <div class="info-box">
+                            <span class="info-box-icon bg-aqua"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">{{ 'no_result'|trans({}, 'SonataAdminBundle') }}</span>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 0%"></div>
+                                </div>
+                                <span class="progress-description">
+                                </span>
+                            </div>
+                        </div>
+                    {% endblock %}
+                {% endif %}
+
+            </div>
+            {% block list_footer %}
+                {% if balances|length > 0 %}
+                    <div class="box-footer">
+                        <div class="form-inline clearfix">
+
+                        </div>
+                    </div>
+                {% endif %}
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}

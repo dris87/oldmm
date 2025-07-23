@@ -1,0 +1,65 @@
+{% import 'common/helpers/collection_helper.html.twig' as coll %}
+<div class='m-employee-card'>
+    {% if cv.employee.pictureName is not empty %}
+        {% set imageName = 'uploads/employee/picture/'~cv.employee.pictureName %}
+    {% else %}
+        {% if cv.employee.gender.value == 1 %}
+            {% set imageName = 'images/cv/male.png' %}
+        {% else %}
+            {% set imageName = 'images/cv/female.png' %}
+        {% endif %}
+    {% endif %}
+    <img src="{{ asset(imageName) }}" class='m-employee-card--image' width="200" height="200" />
+    <br/>
+    {#<h4 class='m-employee-card--name'>{{ cv.name }}</h4>#}
+    <div class='m-employee-card--content'>
+        <table class="m-employee-card--table">
+            <tbody>
+                <tr>
+                    <td>{{ 'label.cvs.status'|trans }}</td>
+                    <td class="text-right">
+                        <label class="m-switch " data-action="{{ path('employee_cv_status_toggle',{'id':cv.id}) }}">
+                            <input type="checkbox"
+                                   {% if cv.status.value == 1 %}checked="checked"{% endif %}
+                                   value=""
+                            />
+                            <span class="slider"></span>
+                            <span class="caption">
+                                <span class="c0">{{ 'label.inactive'|trans }}</span>
+                                <span class="c1">{{ 'label.active'|trans }}</span>
+                            </span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>{{ 'label.cvs.createAt'|trans }}</td>
+                    <td class="text-right">{{ cv.createdAt|localizeddate('medium', 'medium', null, 'CET', 'Y-MM-dd HH:mm') }}</td>
+                </tr>
+                <tr>
+                    <td>{{ 'label.cvs.categories'|trans }}</td>
+                    <td class="text-right">{{ coll.collectionToString(cv.searchCategories,'',3) }}</td>
+                </tr>
+                <tr>
+                    <td>{{ 'label.educations'|trans }}</td>
+                    <td class="text-right"><span class="label label-{% if cv.educations.count == 0 %}danger{% else %}success{% endif %}">{{ cv.educations.count }}</span></td>
+                </tr>
+                <tr>
+                    <td>{{ 'label.experiences'|trans }}</td>
+                    <td class="text-right"><span class="label label-{% if cv.experiences.count == 0 %}danger{% else %}success{% endif %}">{{ cv.experiences.count }}</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="m-employee-card--footer text-right">
+            <a href="{{ path('employee_cv_generate_pdf', {id: cv.id}) }}" class="btn btn-default mb-5" target="_blank">
+                {{ 'label.employee.cv_list.label.cv.customize.button'|trans }}
+            </a>
+            {#<a data-generate-action="{{ path('employee_cv_generate_pdf', {id: cv.id}) }}" class="m-employee-card--customize-button btn btn-default mb-5" target="_blank">
+                {{ 'label.employee.cv_list.label.cv.customize.button'|trans }}
+            </a>#}
+            <a href="{{ path('employee_cv_edit', {id: cv.id}) }}" class="btn btn-primary mb-5">
+                {{ 'label.edit'|trans }}
+            </a>
+        </div>
+    </div>
+</div>

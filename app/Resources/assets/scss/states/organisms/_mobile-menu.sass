@@ -1,0 +1,60 @@
+/** Opened state **/
+body.m-mobile-menu--opened,
+body.m-mobile-menu--search-opened
+  overflow: hidden
+  .m-mobile-menu
+    &--header
+      transition: all 0.3s ease-in, background 0.5s ease-in
+      transition-delay: 0.25s
+      overflow-y: auto
+    &--burger-container
+      transform: rotate(90deg)
+    &--search-container
+      display: none
+    &--search
+      display: none
+    &--burger
+      &--bar
+        transition: all 0.4s $m-mobile-menu--cubic
+        transition-delay: 0.2s
+        &--top
+          transform: translateY(4px) rotate(45deg)
+        &--bottom
+          transform: translateY(3px) rotate(-45deg)
+
+body.m-mobile-menu--opened
+  .m-mobile-menu
+    &--header
+      height: 100%
+      background-color: #000
+    &--container
+      ul
+        li
+          transform: scale(1) translateY(0px)
+          opacity: 1
+          @for $i from 1 through $m-mobile-menu--items
+            &:nth-child(#{$i})
+              transition-delay: #{0.07 * $i+0.2}s
+body.m-mobile-menu--search-opened
+  .m-mobile-menu
+    &--container
+      height: 0
+    &--header
+      height: 100%
+      background-color: $color-background
+    &--search-container
+      display: block
+      opacity: 1
+      h2
+        transform: scale(1) translateY(0px)
+        opacity: 1
+        transition-delay: 0.2s
+      .form-group
+        transform: scale(1) translateY(0px)
+        opacity: 1
+        @for $i from 1 through $m-mobile-menu--items
+          &:nth-child(#{$i})
+            transition-delay: #{0.07 * $i+0.2}s
+    &--burger
+      &--bar
+        background: $black

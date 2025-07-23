@@ -1,0 +1,21 @@
+<div class="m-mobile-menu--header">
+    <div class="m-mobile-menu--burger-container">
+        <div class="m-mobile-menu--burger">
+            <div class="m-mobile-menu--burger--bar m-mobile-menu--burger--bar--top"></div>
+            <div class="m-mobile-menu--burger--bar m-mobile-menu--burger--bar--bottom"></div>
+        </div>
+    </div>
+    <div class="m-mobile-menu--search">
+        <img src="{{ asset('images/icon/ico-search-white.png') }}"/>
+    </div>
+    <div class="m-mobile-menu--container">
+        {{ knp_menu_render('mobile_menu', {'allow_safe_labels': true}) }}
+    </div>
+    <div class="m-mobile-menu--search-container">
+        <div class="clearfix">
+            <h2 class="m-heading text-center">Részletes kereső</h2>
+            {{ form_start(advanced_offer_search( )) }}
+            {{ form_end(advanced_offer_search( )) }}
+        </div>
+    </div>
+</div>

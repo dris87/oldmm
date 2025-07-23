@@ -1,0 +1,19 @@
+{% import '@SonataAdmin/CRUD/base_array_macro.html.twig' as list %}
+
+{% extends admin.getTemplate('base_list_field') %}
+
+{% block field %}
+    <div>
+        <b>
+            {{ object.fullName }}
+
+        </b><br>
+        (
+            {% if object.office %}
+                {{  object.office }}
+            {% else %}
+                -
+            {% endif %}
+        )
+    </div>
+{% endblock %}

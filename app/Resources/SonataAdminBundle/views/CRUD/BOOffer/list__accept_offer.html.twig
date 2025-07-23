@@ -1,0 +1,4 @@
+{#fixme: this is disgusting#}
+{% if object.status.value == 1 %}
+<a class="btn btn-sm btn-success" href="{{ admin.generateObjectUrl('accept', object) }}"><i class="fa fa-check"></i></a>
+{% endif %}

@@ -1,0 +1,36 @@
+{% import 'modules/atoms/icon.html.twig' as icon %}
+<nav class="m-main-menu">
+    <div class="container">
+        <div class="row">
+            <h1>
+                <a href="{{ path('homepage') }}"><img src="{{ asset('images/logo/mumi_logo-blue_light.png') }}"></a>
+            </h1>
+
+            {% if app.user is defined and app.user is not empty %}
+                {{ knp_menu_render('logged_left_side', {'allow_safe_labels': true}) }}
+                <ul class="m-main-menu--right">
+                {#
+                    {% if app.user.firmColleague %}
+                        <li class="m-main-menu--icon mr-20">
+                            <a href="{{ path('firm_cart') }}" role="button">
+                                {{ icon.icon( 'cart-white' , 'sm' , null , 'icon.cart.alt') }}
+                                <span class="ua-icon--badge" id="m-cart-counter">4</span>
+                            </a>
+                        </li>
+                    {% endif %}
+                    #}
+                    <li class="m-main-menu--dropdown m-main-menu--dropdown-user">
+                        <a href="#">
+                            <img src="{{ asset('images/user_image.png') }}"/>
+                            <span>{{ app.user.fullName }}</span>
+                            {{ icon.fa( 'chevron-down' ) }}
+                        </a>
+                        {{ knp_menu_render('logged_dropdown', {'allow_safe_labels': true}) }}
+                    </li>
+                </ul>
+            {% else %}
+                {{ knp_menu_render('not_logged_right_side', {'allow_safe_labels': true}) }}
+            {% endif %}
+        </div>
+    </div>
+</nav>

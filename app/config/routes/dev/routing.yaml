@@ -1,0 +1,11 @@
+_web_profiler:
+    resource: 'web_profiler.yaml'
+
+_twig:
+    resource: 'twig.yaml'
+
+_annotations:
+    resource: 'annotations.yaml'
+
+_main:
+    resource: '../routing.yaml'

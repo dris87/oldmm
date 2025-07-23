@@ -1,0 +1,113 @@
+footer
+  background: $color-footer-background
+  font-size: 14px
+  color: $white
+  padding: 0px 0px 30px
+  line-height: 1.2
+  height: $footer-height
+  position: relative
+  @include transition(all .2s ease)
+  a
+    color: $white
+    text-transform: uppercase
+    font-size: 14px
+    padding: 0px 20px 15px 0px
+    &:hover,
+    &:active,
+    &:focus
+      text-decoration: none
+  nav
+    text-align: center
+    margin: 0px 0px 20px
+    @include transition(all .2s ease)
+    a
+      display: inline-block
+  #footer-links
+    padding-top: 30px
+    padding-bottom: 30px
+  #footer-copyright
+    padding: 32px 0px
+    text-align: left
+    background: #1f1f1f
+    .container
+      padding: 0px 0px
+    .row
+      padding:
+      margin: 10px 0px
+      text-align: center
+  #employee,
+  #firm
+    @include transition(all .2s ease)
+  .container .row > div
+    @include transition(all .2s ease)
+  .line-container
+    @include transition(all .2s ease)
+    width: 15px
+    text-align: center
+    float: left
+    i
+     font-size: 18px
+  .line
+    background: $color-light-line
+    width: 2px
+    height: 50px
+    margin: 6px 6px
+  .content
+    float: left
+    text-align: left
+    padding-left: 10px
+    width: 100px
+    a
+      padding: 0
+      font-size: 11px
+    strong
+      font-size: 12px
+  .divider
+    height: 10px
+
+  @media (min-width: $screen-md-min)
+    nav
+      text-align: left
+    #footer-copyright
+      div
+        &:first-child
+          text-align: left
+        &:last-child
+          text-align: right
+
+  @media (max-width: $screen-sm-max)
+    #footer-copyright
+      padding: 32px 0px 70px
+    #firm
+      .line-container
+        float: right
+      .content
+        float: right
+        text-align: right
+        padding-right: 10px
+
+  @media (max-width: $screen-xs-max)
+    #firm
+      .line-container
+        float: left
+      .content
+        float: left
+        text-align: left
+    .firm-container,
+    .employee-container
+        margin-right: auto
+        margin-left: auto
+        padding-left: 15px
+        padding-right: 15px
+        width: 155px
+        margin-bottom: 20px
+
+@media (min-width: $screen-md-min)
+  footer
+    height: $footer-height-md
+@media (max-width: $screen-sm-max)
+  footer
+    height: $footer-height-sm
+@media (max-width: $screen-xs-max)
+  footer
+    height: $footer-height-xs

@@ -1,0 +1,15 @@
+services:
+
+    spirit.spirit_model.spirit_model_manager:
+        class:        Spirit\SpiritModelBundle\Manager\SpiritModelManager
+        arguments:
+            - '@doctrine.orm.entity_manager'
+            - '@property_accessor'
+
+    spirit.spirit_model.spirit_model_subscriber:
+        class:        Spirit\SpiritModelBundle\EventListener\SpiritContainerModelSubscriber
+        arguments:
+            - '@spirit.spirit_model.spirit_model_manager'
+        public: false
+        tags:
+            - { name: 'doctrine.event_subscriber' }

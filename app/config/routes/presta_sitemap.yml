@@ -1,0 +1,9 @@
+#https://github.com/prestaconcept/PrestaSitemapBundle
+presta_sitemap:
+    resource: "@PrestaSitemapBundle/Resources/config/routing.yml"
+    defaults:
+      priority: 1
+      changefreq: daily
+      lastmod: now
+      # You may want to change the default 3600 seconds max-age set when rendering the sitemap. Edit the following configuration in your application.
+      timetolive: 3600

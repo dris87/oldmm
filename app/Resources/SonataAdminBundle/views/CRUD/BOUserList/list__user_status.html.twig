@@ -1,0 +1,30 @@
+{% extends admin.getTemplate('base_list_field') %}
+
+{% set isEditable = field_description.options.editable is defined and field_description.options.editable and admin.hasAccess('edit', object) %}
+{% set xEditableType = field_description.type|sonata_xeditable_type %}
+
+{% if isEditable and xEditableType %}
+    {% block field_span_attributes %}
+        {% spaceless %}
+            {{ parent() }}
+            data-source="[{value: 0, text: '{%- trans from 'SonataAdminBundle' %}label_type_no{% endtrans -%}'},{value: 1, text: '{%- trans from 'SonataAdminBundle' %}label_type_yes{% endtrans -%}'}]"
+        {% endspaceless %}
+    {% endblock %}
+{% endif %}
+
+{% block field %}
+    {%- spaceless %}
+        {% if value %}
+            {% set text = 'Aktív' %}
+        {% else %}
+            {% set text = 'Inaktív' %}
+        {% endif %}
+
+        {% if field_description.options.inverse|default(false) ? not value : value %}
+            {% set class = 'label-success' %}
+        {% else %}
+            {% set class = 'label-danger' %}
+        {% endif %}
+
+        <span class="label {{ class }}">{{ text }}</span>
+    {% endspaceless -%}{% endblock %}

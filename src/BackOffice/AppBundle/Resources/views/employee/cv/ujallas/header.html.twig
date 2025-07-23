@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<style>
+		body {
+			font-family: 'Roboto', sans-serif;
+			font-size: 12px;
+			letter-spacing: 0.5px;
+			margin: 0;
+			padding: 0;
+			color: #3d4042;
+		}
+
+		.white {
+			width: 70%;
+			padding-right: 15px;
+			padding-left: 40px;
+		}
+
+		.grey {
+			width: 30%;
+			background-color: #F2F2F2;
+			padding-right: 40px;
+			padding-left: 15px;
+		}
+
+		.parts {
+			margin-top: 40px;
+		}
+
+		table {
+			width: 100%;
+			border-spacing: 0;
+			table-layout: fixed;
+			height: 100%;
+			margin: 0;
+		}
+
+		tbody, tr {
+			width: 100%;
+			height: 100%;
+		}
+
+		td {
+			height: 100%;
+			vertical-align: middle;
+		}
+
+		.left {
+			width: 30%;
+		}
+
+		.right {
+			width: 70%;
+		}
+
+		img{
+			height: 50px;
+		}
+	</style>
+</head>
+<body>
+<table>
+	<tbody>
+		<tr>
+			<td class="white">
+				<div class="parts">
+					<table>
+						<tr>
+							<td class="left">
+								<img src="{{ root }}/web/images/logo/mumi_logo-blue_dark.png"/>
+							</td>
+							<td class="right">
+								<p>
+									Az önéletrajz az MUMI.HU weboldalán keresztül jött létre. <br>
+									Önéletrajz létrehozásnak dátuma: {{ date|date('Y.m.d') }}
+								</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</td>
+			<td class="grey">
+
+			</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

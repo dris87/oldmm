@@ -1,0 +1,74 @@
+{% import 'modules/atoms/bootstrap/buttons.html.twig' as buttons %}
+{% import 'modules/atoms/bootstrap/tables.html.twig' as tables %}
+
+<h2>Import</h2>
+    {% verbatim %}
+<pre><code class="twig">{% import 'modules/atoms/bootstrap/buttons.html.twig' as buttons %}</code></pre> 
+    {% endverbatim  %}
+<hr/>
+
+<h2>Button Group</h2>
+{{ buttons.buttonGroup([
+    {text: 'A Button', attr: {'ID': 'myButton1', 'onclick': 'alert(\'Hello World\')'}},
+    {text: 'A Link', href: '#', class: 'btn-primary'},
+]) }}
+
+</hr>
+<h4>Description</h4>
+    {{ tables.table( 
+        [ { html : 'Field' } , { html : 'Type' } , { html : 'Description' } ],
+        [   {cols : [ { html : 'items' } , { html : 'array' } , { html : 'Array of Button Element' } ]}
+        ],'striped') }}
+    <code>
+       bootstrap.buttonGroup(items)
+    </code>
+<h4>Example</h4>
+    {% verbatim %}
+<pre><code class="twig">{{ buttons.buttonGroup([
+    {text: 'A Button', attr: {'ID': 'myButton1', 'onclick': 'alert(\'Hello World\')'}},
+    {text: 'A Link', href: '#', class: 'btn-primary'},
+]) }}</code></pre> 
+    {% endverbatim  %}
+<hr/>
+
+<h2>Button Toolbar</h2>
+{{ buttons.buttonToolbar([
+    [
+        {href: '#', text: '<i class="glyphicon glyphicon-font"></i>'},
+        {href: '#', text: '<i class="glyphicon glyphicon-bold"></i>'},
+        {href: '#', text: '<i class="glyphicon glyphicon-italic"></i>'},
+    ],
+    [
+        {href: '#', text: '<i class="glyphicon glyphicon-align-left"></i>'},
+        {href: '#', text: '<i class="glyphicon glyphicon-align-center"></i>'},
+        {href: '#', text: '<i class="glyphicon glyphicon-align-right"></i>'},
+        {href: '#', text: '<i class="glyphicon glyphicon-align-justify"></i>'}
+    ]
+]) }}
+
+</hr>
+<h4>Description</h4>
+    {{ tables.table( 
+        [ { html : 'Field' } , { html : 'Type' } , { html : 'Description' } ],
+        [   {cols : [ { html : 'items' } , { html : 'array' } , { html : 'Array of Button Element' } ]}
+        ],'striped') }}
+    <code>
+       buttons.buttonGroup(items)
+    </code>
+<h4>Example</h4>
+    {% verbatim %}
+<pre><code class="twig">{{ buttons.buttonToolbar([
+    [
+        {href: '#', text: '<i class="glyphicon glyphicon-font"></i>'},
+        {href: '#', text: '<i class="glyphicon glyphicon-bold"></i>'},
+        {href: '#', text: '<i class="glyphicon glyphicon-italic"></i>'},
+    ],
+    [
+        {href: '#', text: '<i class="glyphicon glyphicon-align-left"></i>'},
+        {href: '#', text: '<i class="glyphicon glyphicon-align-center"></i>'},
+        {href: '#', text: '<i class="glyphicon glyphicon-align-right"></i>'},
+        {href: '#', text: '<i class="glyphicon glyphicon-align-justify"></i>'}
+    ]
+]) }}</code></pre> 
+    {% endverbatim  %}
+<hr/>

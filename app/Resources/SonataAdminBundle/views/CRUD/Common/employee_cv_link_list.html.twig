@@ -1,0 +1,9 @@
+{% extends '@SonataAdmin/CRUD/base_list_field.html.twig' %}
+
+{% block field %}
+    <div>
+        {% if value is not empty %}
+            <b><a href="{{ path('employee_cv_edit',{'id':object.employeeCv.id}) }}">{{ object.employeeCv.withOwnerName }}</a></b>
+        {% endif %}
+    </div>
+{% endblock %}

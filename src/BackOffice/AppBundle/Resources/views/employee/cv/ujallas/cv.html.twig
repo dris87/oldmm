@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ cv.generatedFileName }}</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            font-weight: lighter;
+            margin: 0;
+            padding: 0;
+            color: #3d4042;
+            height: 32.26cm;
+        }
+
+        .white {
+            width: 70%;
+            padding-right: 15px;
+            padding-left: 40px;
+            padding-top: 70px;
+        }
+
+        .grey {
+            width: 30%;
+            background-color: #F2F2F2;
+            padding-right: 40px;
+            padding-left: 15px;
+            position: relative;
+            z-index: -1;
+            padding-top: 70px;
+        }
+
+        .parts {
+            margin-top: 150px;
+            position: relative;
+        }
+
+        .personal {
+            width: 100%;
+            position: absolute;
+            top: -120px;
+        }
+
+        .greybar {
+            width: 100%;
+            height: 50px;
+            background-color: #333333;
+            color: white;
+            position: absolute;
+            top: 20px;
+            padding-bottom: 15px;
+        }
+
+        .greybar h2 {
+            margin-left: 40px;
+        }
+
+        .greybar img {
+            position: absolute;
+            right: 70px;
+            top: -15px;
+            width: 152px;
+            height: 152px;
+            border: 3px solid #29aae2;
+            background-color: white;
+            padding: 3px;
+        }
+
+        .part {
+        }
+
+        table {
+            width: 100%;
+            border-spacing: 0;
+            table-layout: fixed;
+            height: 100%;
+        }
+
+        tbody {
+            height: 100%;
+        }
+
+        tbody, tr {
+            width: 100%;
+            height: 100%;
+        }
+
+        td {
+            height: 100%;
+            vertical-align: top;
+        }
+
+        .left {
+            width: 30%;
+        }
+
+        .right {
+            width: 70%;
+        }
+
+        /* NAgy részek címei */
+
+        .part .title {
+            position: relative;
+            color: #29aae2;
+            text-transform: uppercase;
+            font-weight: normal;
+            margin-bottom: 25px;
+            margin-top: 25px;
+            font-size: 13px;
+        }
+
+        .part .title span {
+            padding-right: 10px;
+        }
+
+        .white .part .title span {
+            background-color: white;
+        }
+
+        .grey .part .title span {
+            background-color: #F2F2F2;
+        }
+
+        .part .title span:after {
+            content:"";
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            right: 0;
+            height: 0.5em;
+            border-top: 1px solid #29aae2;
+            z-index: -1;
+        }
+
+        /* Kisebb Blockok címei */
+
+        .block .title {
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 17px 0 10px 0;
+            color: #3d4042;
+        }
+
+        .list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Experience, study */
+
+        .date {
+            padding-top: 12px;
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .date > div {
+            display: inline-block;
+        }
+
+        .date > div > div {
+            margin-bottom: 10px;
+        }
+
+        .date .start-date {
+            margin-right: 5px;
+            text-align: center;
+            width: 40%;
+        }
+
+        .date .end-date {
+            margin-left: 5px;
+            text-align: center;
+            width: 40%;
+        }
+
+        .description span {
+            display: block;
+            font-size: 12px;
+        }
+
+        .requirements .block .title {
+            /*margin: 0;*/
+        }
+
+        .requirements .block{
+            margin-top: 12px;
+        }
+
+        .requirements td {
+            padding-bottom: 15px;
+        }
+
+        .pagenotbreak {
+            page-break-inside: avoid !important;
+        }
+
+        .right-caret {
+            border-bottom: 4px solid transparent;
+            border-top: 4px solid transparent;
+            border-left: 4px solid #29aae2;
+            display: inline-block;
+            height: 0;
+            width: 0;
+        }
+
+        .comment {
+            font-style: italic;
+        }
+
+        .hobby{
+            height: 100%;
+        }
+
+        .icon{
+            color: #29aae2;
+        }
+        .td-padding-bottom{
+            padding: 5px;
+        }
+        .month{
+            font-size: 11px;
+        }
+
+    </style>
+
+    <script defer src="{{ root }}/src/BackOffice/AppBundle/Resources/public/cv/ujallas/js/fa-solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+    <script defer src="{{ root }}/src/BackOffice/AppBundle/Resources/public/cv/ujallas/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+    <script src="{{ root }}/src/BackOffice/AppBundle/Resources/public/cv/jquery-3.3.1.min.js"></script>
+
+    <script src="{{ root }}/src/BackOffice/AppBundle/Resources/public/cv/employee_custom.js"></script>
+
+</head>
+<body id="body-height" onload="subst()">
+<div class="greybar">
+    <h2>{% if not isLight %}{{ cv.employee.firstName }} {{ cv.employee.lastName }}{% endif %}</h2>
+    {% if not isLight and cv.employee.pictureName is not empty %}
+        {% set imageName = 'uploads/employee/picture/'~cv.employee.pictureName %}
+        <img src="{{ root }}/web/{{ imageName }}" width="200" height="200" />
+    {% endif %}
+</div>
+<table>
+    <tbody>
+    <tr>
+        <td class="white">
+            <div class="parts">
+                <div class="personal">
+                    <table>
+                        <colgroup>
+                            <col class="left">
+                            <col class="right">
+                        </colgroup>
+                        <tr>
+                            <td class="td-padding-bottom">
+
+                                {#<div class="document-height"></div>#}
+
+                                {% if cv.employee.gender.value == 1 %}
+                                    <i class="icon fas fa-venus-mars"></i> Férfi
+                                {% else %}
+                                    <i class="icon fas fa-venus-mars"></i> Nő
+                                {% endif %}
+                            </td>
+                            <td class="td-padding-bottom">
+                                <i class="icon fas fa-flag"></i>
+                                {% for nation in cv.employee.nationality %}
+                                    {{ nation.value }}{% if loop.index != loop.last %}, {% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-padding-bottom">
+                                <i class="icon fas fa-birthday-cake"></i> {{ cv.employee.birthDate|date("Y-m-d") }}
+                            </td>
+                            <td class="td-padding-bottom">
+                                <i class="icon fas fa-map-marker-alt"></i> {{ cv.employee.location.zip.value }}, {{ cv.employee.location.city.value }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-padding-bottom">
+                                {% if not isLight %}
+                                    <i class="icon fas fa-phone-square"></i> +{{ cv.employee.phoneNumber.countryCode }} {{ cv.employee.phoneNumber.nationalNumber }}
+                                {% endif %}
+                            </td>
+                            <td class="td-padding-bottom">
+                                {% if not isLight %}
+                                    <i class="icon fas fa-envelope"></i> {{ cv.employee.email }}
+                                {% endif %}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="part  requirements">
+
+                    <div class="part pagenotbreak requirements">
+                        <h2 class="title"><span>Álláskeresési adatok</span></h2>
+                        <table>
+                            {% if cv.shifts is not empty %}
+                                <tr>
+                                    <td class="left">
+                                        <div class="block">
+                                            <h1 class="title">Munkaidő</h1>
+                                        </div>
+                                    </td>
+                                    <td class="right">
+                                        <p>
+                                            {% for shift in cv.shifts %}
+                                                {{ shift.value }}{% if loop.index != loop.last %}, {% endif %}
+                                            {% endfor %}
+                                        </p>
+                                    </td>
+                                </tr>
+                            {% endif %}
+
+                            {% if cv.jobForms is not empty %}
+                                <tr>
+                                    <td class="left">
+                                        <div class="block">
+                                            <h1 class="title">Szerződés típusa</h1>
+                                        </div>
+                                    </td>
+                                    <td class="right">
+                                        <p>
+                                            {% for jobForm in cv.jobForms %}
+                                                {{ jobForm.value }}{% if loop.index != loop.last %}, {% endif %}
+                                            {% endfor %}
+                                        </p>
+                                    </td>
+                                </tr>
+                            {% endif %}
+
+                            <tr >
+                                <td class="left" >
+                                    <div class="block">
+                                        <h1 class="title">Utazási hajlandóság</h1>
+                                    </div>
+                                </td>
+                                <td class="right">
+                                    <p>
+                                        {% if cv.willToTravelDistance is not empty %}
+                                            Ha szükséges, a lakhelyemtől számítva utazom <strong>{{ cv.willToTravelDistance }}km</strong>-t.
+                                        {% endif %}
+
+                                        {% if cv.willToTravelLocations is not empty %}
+                                            Ha szükséges, utazom az alábbi településekre:
+                                            <br>
+                                            {% for location in cv.willToTravelLocations %}
+                                                {{ location.value }}
+                                            {% endfor %}
+                                        {% endif %}
+
+                                    </p>
+                                </td>
+                            </tr>
+
+                            {% if cv.willToMove is not empty %}
+                                <tr>
+                                    <td class="left">
+                                        <div class="block">
+                                            <h1 class="title">Költözési hajlandóság</h1>
+                                        </div>
+                                    </td>
+                                    <td class="right">
+                                        {% if cv.willToMove.readable == "by_location" %}
+                                            {% if cv.willToMoveLocations is not empty %}
+                                                <p>
+                                                    Ha szükséges, költözöm az alábbi településekre:
+                                                    <br>
+                                                    {% for location in cv.willToMoveLocations %}
+                                                        {{ location.city.value }}
+                                                    {% endfor %}
+                                                </p>
+                                            {% endif %}
+                                        {% else %}
+                                            <p>
+                                                Ha szükséges bárhova költöznék.
+                                            </p>
+                                        {% endif %}
+
+                                    </td>
+                                </tr>
+                            {% endif %}
+
+                            {% if cv.marketStatuses is not empty %}
+                                <tr>
+                                    <td class="left">
+                                        <div class="block">
+                                            <h1 class="title">Jelenlegi körülmények</h1>
+                                        </div>
+                                    </td>
+                                    <td class="right">
+                                        <p>
+                                            {% for status in cv.marketStatuses %}
+                                                {{ status.value }}{% if loop.index != loop.last %}, {% endif %}
+                                            {% endfor %}
+                                        </p>
+                                    </td>
+                                </tr>
+                            {% endif %}
+
+                            {% if cv.jobComment is not empty %}
+                                <tr>
+                                    <td class="left">
+                                        <div class="block">
+                                        </div>
+                                    </td>
+                                    <td class="right">
+                                        {% if cv.jobComment is not null and cv.jobComment is not empty %}
+                                            <span class="comment"><i class="icon fas fa-info-circle"></i> {{ cv.jobComment }}</span>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                            {% endif %}
+
+                        </table>
+                    </div>
+
+                    <div class="part">
+
+                        <h2 class="title">
+                            <span>
+                                Szakmai tapasztalatok
+                            </span>
+                        </h2>
+
+                        {% if cv.experiences is not empty %}
+
+                            {% for experience in cv.experiences %}
+                                <div class="experience pagenotbreak">
+                                    <table>
+                                        <tr>
+                                            <td class="left">
+                                                <div class="date">
+                                                    <div class="start-date">
+                                                        <div>
+                                                            {{ experience.fromDate|date("Y") }}
+                                                        </div>
+                                                        <div class="month">
+                                                            {{ experience.fromDate|localizeddate('long', 'none', 'hu', 'Europe/Budapest', 'MMMM' )|upper }}
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <b class="right-caret"></b>
+                                                    </div>
+                                                    <div class="end-date">
+                                                        <div>
+                                                            {% if not experience.inProgress  %}
+                                                                {{ experience.toDate|date("Y") }}
+                                                            {% else %}
+                                                                <i class="icon fas fa-circle"></i>
+                                                            {% endif %}
+                                                        </div>
+                                                        <div class="month">
+                                                            {% if not experience.inProgress %}
+                                                                {{ experience.toDate|localizeddate('long', 'none', 'hu', 'Europe/Budapest', 'MMMM' )|upper }}
+                                                            {% else %}
+                                                                Jelenleg is
+                                                            {% endif %}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="right">
+                                                <div class="description block">
+                                                    <header>
+                                                        <h1 class="title">{{ experience.experience.value }}</h1>
+                                                        <span>{{ experience.companyName }}</span>
+                                                        <span>{{ experience.location.city.value }}</span>
+                                                    </header>
+                                                    <section>
+                                                        <p>
+                                                            {{ experience.comment }}
+                                                        </p>
+                                                    </section>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            {% endfor %}
+
+
+                        {% else %}
+
+                            <p>
+                                Nem rendelkezem munkatapasztalattal.
+                            </p>
+
+                        {% endif %}
+                    </div>
+
+
+                    <div class="part">
+
+                        <h2 class="title">
+                            <span>Tanulmányok</span>
+                        </h2>
+
+                        {% if cv.educations is not empty %}
+
+                            {% for study in cv.educations %}
+
+                                <div class="study pagenotbreak">
+                                    <table>
+                                        <tr>
+                                            <td class="left">
+                                                <div class="date">
+                                                    <div class="start-date">
+                                                        <div>
+                                                            {{ study.fromDate|date("Y") }}
+                                                        </div>
+                                                        <div class="month">
+                                                            {{ study.fromdate|localizeddate('long', 'none', 'hu', 'Europe/Budapest', 'MMMM' )|upper }}
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <b class="right-caret"></b>
+                                                    </div>
+                                                    <div class="end-date">
+                                                        <div>
+                                                            {% if not study.inProgress %}
+                                                                {{ study.toDate|date("Y") }}
+                                                            {% else %}
+                                                                <i class="icon fas fa-circle"></i>
+                                                            {% endif %}
+                                                        </div>
+                                                        <div class="month">
+                                                            {% if not study.inProgress %}
+                                                                {{ study.toDate|localizeddate('long', 'none', 'hu', 'Europe/Budapest', 'MMMM' )|upper }}
+                                                            {% else %}
+                                                                Jelenleg is
+                                                            {% endif %}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="right">
+                                                <div class="description block">
+                                                    <header>
+                                                        <h1 class="title">{{ study.school.value }}</h1>
+                                                        <span>
+                                                            {{ study.category.value }}
+                                                            {% if study.educationLevel is not empty %}
+                                                                , {{ study.educationLevel.value }}
+                                                            {% endif %}
+                                                        </span>
+                                                        <span>{{ study.location.city.value }}</span>
+                                                    </header>
+                                                    <section>
+                                                        <p>{{ study.comment }}</p>
+                                                    </section>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            {% endfor %}
+
+                        {% else %}
+
+                            <p>
+                                Kevesebb végzettségem van mint 8 általános
+                            </p>
+
+                        {% endif %}
+
+
+                    </div>
+
+
+                    {% if cv.hobby is not empty %}
+                        <div class="part pagenotbreak hobby">
+                            <h2 class="title">
+                                <span>
+                                    Szabadidő, Hobbi
+                                </span>
+                            </h2>
+                            <p>{{ cv.hobby }}</p>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </td>
+
+
+        <td class="grey">
+            <div class="parts">
+                <div class="part pagenotbreak">
+                    <h2 class="title">
+                        <span>
+                            Keresett pozicíó(k)
+                        </span>
+                    </h2>
+                    <span>
+                        {% for job in cv.searchCategories %}
+                            {% if loop.index != loop.last %}
+                                {{ job.value }},
+                            {% else %}
+                                {{ job.value }}
+                            {% endif %}
+                        {% endfor %}
+                    </span>
+                </div>
+
+
+                {% if
+                    ( cv.salaryFrom is not null and cv.salaryFrom > 0 )
+                        or
+                    ( cv.salaryTo is not null and cv.salaryTo > 0 )
+                        or
+                    ( cv.cafeteria is not null and cv.cafeteria )
+                        or
+                    ( cv.extraComment is not empty )
+                %}
+
+
+                    <div class="part pagenotbreak">
+                        <h2 class="title"><span>Nettó bérigény adatok</span></h2>
+                        <div class="block">
+
+                            <h4>
+                                {% if cv.salaryFrom is not empty and cv.salaryFrom > 0 %}
+                                    {{ cv.salaryFrom|number_format(0, '.', ' ') }} Ft-tól
+                                {% endif %}
+                                {% if cv.salaryTo is not empty and cv.salaryTo > 0  %}
+                                    {{ cv.salaryTo|number_format(0, '.', ' ') }} Ft-ig
+                                {% endif %}
+                            </h4>
+
+                            {% if cv.extraComment is not empty %}
+                                <span class="comment"><i class="icon fas fa-info-circle"></i> {{ cv.extraComment }}</span>
+                            {% endif %}
+                        </div>
+
+                        {% if cv.cafeteria %}
+                            <div class="block">
+                                <span class="comment">A fizetésen felül kafetériát is kérek!</span>
+                            </div>
+                        {% endif %}
+
+                    </div>
+
+
+                {% endif %}
+
+
+                {% if cv.drivingLicenses is not empty or cv.personalStrengths is not empty or cv.languages is not empty or cv.softwareExperiences is not empty or cv.itExperiences is not empty %}
+
+                    <div class="part pagenotbreak">
+
+                        <h2 class="title"><span>Egyéb adatok</span></h2>
+
+                        {% if cv.drivingLicenses is not empty %}
+
+                            <div class="block pagenotbreak">
+                                <h1 class="title">Jogosítvány</h1>
+                                <span>
+                            {% for licence in cv.drivingLicenses %}
+                                {% if loop.index != loop.last %}
+                                    {{ licence.value }},
+                                {% else %}
+                                    {{ licence.value }}
+                                {% endif %}
+                            {% endfor %}
+                        </span>
+                            </div>
+
+                        {% endif %}
+
+                        {% if cv.personalStrengths is not empty %}
+
+                            <div class="block pagenotbreak">
+                                <h1 class="title">Személyes kompetenciák</h1>
+                                <span>
+                                    {% for strength in cv.personalStrengths %}
+                                        {% if loop.index != loop.last %}
+                                            {{ strength.value }},
+                                        {% else %}
+                                            {{ strength.value }}
+                                        {% endif %}
+                                    {% endfor %}
+                                </span>
+                            </div>
+
+                        {% endif %}
+
+
+                        {% if cv.languages is not empty %}
+
+                            <div class="block pagenotbreak">
+                                <h1 class="title">Nyelvismeret</h1>
+                                <ul class="list">
+                                    {% for language in cv.languages %}
+                                        <li>
+                                            <span>
+                                                <b class="right-caret"></b>
+                                                {{ language.dictionary.value }}
+                                                {% if language.level is not empty %}
+                                                    - {{ language.level.value }}
+                                                {% endif %}
+                                            </span>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+
+                        {% endif %}
+
+                        {% if cv.softwareExperiences is not empty %}
+
+                            <div class="block pagenotbreak">
+                                <h1 class="title">Számítógépes ismeretek</h1>
+                                <ul class="list">
+                                    {% for comp in cv.softwareExperiences %}
+                                        <li>
+                                            <span>
+                                                <b class="right-caret"></b>
+                                                {{ comp.dictionary.value }}
+                                                {% if comp.level is not empty %}
+                                                    - {{ comp.level.value }}
+                                                {% endif %}
+                                            </span>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+
+                        {% endif %}
+
+                        {% if cv.itExperiences is not empty %}
+                            <div class="block pagenotbreak">
+                                <h1 class="title">IT Szakismeretek</h1>
+                                <ul class="list">
+                                    {% for comp in cv.itExperiences %}
+                                        <li>
+                                            <span>
+                                                <b class="right-caret"></b>
+                                                {{ comp.dictionary.value }}
+                                                {% if comp.level is not empty %}
+                                                    - {{ comp.level.value }}
+                                                {% endif %}
+                                            </span>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+
+                            </div>
+                        {% endif %}
+
+                    </div>
+
+                {% endif %}
+
+                {% if cv.lifestyles is not empty or cv.supports is not empty or cv.companyHelps is not empty %}
+
+                    <div class="part pagenotbreak">
+
+                        <h2 class="title">
+                            <span>
+                                Extra igények
+                            </span>
+                        </h2>
+
+                        {% if cv.lifestyles is not empty %}
+                            <div class="block pagenotbreak">
+                                <h1 class="title">Életvitel</h1>
+                                <span>
+                                    {% for lifestyle in cv.lifestyles %}
+                                        {% if loop.index != loop.last %}
+                                            {{ lifestyle.value }},
+                                        {% else %}
+                                            {{ lifestyle.value }}
+                                        {% endif %}
+                                    {% endfor %}
+                                </span>
+                            </div>
+                        {% endif %}
+
+                        {% if cv.companyHelps is not empty %}
+
+                            <div class="block pagenotbreak">
+                                <h1 class="title">Eszközök</h1>
+                                <span>
+                                    {% for help in cv.companyHelps %}
+                                        {% if loop.index != loop.last %}
+                                            {{ help.value }},
+                                        {% else %}
+                                            {{ help.value }}
+                                        {% endif %}
+                                    {% endfor %}
+                                </span>
+                            </div>
+
+                        {% endif %}
+
+                        {% if cv.supports is not empty %}
+                            <div class="block pagenotbreak">
+                                <h1 class="title">Támogatás</h1>
+                                <span>
+                                    {% for support in cv.supports %}
+                                        {% if loop.index != loop.last %}
+                                            {{ support.value }},
+                                        {% else %}
+                                            {{ support.value }}
+                                        {% endif %}
+                                    {% endfor %}
+                                </span>
+                            </div>
+                        {% endif %}
+
+                    </div>
+
+                {% endif %}
+                </div>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

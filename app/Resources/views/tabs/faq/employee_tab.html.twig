@@ -1,0 +1,11 @@
+{% set employee_tab_accordion_items = [] %}
+
+{% for i in 0..13 %}
+	{% if i != 7 %}
+    	{% set employee_tab_accordion_items = employee_tab_accordion_items|merge( [ { id : 'employee-accordion-item-' ~ i , title : 'page.faq.employee.' ~ i ~ '.title' , content : 'page.faq.employee.' ~ i ~ '.content' } ] ) %}
+    {% endif %}
+{% endfor %}
+
+{% import 'modules/atoms/bootstrap/accordion.html.twig' as accordion %}
+
+{{ accordion.accordion( employee_tab_accordion_items , 'employee-faq-accordion' ) }}

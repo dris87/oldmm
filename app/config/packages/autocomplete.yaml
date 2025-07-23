@@ -1,0 +1,191 @@
+services:
+    app.autocomplete.descriptor.dic_location:
+        class: All4One\AppBundle\Autocomplete\DicLocationAutocompleteDescriptor
+        arguments:
+            $class: Common\CoreBundle\Entity\Dictionary\DicLocation
+            $property: 'cityName'
+            $searchFields: 'z.value, c.value'
+        tags:
+            - { name: 'autocomplete.descriptor', id: 'dic_location.descriptor' }
+    app.autocomplete.descriptor.dic_city_county:
+        class: All4One\AppBundle\Autocomplete\DicCityCountyAutocompleteDescriptor
+        arguments:
+            $class: Common\CoreBundle\Entity\Dictionary\Dictionary
+            $property: 'value'
+        tags:
+            - { name: 'autocomplete.descriptor', id: 'dic_city_county.descriptor' }
+
+    app.autocomplete.descriptor.dic_position:
+        class: All4One\AppBundle\Autocomplete\DicBaseAutocompleteDescriptor
+        arguments:
+            $class: Common\CoreBundle\Entity\Dictionary\DicPosition
+            $property: 'value'
+        tags:
+            - { name: 'autocomplete.descriptor', id: 'dic_position.descriptor' }
+
+    app.autocomplete.descriptor.dic_support:
+        class: All4One\AppBundle\Autocomplete\DicBaseAutocompleteDescriptor
+        arguments:
+            $class: Common\CoreBundle\Entity\Dictionary\DicSupport
+            $property: 'value'
+        tags:
+            - { name: 'autocomplete.descriptor', id: 'dic_support.descriptor' }
+
+    app.autocomplete.descriptor.dic_category:
+        class: All4One\AppBundle\Autocomplete\DicBaseAutocompleteDescriptor
+        arguments:
+            $class: Common\CoreBundle\Entity\Dictionary\DicCategory
+            $property: 'value'
+        tags:
+            - { name: 'autocomplete.descriptor', id: 'dic_category.descriptor' }
+
+    app.autocomplete.descriptor.dic_child_category:
+        class: All4One\AppBundle\Autocomplete\DicChildCategoriesAutocompleteDescriptor
+        arguments:
+            $class: Common\CoreBundle\Entity\Dictionary\DicCategory
+            $property: 'value'
+        tags:
+            - { name: 'autocomplete.descriptor', id: 'dic_child_category.descriptor' }
+    app.autocomplete.descriptor.dic_personal_strength:
+        class: All4One\AppBundle\Autocomplete\DicBaseAutocompleteDescriptor
+        arguments:
+            $class: Common\CoreBundle\Entity\Dictionary\DicPersonalStrength
+            $property: 'value'
+        tags:
+            - { name: 'autocomplete.descriptor', id: 'dic_personal_strength.descriptor' }
+
+    app.autocomplete.descriptor.dic_shift:
+        class: All4One\AppBundle\Autocomplete\DicBaseAutocompleteDescriptor
+        arguments:
+            $class: Common\CoreBundle\Entity\Dictionary\DicShift
+            $property: 'value'
+        tags:
+            - { name: 'autocomplete.descriptor', id: 'dic_shift.descriptor' }
+
+    app.autocomplete.descriptor.dic_language:
+        class: All4One\AppBundle\Autocomplete\DicBaseAutocompleteDescriptor
+        arguments:
+            $class: Common\CoreBundle\Entity\Dictionary\DicLanguage
+            $property: 'value'
+        tags:
+            - { name: 'autocomplete.descriptor', id: 'dic_language.descriptor' }
+    app.autocomplete.descriptor.dic_language_level:
+        class: All4One\AppBundle\Autocomplete\DicBaseAutocompleteDescriptor
+        arguments:
+            $class: Common\CoreBundle\Entity\Dictionary\DicLanguageLevel
+            $property: 'value'
+        tags:
+            - { name: 'autocomplete.descriptor', id: 'dic_language_level.descriptor' }
+
+    app.autocomplete.descriptor.dic_nationality:
+        class: All4One\AppBundle\Autocomplete\DicBaseAutocompleteDescriptor
+        arguments:
+            $class: Common\CoreBundle\Entity\Dictionary\DicNationality
+            $property: 'value'
+        tags:
+            - { name: 'autocomplete.descriptor', id: 'dic_nationality.descriptor' }
+    app.autocomplete.descriptor.dic_job_form:
+        class: All4One\AppBundle\Autocomplete\DicBaseAutocompleteDescriptor
+        arguments:
+            $class: Common\CoreBundle\Entity\Dictionary\DicJobForm
+            $property: 'value'
+        tags:
+            - { name: 'autocomplete.descriptor', id: 'dic_job_form.descriptor' }
+    app.autocomplete.descriptor.dic_driving_license:
+        class: All4One\AppBundle\Autocomplete\DicBaseAutocompleteDescriptor
+        arguments:
+            $class: Common\CoreBundle\Entity\Dictionary\DicDrivingLicense
+            $property: 'value'
+        tags:
+            - { name: 'autocomplete.descriptor', id: 'dic_driving_license.descriptor' }
+    app.autocomplete.descriptor.dic_market_status:
+        class: All4One\AppBundle\Autocomplete\DicBaseAutocompleteDescriptor
+        arguments:
+            $class: Common\CoreBundle\Entity\Dictionary\DicMarketStatus
+            $property: 'value'
+        tags:
+            - { name: 'autocomplete.descriptor', id: 'dic_market_status.descriptor' }
+    app.autocomplete.descriptor.dic_education_level:
+        class: All4One\AppBundle\Autocomplete\DicBaseAutocompleteDescriptor
+        arguments:
+            $class: Common\CoreBundle\Entity\Dictionary\DicEducationLevel
+            $property: 'value'
+        tags:
+            - { name: 'autocomplete.descriptor', id: 'dic_education_level.descriptor' }
+    app.autocomplete.descriptor.dic_school:
+        class: All4One\AppBundle\Autocomplete\DicBaseAutocompleteDescriptor
+        arguments:
+            $class: Common\CoreBundle\Entity\Dictionary\DicSchool
+            $property: 'value'
+        tags:
+            - { name: 'autocomplete.descriptor', id: 'dic_school.descriptor' }
+# for testing
+    app.autocomplete.descriptor.dic_city:
+        class: All4One\AppBundle\Autocomplete\DicBaseAutocompleteDescriptor
+        arguments:
+            $class: Common\CoreBundle\Entity\Dictionary\DicCity
+            $property: 'value'
+            $searchFields: 'id, value'
+        tags:
+            - { name: 'autocomplete.descriptor', id: 'dic_city.descriptor'}
+
+    app.autocomplete.descriptor.dic_experience:
+        class: All4One\AppBundle\Autocomplete\DicBaseAutocompleteDescriptor
+        arguments:
+            $class: Common\CoreBundle\Entity\Dictionary\DicExperience
+            $property: 'value'
+        tags:
+            - { name: 'autocomplete.descriptor', id: 'dic_experience.descriptor' }
+    app.autocomplete.descriptor.dic_experience_level:
+        class: All4One\AppBundle\Autocomplete\DicBaseAutocompleteDescriptor
+        arguments:
+            $class: Common\CoreBundle\Entity\Dictionary\DicExperienceLevel
+            $property: 'value'
+        tags:
+            - { name: 'autocomplete.descriptor', id: 'dic_experience_level.descriptor' }
+
+    app.autocomplete.descriptor.dic_it_experience:
+        class: All4One\AppBundle\Autocomplete\DicBaseAutocompleteDescriptor
+        arguments:
+            $class: Common\CoreBundle\Entity\Dictionary\DicItExperience
+            $property: 'value'
+        tags:
+            - { name: 'autocomplete.descriptor', id: 'dic_it_experience.descriptor' }
+    app.autocomplete.descriptor.dic_it_experience_level:
+        class: All4One\AppBundle\Autocomplete\DicBaseAutocompleteDescriptor
+        arguments:
+            $class: Common\CoreBundle\Entity\Dictionary\DicItExperienceLevel
+            $property: 'value'
+        tags:
+            - { name: 'autocomplete.descriptor', id: 'dic_it_experience_level.descriptor' }
+
+    app.autocomplete.descriptor.dic_software_experience:
+        class: All4One\AppBundle\Autocomplete\DicBaseAutocompleteDescriptor
+        arguments:
+            $class: Common\CoreBundle\Entity\Dictionary\DicSoftwareExperience
+            $property: 'value'
+        tags:
+            - { name: 'autocomplete.descriptor', id: 'dic_software_experience.descriptor' }
+    app.autocomplete.descriptor.dic_software_experience_level:
+        class: All4One\AppBundle\Autocomplete\DicBaseAutocompleteDescriptor
+        arguments:
+            $class: Common\CoreBundle\Entity\Dictionary\DicSoftwareExperienceLevel
+            $property: 'value'
+        tags:
+            - { name: 'autocomplete.descriptor', id: 'dic_software_experience_level.descriptor' }
+
+    app.autocomplete.descriptor.dic_life_style:
+        class: All4One\AppBundle\Autocomplete\DicBaseAutocompleteDescriptor
+        arguments:
+            $class: Common\CoreBundle\Entity\Dictionary\DicLifeStyle
+            $property: 'value'
+        tags:
+            - { name: 'autocomplete.descriptor', id: 'dic_life_style.descriptor' }
+    app.autocomplete.descriptor.dic_company_help:
+        class: All4One\AppBundle\Autocomplete\DicBaseAutocompleteDescriptor
+        arguments:
+            $class: Common\CoreBundle\Entity\Dictionary\DicCompanyHelp
+            $property: 'value'
+        tags:
+            - { name: 'autocomplete.descriptor', id: 'dic_company_help.descriptor' }
+

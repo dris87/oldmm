@@ -1,0 +1,155 @@
+.m-steps--hidden
+  > div
+    display: none
+  .m-steps--loader
+    display: block
+    .loading-overlay
+      width: 100%
+      height: 100%
+.sw-main
+  width: 100%
+  max-width: 100%
+  margin: 0 auto
+  margin-bottom: 30px
+  .dark
+    background: #F2F2F2
+    padding: 40px
+  &.sw-theme-circles
+    margin-top: -30px
+.sw-theme-default
+  background: $white
+  margin-top: 30px
+  > form > div
+    padding: 0px 20px
+.sw-theme-circles .sw-container
+  background: white
+  border: 1px solid #E4E4E4
+  padding: 40px 95px
+  margin-bottom: 30px
+  position: relative
+  @include transition(0.2s all ease)
+.sw-theme-default .step-content
+  padding: 30px
+  .m-section-header span
+    background: $white
+  .dark .m-section-header span
+    background: #F2F2F2
+
+.sw-theme-circles .step-content
+  padding: 30px
+  .m-section-header span
+    background: $white
+  .dark .m-section-header span
+    background: #F2F2F2
+@media (max-width: $screen-sm-max)
+  .sw-theme-circles .sw-container
+    padding: 20px 15px
+
+@media (max-width: $screen-sm-max)
+  .sw-theme-default > .nav-tabs > li
+    float: none !important
+    width: 100%
+
+.sw-theme-circles .sw-toolbar
+  background: none
+  text-align: center
+  border: none!important
+
+.btn-toolbar .btn, .btn-toolbar .btn-group, .btn-toolbar .input-group
+  float: none
+
+
+.nav-tabs > li
+  display: inline-block
+
+.sw-theme-circles > ul.step-anchor > li
+  margin-left: 10px
+  float: none
+  margin-right: 10px
+.sw-theme-circles > ul.step-anchor > li.clickable > a:hover,
+.sw-theme-circles > ul.step-anchor > li.clickable > a:active,
+.sw-theme-circles > ul.step-anchor > li.clickable > a:focus
+  color: $white!important
+
+.sw-theme-circles > ul.step-anchor
+  background: none
+  position: relative
+  top: -25px
+  width: auto
+  margin: 0 auto
+  text-align: center
+
+.sw-theme-circles > ul.step-anchor > li.active > a
+  border: none
+  color: $white
+  background: $ua-orange
+  &:hover,
+  &:active,
+  &:focus
+    background: $ua-orange
+    color: $white
+
+.sw-theme-circles > ul.step-anchor > li > a
+  background: $ua-light-grey
+  color: $white
+  width: 50px
+  height: 50px
+  padding: 12px 0
+  @include transition(0.2s all ease)
+  .fa
+    font-size: 20px
+  &:hover,
+  &:active,
+  &:focus
+    background: #bfbfbf
+    color: $white
+
+.sw-theme-circles > ul.step-anchor > li > a
+  border: none
+
+.nav-tabs > li > a
+  border: none
+
+.sw-theme-circles > ul.step-anchor > li.done > a
+  background: #4b954b
+  border-color: #4b954b
+  &:hover,
+  &:active,
+  &:focus
+    background: lighten(#4b954b , 10)
+    color: $white
+
+.sw-theme-circles > ul.step-anchor::before
+  background: none
+  display: none
+
+.sw-btn-prev,
+.sw-btn-next
+  text-align: center
+  font-size: 14px
+  font-weight: bold
+  text-transform: uppercase
+  display: inline-block
+  height: 48px
+  line-height: 38px
+  width: 240px
+  border: none
+  cursor: pointer
+  background-color: rgb(242, 242, 242)
+  color: #4D4D4D
+  margin: 0 10px
+.sw-btn-next
+  background-color: $ua-orange
+  color: $white
+  &:hover,
+  &:active,
+  &:focus
+    background-color: darken($ua-orange, 10)
+    color: $white
+
+
+.sw-theme-default > ul.step-anchor > li.active > a
+  color: $ua-orange
+
+.sw-main form .m-section-header span
+  background: $white

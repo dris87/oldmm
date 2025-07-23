@@ -1,0 +1,101 @@
+/** This panel can have different backgrounds */
+.m-bg-panel
+  padding: 40px 0
+  text-align: center
+  color: $white
+  &--small
+    padding: 5px 0px
+    .m-bg-panel--header
+      margin-bottom: 10px
+  &--orange
+    @include linearGradient(#29aae2, #1b75bc)
+    .m-bg-panel--header
+      color: $white
+      strong
+        color: $white
+  &--bg
+    background: $color-background
+    .m-bg-panel--header
+      color: $black
+      strong
+        color: $black
+  &--white
+    background: $white
+  &--desk
+    background: black url('images/bg/bg_desk.jpg') no-repeat center
+    background-size: cover
+    height: auto
+    .m-bg-panel--header
+      color: $white
+  &--coffee-desk
+    background: black url('images/bg/bg_coffee_desk.jpg') no-repeat center
+    background-size: cover
+    height: auto
+    .m-bg-panel--header
+      color: $black
+  &--header
+    font-size: 30px
+    display: block
+    margin-bottom: 30px
+    font-weight: normal
+    color: $ua-light-line
+    i.fa
+      font-size: 25px
+      margin: 10px 0px
+    .b-scroll-to
+      color: #A0A0A0
+      text-transform: uppercase
+      font-weight: 300
+      text-align: center
+      letter-spacing: 0.5px
+  &--icon-list
+    a
+      display: inline-block
+      font-size: 38px
+      color: $white
+      margin: 0 30px 20px 30px
+  &--image-list
+    img
+      margin: 0 10px
+      max-width: 200px
+
+  /** Media query definitions **/
+  @media (max-width: $screen-xs-max)
+    &--header
+      font-size: 28px
+      margin-bottom: 15px
+    &--icon-list
+      a
+        font-size: 28px
+        margin: 0 20px 12px 20px
+        i.fa
+          font-size: 23px
+    &--image-list
+      img
+        margin: 0px 10px
+        max-width: 100px
+
+#features_panel
+  .m-bg-panel
+    color: $white
+    text-align: center
+    &--header
+      font-size: 30px
+      display: block
+      margin-bottom: 80px
+      text-transform: uppercase
+    &--content
+      p
+        font-size: 20px
+        line-height: 1.3
+        font-weight: 300
+        padding-top: 20px
+        padding-bottom: 30px
+      @media (max-width: $screen-sm-max)
+        p
+          font-size: 15px
+    &--footer
+      margin: 20px 0px
+      i.fa
+        font-size: 30px
+        color: #A0A0A0

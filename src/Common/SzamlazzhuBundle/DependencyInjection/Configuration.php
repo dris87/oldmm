@@ -1,0 +1,54 @@
+<?php
+
+/*
+ * This file is part of the `All4One/Ujallas.hu` project.
+ *
+ * (c) https://ujallas.hu
+ *
+ * Developed by: Ferencz Dávid Tamás <fdt0712@gmail.com>
+ * Contributed: Sipos Zoltán <sipiszoty@gmail.com>, Pintér Szilárd <leaderlala00@gmail.com >
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace Common\SzamlazzhuBundle\DependencyInjection;
+
+use Symfony\Component\Config\Definition\Builder\TreeBuilder;
+use Symfony\Component\Config\Definition\ConfigurationInterface;
+
+/**
+ * This is the class that validates and merges configuration from your app/config files.
+ *
+ * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/configuration.html}
+ */
+class Configuration implements ConfigurationInterface
+{
+    /**
+     * {@inheritdoc}
+     */
+    public function getConfigTreeBuilder()
+    {
+        $treeBuilder = new TreeBuilder();
+        $rootNode = $treeBuilder->root('all4_one_szamlazzhu');
+
+        $rootNode
+            ->children()
+                ->scalarNode('username')
+                    ->isRequired()
+                ->end()
+                ->scalarNode('password')
+                    ->isRequired()
+                ->end()
+                ->booleanNode('e_invoice')
+                    ->defaultTrue()
+                ->end()
+            ->end()
+        ;
+        // Here you should define the parameters that are allowed to
+        // configure your bundle. See the documentation linked above for
+        // more information on that topic.
+
+        return $treeBuilder;
+    }
+}

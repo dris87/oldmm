@@ -1,0 +1,245 @@
+.l-header
+  height: 60px
+  position: static
+  background-color: #f3f5f6
+  margin-bottom: 15px
+  .m-main-menu--burger,
+  h1
+    display: none
+  li
+    width: 18px
+    height: 2px
+    background-color: #0bbbb1
+    border-radius: 5px
+    margin: 4px 0
+  &.open
+    li
+      background-color: #d9dde1
+
+@media (max-width: $screen-md-min)
+  .l-header
+    height: 44px
+    z-index: 2
+    background-color: #f3f3f3
+    border-bottom: 1px solid #fff
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2)
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2)
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2)
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    margin-bottom: 0
+    .m-main-menu--burger,
+    h1
+      display: block
+    h1
+      line-height: 44px
+      font-size: 17px
+      font-weight: 700
+      text-align: center
+    i
+      position: absolute
+      top: 8px
+      right: 10px
+      color: #0bbbb1
+
+.no-header .m-extended-header
+  .m-main-menu
+    display: block
+@media (max-width: $screen-md-min)
+  .no-header .m-extended-header .m-main-menu
+    display: none
+  .m-extended-header
+    h1
+      color: white
+      line-height: 30px
+      margin: 30px auto
+      font-size: 25px
+      min-width: 100%
+      max-width: 100%
+      text-align: center
+    h2
+      color: white
+      line-height: 30px
+      margin: 5px auto
+      font-size: 15px
+      min-width: 100%
+      max-width: 100%
+      text-align: center
+    &--logo
+      float: none!important
+      text-align: center
+    &--nav
+      display: block!important
+
+#general-homepage
+  .m-extended-header
+    &#logged
+      h1
+        margin: 80px auto 80px
+
+#general-homepage
+  .m-extended-header
+    h1
+      margin: 100px auto 0px
+      line-height: 35px
+    h2
+      color: white
+      line-height: 30px
+      margin: 5px auto
+      font-size: 15px
+      min-width: 100%
+      max-width: 100%
+      text-align: center
+@media (max-width: $screen-sm-max)
+  #general-homepage
+    .m-extended-header
+      h1
+        margin: 60px auto 60px
+        line-height: 40px
+.m-extended-header
+  background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url(../images/bg/bg_main3.jpg) no-repeat center bottom
+  background-size: cover
+  padding: 10px 0px
+  @include transition(all .2s ease)
+  &#logged
+    .m-extended-header--nav
+      display: none
+    h1
+      margin: 30px auto 30px
+  &--darts
+    background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url(../images/bg/bg_darts.jpg) no-repeat center center
+    background-size: cover
+  &--puzzle
+    background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url(../images/bg/bg_puzzle.jpg) no-repeat center center
+    background-size: cover
+  &--sunshine
+    background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url(../images/bg/bg_sunshine.jpg) no-repeat center center
+    background-size: cover
+  &--laptop-and-phone
+    background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url(../images/bg/bg_laptop_and_phone.jpg) no-repeat center center
+    background-size: cover
+  &--laptop
+    background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url(../images/bg/bg_sunshine.jpg) no-repeat center center
+    background-size: cover
+  &--team
+    background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url(../images/bg/bg_team.jpg) no-repeat center center
+    background-size: cover
+  &--meeting
+    background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url(../images/bg/bg_meeting.jpg) no-repeat center center
+    background-size: cover
+  &--signature
+    background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url(../images/bg/bg_signature.jpg) no-repeat center center
+    background-size: cover
+  &--lightbulb
+    background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url(../images/bg/bg_lightbulb.jpg) no-repeat center center
+    background-size: cover
+  &--newsletter-desk
+    background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url(../images/bg/bg_newsletter_desk.jpg) no-repeat center top
+    background-size: cover
+  &--hire-me
+    background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url(../images/bg/bg_hire_me.jpg) no-repeat center center
+    background-size: cover
+  &--grass
+    background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url(../images/bg/bg_grass.jpg) no-repeat center center
+    background-size: cover
+  &--contact
+    background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url(../images/bg/bg_contact.jpg) no-repeat center center
+    background-size: cover
+  &--main-old
+    background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url(../images/bg/bg_main_old.jpg) no-repeat center center
+    background-size: cover
+  &--shout
+    background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url(../images/bg/bg_shout.png) no-repeat top center
+    background-position-y: -250px
+    background-size: cover
+  &--logo
+    float: left
+    z-index: 9999999
+    img
+      height: 70px
+  .m-bg-panel .b-scroll-to
+    color: $white
+  &--nav
+    margin: 20px 0 0
+    ul
+      float: right
+  .m-main-menu
+    position: relative
+    background: none
+    width: 70%
+    float: right
+  h1
+    color: white
+    line-height: 40px
+    margin: 60px auto 80px
+    font-size: 32px
+    font-weight: bold
+    max-width: 70%
+    text-align: center
+    @media (max-width: $screen-sm-max)
+      font-size: 27px
+      line-height: 35px
+    &.m-strong-heading
+      font-size: 33px
+      line-height: 250px
+      margin: 0px auto
+      @media (max-width: $screen-sm-max)
+        font-size: 21px
+        line-height: 35px
+  .nav-tabs
+    border: none
+    .nav-link
+      background: rgba(0,0,0,0.6)
+      text-align: center
+      height: 60px
+      font-size: 17px
+      line-height: 50px
+      border-radius: 1px
+      padding: 6px 30px
+      cursor: pointer
+      border: none
+      color: $white
+      @include transition(all 0.2s ease)
+      margin-top: 15px
+      &:hover,
+      &:active,
+      &:focus
+        border: none
+        outline: none
+        color: $white
+    .nav-item
+      border: none
+      width: 25%
+      &.active .nav-link
+        border: none
+        background: rgba(41, 170, 226, 0.6)
+        height: 75px
+        margin-top: 0
+        line-height: 63px
+  .tab-content
+    background: rgba(41, 170, 226, 0.6)
+    padding: 45px 0px
+    @include transition(all .2s ease)
+    .container
+      min-height: 30px
+      padding: 10px 0px
+      box-sizing: border-box
+      @include transition(all 0.2s ease)
+      @include transition(all .2s ease)
+      a
+        color: $white
+        text-decoration: none
+        line-height: 30px
+        font-size: 13px
+        font-weight: bold
+        &:hover,
+        &:focus,
+        &:active
+          text-decoration: none
+          color: darken($white, 10)
+    > .tab-pane
+      @include transition(all .2s ease)
+  .nav-tabs > li.active
+    margin-bottom: 0px

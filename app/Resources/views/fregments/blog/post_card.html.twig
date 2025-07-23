@@ -1,0 +1,14 @@
+<div class="m-post-card--container">
+    <div class="m-post-card--image">
+        <img src="{{ asset('uploads/blog/picture/' ~ post.pictureName) }}"/>
+    </div>
+    <div class="m-post-card--content">
+        <strong class="m-post-card--title">
+            <a href="{{ path('show_news',{'slug':post.slug}) }}">
+                {{ post.title }}
+            </a>
+        </strong>
+        <span class="m-post-card--date">{{ post.publishedAt|localizeddate('medium', 'medium', null, 'CET', 'Y-MM-dd') }}</span>
+        <a href="{{ path('show_news',{'slug':post.slug}) }}" class="m-post-card--view">Bővebben <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+    </div>
+</div>

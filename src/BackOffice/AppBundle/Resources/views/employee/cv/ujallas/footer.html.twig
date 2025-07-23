@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 10px;
+            margin: 0;
+            padding: 0;
+            color: #3d4042;
+        }
+
+        .footer {
+            width: calc(100% - 80px);
+            padding-right: 40px;
+            padding-left: 40px;
+            padding-bottom: 40px;
+            background-color: #333333;
+        }
+
+        table {
+            width: 100%;
+            padding-top: 20px;
+            border-spacing: 0;
+            table-layout: fixed;
+            height: 100%;
+            margin: 0;
+        }
+
+        tbody, tr {
+            width: 100%;
+            height: 100%;
+        }
+
+        td {
+            height: 100%;
+            vertical-align: top;
+        }
+
+        .left {
+            text-align: left;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        .white {
+            color: #F2F2F2;
+            text-transform: uppercase;
+        }
+
+        .orange {
+            color: #FBB03B;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .blue {
+            color: #1b75bc;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        .page-no{
+            font-size: 12px;
+        }
+    </style>
+
+    <script>
+        function subst() {
+            var vars = {};
+            var query_strings_from_url = document.location.search.substring(1).split('&');
+            for (var query_string in query_strings_from_url) {
+                if (query_strings_from_url.hasOwnProperty(query_string)) {
+                    var temp_var = query_strings_from_url[query_string].split('=', 2);
+                    vars[temp_var[0]] = decodeURI(temp_var[1]);
+                }
+            }
+            var css_selector_classes = ['page', 'frompage', 'topage', 'webpage', 'section', 'subsection', 'date', 'isodate', 'time', 'title', 'doctitle', 'sitepage', 'sitepages'];
+            for (var css_class in css_selector_classes) {
+                if (css_selector_classes.hasOwnProperty(css_class)) {
+                    var element = document.getElementsByClassName(css_selector_classes[css_class]);
+                    for (var j = 0; j < element.length; ++j) {
+                        element[j].textContent = vars[css_selector_classes[css_class]];
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="subst()">
+<div class="footer">
+    <table>
+        <tr>
+            <td class="left">
+                <p class="white">Munkalehetőség mindenkinek!</p>
+                <p class="blue">{{ homesite_url }}</p>
+            </td>
+            <td class="right">
+                <p class="white">OLDAL</p>
+                <p class="blue page-no"><span class="page"></span> / <span class="topage"></span></p>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

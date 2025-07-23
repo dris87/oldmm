@@ -1,0 +1,45 @@
+knp_menu:
+    # use "twig: false" to disable the Twig extension and the TwigRenderer
+    twig:
+        template: KnpMenuBundle::menu.html.twig
+    #  if true, enables the helper for PHP templates
+    templating: false
+    # the renderer to use, list is also available by default
+    default_renderer: twig
+framework:
+    translator: { fallback: hu }
+twig:
+    form_themes:
+        - "PrestaImageBundle:form:image_widget.html.twig"
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+        firm_logo:
+            uri_prefix: uploads/firm/logo
+            upload_destination: '%kernel.project_dir%/web/uploads/firm/logo'
+        firm_cover_image:
+            uri_prefix: uploads/firm/cover
+            upload_destination: '%kernel.project_dir%/web/uploads/firm/cover'
+        news_post_picture:
+            uri_prefix: uploads/blog/picture
+            upload_destination: '%kernel.project_dir%/web/uploads/blog/picture'
+        news_post_cover:
+            uri_prefix: uploads/blog/cover
+            upload_destination: '%kernel.project_dir%/web/uploads/blog/cover'
+        employee_picture:
+            uri_prefix: uploads/employee/picture
+            upload_destination: '%kernel.project_dir%/web/uploads/employee/picture'
+white_october_breadcrumbs:
+    separator:          ''
+    separatorClass:     'separator'
+    listId:             'wo-breadcrumbs'
+    listClass:          'breadcrumb'
+    itemClass:          ''
+    linkRel:            ''
+    locale:             ~ # defaults to null, so the default locale is used
+    translation_domain: ~ # defaults to null, so the default domain is used
+    viewTemplate:       'WhiteOctoberBreadcrumbsBundle::microdata.html.twig'
+all4one_robots_txt:
+    sitemaps:
+      - "/sitemap.xml"

@@ -1,0 +1,132 @@
+/* Steps to step on firm landing page */
+.m-step-to-step
+	background: #373A40 url(../images/bg/bg_desk.jpg) no-repeat
+	background-size: cover
+	color: white
+	text-align: center
+	&--content
+		overflow: hidden
+		padding: 30px 500px 0 0
+		position: relative
+		@media (max-width: $screen-sm-max)
+			padding: 0
+			overflow: visible
+	&--header
+		font-size: 26px
+		display: block
+		margin-bottom: 40px
+		margin-top: 40px
+		text-transform: uppercase
+	&--menu
+		background: rgba(255,255,255,0.2)
+		display: inline-block
+		color: white
+		text-transform: uppercase
+		font-size: 14px
+		padding: 1px 2px
+		border-radius: 26px
+		text-align: left
+		font-weight: 200
+		@media (max-width: $screen-sm-max)
+			display: none
+		li
+			display: inline-block
+			padding: 0 20px
+			cursor: pointer
+			height: 50px
+			line-height: 50px
+			vertical-align: middle
+			font-size: 12px
+			font-weight: 600
+			border-radius: 25px
+			&.active
+				background: $ua-orange
+				background-image: url(../images/bg/bg_steps_active.png), url(../images/bg/bg_steps_active.png)
+				background-repeat: no-repeat, no-repeat
+				background-position: center 5px, center 41px
+
+	&--pages
+		display: inline-block
+		white-space: nowrap
+		@media (max-width: $screen-sm-max)
+			display: block
+			margin: 0px
+			padding: 0px
+		li
+			display: inline-block
+			vertical-align: middle
+			position: relative
+			box-sizing: border-box
+			width: 450px
+			padding: 70px 50px
+			white-space: normal
+			border: 3px dotted #4697c9
+			margin-right: 190px
+			border-radius: 30px
+			font-size: 24px
+			font-weight: bold
+			line-height: 1.3
+			@media (max-width: $screen-sm-max)
+				display: block
+				width: auto
+				padding: 20px 20px
+				margin: 0 0 40px 0
+				font-size: 18px
+			.title
+				background: #3587b7
+				display: block
+				height: 26px
+				line-height: 26px
+				border-radius: 13px
+				padding: 0 13px
+				font-size: 14px
+				color: white
+				text-transform: uppercase
+				position: absolute
+				left: 50%
+				top: -14px
+				font-weight: normal
+				transform: translate(-50%,0)
+
+			p
+				margin-bottom: 20px
+				&:last-child
+					margin-bottom: 0
+				&.small
+					font-size: 14px
+					font-weight: normal
+					line-height: 1.5
+			.arrow
+				height: 1px
+				border-bottom: 3px dotted #4697c9
+				width: 230px
+				position: absolute
+				top: 50%
+				transform: translate(0, -50%)
+				right: -215px
+				@media (max-width: $screen-sm-max)
+					display: none
+				&:before
+					content: ''
+					width: 6px
+					height: 6px
+					display: block
+					border: 3px solid #4697c9
+					border-radius: 6px
+					position: absolute
+					left: -12px
+					top: -3px
+				&:after
+					position: absolute
+					top: -7px
+					right: -9px
+					content: ''
+					width: 0
+					height: 0
+					border-top: 10px solid transparent
+					border-bottom: 10px solid transparent
+					border-left: 10px solid #4697c9
+			&:last-child .arrow
+				display: none
+
+/*---------------------------------------------------*/

@@ -1,0 +1,127 @@
+<div class="m-tiles-detailed-list--content clearfix {% if is_granted('ROLE_OFFER_EXALTATION' , offer) %}m-tiles-detailed-list--highlighted {% endif %}">
+
+    {% if is_granted('ROLE_OFFER_EXALTATION' , offer) %}
+        <div class="m-tiles-detailed-list--highlighted-box">KIEMELT</div>
+    {% endif %}
+    <div class="m-tiles-detailed-list--logo clearfix">
+        <img src="{{ asset('uploads/firm/logo/' ~ offer.firm.realLogoName) }}" class="mb-10"/>
+        {% if offer.status.value == 5 or offer.status.value == 4 or offer.status.value == 3 %}
+            {# 
+            <label class="m-switch " data-action="{{ path('firm_offer_status_toggle',{'id':offer.id,'type':'active-inactive'}) }}">
+                <input type="checkbox"
+                       {% if offer.status.value == 5 or offer.status.value == 3 %}checked="checked"{% endif %}
+                       value=""
+                />
+                <span class="slider"></span>
+                <span class="caption">
+                                            <span class="c0">{{ 'label.inactive'|trans }}</span>
+                    {% if date(offer.applicableFromDate) <= date() %}
+                        <span class="c1">{{ 'label.active'|trans }}</span>
+                                            {% else %}
+                        <span class="c1">{{ 'label.offer.waiting'|trans }}</span>
+                    {% endif %}
+                                        </span>
+            </label> #}
+        {% elseif offer.status.value == 0 %}
+            <span class="label label-default">{{ 'label.offer.saved'|trans }}</span>
+        {% elseif offer.status.value == 1 %}
+            <span class="label label-info">{{ 'label.under_consideration'|trans }}</span>
+        {% elseif offer.status.value == 2 %}
+            <span class="label label-warning">{{ 'label.denied'|trans }}</span>
+        {% elseif offer.status.value == 6 %}
+            <span class="label label-danger">{{ 'label.expired'|trans }}</span>
+        {% endif %}
+    </div>
+
+    <div class="m-tiles-detailed-list--body clearfix">
+
+        <strong class="m-tiles-detailed-list--title">
+            {{ offer.title }}
+
+            {% if offer.locations is iterable %}
+
+                {% for location in offer.locations %}
+
+                    {% if loop.first %}({% endif %}
+
+                    {% if not loop.first %} - {% endif %} {{ location }}
+
+                    {% if loop.last %}){% endif %}
+
+                {% endfor %}
+
+            {% else %} {{ offer.location }} {% endif %}
+
+        </strong>
+
+        <div class="m-tiles-detailed-list--desc mt-20">
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 text-center">
+                    <div class="mb-5">
+                        <strong class="mb-20">{{ 'label.availability'|trans }}</strong>
+                    </div>
+                    <div {% if date(offer.applicableFromDate) > date() %} class="m-color--red" {% endif %}>{{ offer.applicableFromDate|localizeddate('medium', 'medium', null, 'CET', 'Y-MM-dd') }}</div>
+                    <div> - </div>
+                    <div {% if date(offer.expireDate) < date('+7days') %} class="m-color--red" {% endif %}>{{ offer.expireDate|localizeddate('medium', 'medium', null, 'CET', 'Y-MM-dd') }}</div>
+
+                </div>
+                <div class="col-xs-12 col-sm-4 text-center">
+                    <div class="mb-5">
+                        <strong>
+                            {{ 'label.candidates'|trans }}
+                            <div style="font-weight: 300;" class="mt-5">
+                                <span>{{ 'label.candidates.direct'|trans }} / </span>
+                                {#                            <span class="mr-10">{{ 'label.candidates.paired'|trans }}</span>#}
+                                <span >{{ 'label.candidates.new'|trans }}</span>
+                            </div>
+                        </strong>
+                    </div>
+                    
+                </div>
+                <div class="col-xs-12 col-sm-4 text-center">
+                    <div class="mb-5">
+                        <strong>
+                            {{ 'label.available_services'|trans }}
+                        </strong>
+                    </div>
+                    {% if is_granted('ROLE_ADVANCE_FILTER' , offer) or   is_granted('ROLE_OFFER_EXALTATION' , offer) %}
+                        {% if is_granted('ROLE_ADVANCE_FILTER' , offer) %}
+                            <span><i class="fa fa-filter" data-toggle="tooltip" data-placement="bottom" title="{{ 'label.advanced_filter'|trans }}"></i></span>
+                        {% endif %}
+                        {% if is_granted('ROLE_OFFER_EXALTATION' , offer) %}
+                            <span><i class="fa fa-window-maximize" data-toggle="tooltip" data-placement="bottom" title="{{ 'label.highlight'|trans }}"></i></span>
+                        {% endif %}
+                    {% else %}
+                        -
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="m-tiles-detailed-list--footer text-right clearfix">
+            {% if offer.status.value == 0 %}
+                <a href="{{ path('firm_offer_delete', {id: offer.id}) }}" class="btn btn-danger mb-5">
+                    <span class="hidden-xs">{{ 'label.delete'|trans }}</span>
+                    <i class="fa fa-trash visible-xs" style="font-size:17px"></i>
+                </a>
+            {% endif %}
+            {% if offer.status.value == 4 or offer.status.value == 5 %}
+                {#
+                <a href="{{ path('firm_offer_candidates_list', {id: offer.id}) }}" class="btn btn-primary mb-5">
+                    <span class="hidden-xs">{{ 'label.candidates'|trans }}</span>
+                    <i class="fa fa-list visible-xs" style="font-size:17px"></i>
+                </a> #}
+            {% elseif offer.status.value == 2 or offer.status.value == 0 %}
+                <a href="{{ path('firm_offer_edit', {id: offer.id}) }}" class="btn btn-primary mb-5">
+                    <span class="hidden-xs">{{ 'label.edit'|trans }}</span>
+                    <i class="fa fa-pencil visible-xs" style="font-size:17px"></i>
+                </a>
+            {% endif %}
+            <a href="{{ path('show_offer', {slug: offer.slug}) }}" class="btn btn-default mb-5">
+                <span class="hidden-xs">{{ 'label.show'|trans }}</span>
+                <i class="fa fa-eye visible-xs" style="font-size:17px"></i>
+            </a>
+        </div>
+    </div>
+</div>

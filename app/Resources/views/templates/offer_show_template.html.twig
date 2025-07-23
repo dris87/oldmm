@@ -1,0 +1,117 @@
+{% import _self as self %}
+{% import 'modules/atoms/heading.html.twig' as heading %}
+<script type="text/html" id="offer-show-template">
+
+    <div class="l-offer-show">
+        <div class="l-offer-show--header">
+            <div class="container">
+                <h1 class="l-offer-show--firm-name">{{ app.user.firm.name }}</h1>
+
+                <strong data-content="title"></strong>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="l-offer-show--lead" data-content="lead"></div>
+
+            {{ self.offer_show_text_panel_template('tasks') }}
+            {{ self.offer_show_text_panel_template('details') }}
+            {{ self.offer_show_expectations_panel_template() }}
+
+            {{ self.offer_show_text_panel_template('advantages') }}
+            {{ self.offer_show_offer_info_panel_template() }}
+            {{ self.offer_show_firm_info_panel_template() }}
+
+        </div>
+
+    </div>
+
+
+</script>
+
+{%  macro offer_show_text_panel_template(type) %}
+
+    <div class="m-text-panel l-offer-show--{{ type }}">
+
+        <div class="m-text-panel--header">
+
+            {% set trans_token = 'modal.offer.preview.' ~ type %}
+            <span>{{ trans_token|trans }}</span>
+
+        </div>
+
+        <ul class="m-text-panel--list" data-content="{{ type }}"></ul>
+
+    </div>
+
+{% endmacro %}
+
+{% macro offer_show_expectations_panel_template() %}
+    {% import 'modules/atoms/heading.html.twig' as heading %}
+
+    <div class="m-text-panel l-offer-show--expectations">
+
+        <div class="m-text-panel--header">
+            <span>{{ 'modal.offer.preview.expectations'|trans }}</span>
+        </div>
+
+        <ul class="m-text-panel--list l-offer-show--min-education">
+            <li><strong>{{ 'modal.offer.preview.min_education'|trans }}</strong> <span data-content="minEducation"></span></li>
+        </ul>
+
+        <div class="l-offer-show--educations">
+            {{ heading.section_header('modal.offer.preview.educations') }}
+            <ul class="m-text-panel--list" data-content="educations"></ul>
+        </div>
+
+        <div class="l-offer-show--experiences">
+            {{ heading.section_header('modal.offer.preview.experiences') }}
+            <ul class="m-text-panel--list" data-content="experiences"></ul>
+        </div>
+
+        <div class="l-offer-show--other">
+            {{ heading.section_header('modal.offer.preview.other') }}
+            <ul class="m-text-panel--list" data-content="other"></ul>
+        </div>
+
+    </div>
+
+{% endmacro %}
+{% macro offer_show_offer_info_panel_template() %}
+
+    <div class="m-text-panel l-offer-show--offer-info">
+
+        <div class="m-text-panel--header">
+            <span>{{ 'modal.offer.preview.offer_info'|trans }}</span>
+        </div>
+
+        <ul class="m-text-panel--list">
+            <li><strong>{{ 'modal.offer.preview.shifts'|trans }}</strong><span data-content="shifts"></span></li>
+            <li><strong>{{ 'modal.offer.preview.job_forms'|trans }}</strong><span data-content="jobForms"></span></li>
+            <li><strong>{{ 'modal.offer.preview.numberof_employee'|trans }}</strong><span data-content="numberOfEmployee"></span></li>
+            <li><strong>{{ 'modal.offer.preview.availability'|trans }}</strong><span data-content="availability"></span></li>
+        </ul>
+
+    </div>
+
+{% endmacro %}
+{% macro offer_show_firm_info_panel_template() %}
+
+    <div class="m-text-panel l-offer-show--firm-info">
+
+        <div class="m-text-panel--header">
+
+            <span>{{ 'modal.offer.preview.firm_info'|trans }}</span>
+
+        </div>
+
+        <ul class="m-text-panel--list">
+
+            <li>{{ app.user.firm.address }}</li>
+
+        </ul>
+
+    </div>
+
+{% endmacro %}

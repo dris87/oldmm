@@ -1,0 +1,7 @@
+{% extends '@SonataAdmin/CRUD/base_list_field.html.twig' %}
+
+{% block field %}
+    {% for item in value %}
+        <span class="label {% if not loop.first %}label-danger{% else %}label-default{% endif %}"> {{ item.value }}</span>
+    {% endfor %}
+{% endblock %}

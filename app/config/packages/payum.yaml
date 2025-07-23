@@ -1,0 +1,11 @@
+payum:
+    security:
+        token_storage:
+            Common\CoreBundle\Entity\Firm\FirmPaymentToken: { doctrine: orm }
+
+    storages:
+        Common\CoreBundle\Entity\Firm\Order\FirmOrder: { doctrine: orm }
+
+    gateways: {}
+#        offline:
+#            factory: offline

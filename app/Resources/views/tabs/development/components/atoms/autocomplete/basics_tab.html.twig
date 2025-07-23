@@ -1,0 +1,44 @@
+{% import 'modules/atoms/bootstrap/tables.html.twig' as tables %}
+
+<h2>Autocomplete component</h2>
+{{ form_start(form) }}
+    {{ form_row(form.autocomplete) }}
+    {{ form_row(form.submit) }}
+{{ form_end(form) }}
+
+</hr>
+<h3>Description</h3>
+    {{ tables.table( 
+        [ { html : 'Option' } , { html : 'Type' } , { html : 'Description' } ],
+        [   {cols : [ { html : 'compound' } , { html : 'boolean' } , { html : '' } ]},
+            {cols : [ { html : 'placeholder' } , { html : 'string' } , { html : '' } ]},
+            {cols : [ { html : 'multiple' } , { html : 'boolean' } , { html : '' } ]},
+            {cols : [ { html : 'minimum_input_length' } , { html : 'int' } , { html : '' } ]},
+            {cols : [ { html : 'items_per_page' } , { html : 'int' } , { html : '' } ]},
+            {cols : [ { html : 'quiet_millis' } , { html : 'int' } , { html : '' } ]},
+            {cols : [ { html : 'cache' } , { html : 'boolean' } , { html : '' } ]},
+        ],'striped') }}
+    <code>
+       bootstrap.buttonGroup(items)
+    </code>
+<h4>Example</h4>
+    {% verbatim %}
+<pre><code class="twig">{{ form_start(form) }}
+    {{ form_row(form.autocomplete) }}
+    {{ form_row(form.submit) }}
+{{ form_end(form) }}</code></pre> 
+    {% endverbatim  %}
+    {% verbatim %}
+<pre><code class="twig">$form = $this->createFormBuilder()
+    ->add('autocomplete', AutocompleteType::class, [
+        'label' => 'Autocomplete',
+        'descriptor' => 'dic_zip.descriptor',
+        'required' => true,
+    ])
+    ->add('submit', SubmitType::class, [
+        'label' => 'Submit',
+    ])
+    ->getForm()
+    ;</code></pre> 
+    {% endverbatim  %}
+<hr/>

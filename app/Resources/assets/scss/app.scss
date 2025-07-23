@@ -1,0 +1,35 @@
+@charset 'utf-8';
+$web-font-path: 'data:text/css;base64,';
+
+// Element outline and info in Google Chrome (need to install the extension)
+// @source http://pesticide.io/
+$pesticide-debug-outline: false;
+$pesticide-debug-depth: false;
+
+// Include the main smaacs indexes
+@import 'utilities/index';
+@import 'libs/index';
+@import 'base/index';
+@import 'layout/index';
+@import 'modules/atoms/index';
+@import 'modules/molecules/index';
+@import 'modules/organisms/index';
+@import 'states/index';
+@import 'overrides/index';
+@import 'states/print';
+@import 'utilities/fonts';
+@import 'shame';
+
+
+.m-check
+{
+  opacity: 1!important;
+  border: 3px solid #fbaa1a;
+  border-radius: 3px;
+}
+.m-img-check{
+  opacity: 0.5;
+}
+.box{
+  margin-bottom:5px;
+}

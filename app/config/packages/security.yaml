@@ -1,0 +1,90 @@
+security:
+    encoders:
+        # Our user class and the algorithm we'll use to encode passwords
+        # https://symfony.com/doc/current/security.html#c-encoding-the-user-s-password
+        Common\CoreBundle\Entity\User\User: bcrypt
+        FOS\UserBundle\Model\UserInterface: bcrypt
+
+#    acl:
+#        connection: default
+
+    role_hierarchy:
+        ROLE_ADMIN:       [ROLE_USER, ROLE_SONATA_ADMIN]
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+        SONATA:
+            - ROLE_SONATA_PAGE_ADMIN_PAGE_EDIT  # if you are using acl then this line must be commented
+
+    providers:
+        database_users:
+            entity:
+              class: Common\CoreBundle\Entity\User\User
+              property: email
+        fos_userbundle:
+            id: fos_user.user_provider.username
+
+    # https://symfony.com/doc/current/security.html#initial-security-yml-setup-authentication
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        # -> custom firewall for the admin area of the URL
+        admin:
+            pattern:            /admin((\/.*)|($))
+            context:            user
+            form_login:
+                provider:       fos_userbundle
+                login_path:     /admin/login
+                use_forward:    false
+                check_path:     /admin/login_check
+                failure_path:   null
+#                always_use_default_target_path: false
+                default_target_path:            /admin
+            logout:
+                path:           /admin/logout
+                target:         /admin/login
+            anonymous:          true
+
+        main:
+            # this firewall applies to all URLs
+            pattern: ^/
+
+            # but the firewall does not require login on every page
+            # denying access is done in access_control or in your controllers
+            anonymous: true
+            # This allows the user to login by submitting a username and password
+            # Reference: https://symfony.com/doc/current/security/form_login_setup.html
+            form_login:
+                # The route name that the login form submits to
+                check_path: security_login
+                # The name of the route where the login form lives
+                # When the user tries to access a protected page, they are redirected here
+                login_path: security_login
+                # Secure the login form against CSRF
+                # Reference: https://symfony.com/doc/current/security/csrf_in_login_form.html
+                csrf_token_generator: security.csrf.token_manager
+                # The page users are redirect to when there is no previous page stored in the
+                # session (for example when the users access directly to the login page).
+                default_target_path: homepage
+
+                success_handler: authentication.success.listener
+            json_login:
+                check_path: security_json_login
+            logout:
+                # The route name the user can go to in order to logout
+                path: security_logout
+                # The name of the route to redirect to after logging out
+                target: homepage
+
+    access_control:
+        # Admin login page needs to be accessed without credential
+        - { path: ^/admin/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/logout$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/login_check$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+
+        # Secured part of the site
+        # This config requires being logged for the whole site and having the admin role for the admin part.
+        # Change these rules to adapt them to your needs
+        - { path: ^/admin/, role: [ROLE_ADMIN, ROLE_SONATA_ADMIN] }
+        - { path: ^/.*, role: IS_AUTHENTICATED_ANONYMOUSLY }

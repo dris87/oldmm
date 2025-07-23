@@ -1,0 +1,12 @@
+<div class="container">
+    {{ form_start(simpleSearchForm, {
+        'attr': {
+            'class': 'm-simple-search-form'
+        }
+    }) }}
+
+        {% include 'form/offer/simple_search_form.html.twig' with { 'form' : simpleSearchForm } %}
+
+    {{ form_end(simpleSearchForm) }}
+
+</div>

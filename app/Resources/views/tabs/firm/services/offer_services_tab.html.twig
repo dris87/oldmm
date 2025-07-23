@@ -1,0 +1,81 @@
+ <table class="m-simple-table">
+    <thead>
+    <tr>
+        <th scope="col" width="10%" class="text-center">{{ 'label.id'|trans }}</th>
+        <th scope="col" width="30%">{{ 'label.offer.title'|trans }}</th>
+        <th scope="col" width="10%" class="text-center">{{ 'label.availability'|trans }}</th>
+        {# 
+        {% for referencePackage in referencePackages %}
+        <th scope="col" width="20%" class="text-center">
+            {{ referencePackage.name }}
+            <div style="font-weight: 300">({{ referencePackage.price|number_format(0, '.', ' ') }} {{ 'label.forint_plus_tax'|trans }})</div> 
+        </th>
+        {% endfor %} #}
+        <th scope="col" width="10%"></th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for offer in offers %}
+        <tr>
+            <td  class="text-center">{{ offer.id }}</td>
+            <td>{{ offer.title }}</td>
+            <td class="text-center">
+                <div>{{ offer.applicableFromDate|localizeddate('medium', 'medium', null, 'CET', 'Y-MM-dd') }}</div>
+                <div> - </div>
+                <div {% if date(offer.expireDate) < date('-7days') %} class="m-color--red" {% endif %}>{{ offer.expireDate|localizeddate('medium', 'medium', null, 'CET', 'Y-MM-dd') }}</div>
+            </td>
+             {# 
+            {% for referencePackage in referencePackages %}
+            <td class="text-center">
+                {% set status = offer.offerServiceStatus( referencePackage.services.first.type ) %}
+
+                {% import 'common/helpers/form_helper.html.twig' as form %}
+
+                {% set states = [{'from':'first','to':'second'},{'from':'second','to':'first'}] %}
+                {% if status.readable == 'inactive' %}
+                    {% set selected = 'first' %}
+                {% elseif status.readable == 'in_cart' %}
+                    {% set selected = 'second' %}
+                {% else %}
+                    {% set selected = 'third' %}
+                    {% set states = [{'from':'first','to':'second'},{'from':'third','to':'first'},{'from':'second','to':'first'}] %}
+                {% endif %}
+    
+                {{ form.three_state_checkbox(
+                    selected,
+                    states,
+                    path('firm_purchase_offer_service_status_toggle',{'packageId': referencePackage.id,'offerId': offer.id,'status':'inactive'}),
+                    path('firm_purchase_offer_service_status_toggle',{'packageId': referencePackage.id,'offerId': offer.id,'status':'in_cart'}),
+                    path('firm_purchase_offer_service_status_toggle',{'packageId': referencePackage.id,'offerId': offer.id,'status':'active'})
+                ) }}
+            </td>
+            {% endfor %} #}
+            <td class="text-right">
+                <div class="item-actions">
+                    <a href="{{ path('show_offer', {slug: offer.slug}) }}" class="btn btn-default mb-5">
+                        <span class="hidden-sm hidden-xs">{{ 'label.show'|trans }}</span>
+                        <i class="fa fa-eye visible-sm visible-xs" style="font-size:17px"></i>
+                    </a>
+                </div>
+            </td>
+        </tr>
+    {% else %}
+        <tr>
+            <td colspan="{{ 4 + (referencePackages | length) }}" align="center">
+                {{ 'page.offers.list.not_found'|trans }}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+{% if offers.haveToPaginate is defined %}
+    <div class="navigation text-right mb-20">
+        {{ pagerfanta(offers, 'twitter_bootstrap3', {
+            routeName: 'firm_services_list_paginated',
+            prev_message :'<i class="fa fa-chevron-left"></i>',
+            next_message :'<i class="fa fa-chevron-right"></i>'
+        }) }}
+    </div>
+{% endif %}

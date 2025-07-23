@@ -1,0 +1,33 @@
+/** ==========================================================================
+  // Third-Party Styles
+  // ==========================================================================
+**/
+// Import third-party styles from node_modules
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import '~eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css';
+@import "~font-awesome/scss/font-awesome.scss";
+@import "../libraries/smartwizard/dist/css/smart_wizard.css";
+@import "../libraries/smartwizard/dist/css/smart_wizard_theme_arrows.css";
+@import "../libraries/smartwizard/dist/css/smart_wizard_theme_circles.css";
+@import "~select2/dist/css/select2.min.css";
+@import "~cropper/dist/cropper.css";
+
+
+/** ==========================================================================
+  // Convert vendor styles to SCSS (basically just change the extension
+  // to ".scss" and add "_" to the beginning) and import them here.
+**/
+
+/** ==========================================================================
+// $CSS Pesticide
+// ==========================================================================
+// Can always be included as it only renders css if the
+// variable $pesticide-debug is set to "true"
+**/
+@import 'pesticide';
+
+/** ==========================================================================
+// $Normalize
+// ==========================================================================**/
+@import 'normalize';
+@import 'eu-cookie-law';

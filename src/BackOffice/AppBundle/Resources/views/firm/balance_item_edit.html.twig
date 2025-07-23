@@ -1,0 +1,64 @@
+{% extends '@SonataAdmin/standard_layout.html.twig' %}
+
+{% form_theme form '@SonataAdmin/Form/form_admin_fields.html.twig' %}
+
+{% block title %}
+    Kredit módosítása
+{% endblock %}
+
+{% block breadcrumb %}
+    <div class="hidden-xs">
+        <ol class="nav navbar-top-links breadcrumb">
+            <li>
+                <a href="{{ path('sonata_admin_dashboard') }}">{{ 'link_breadcrumb_dashboard' | trans({}, 'SonataAdminBundle') | raw }}</a>
+            </li>
+            {% if block('breadcrumb_between') is defined %}
+                {{ block('breadcrumb_between') }}
+            {% endif %}
+            <li class="active"><span>{{ block('title') }}</span></li>
+        </ol>
+    </div>
+{% endblock %}
+
+{% block actions %}
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            <a class="sonata-action-element" href="{{ path('admin_firm_balance', { firm: firm}) }}">
+                <i class="fa fa-list" aria-hidden="true"></i>
+                Vissza az egyenleghez
+            </a>
+        </li>
+    </ul>
+{% endblock %}
+
+{% block navbar_title %}
+    {{ block('title') }}
+{% endblock %}
+
+{% block form %}
+{{ form_start(form) }}
+<form role="form" method="POST" >
+    {{ form_errors(form) }}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                </div>
+                <div class="box-body">
+                    <div class="sonata-ba-collapsed-fields">
+                        {{ form_row(form.credit) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="sonata-ba-form-actions well well-small form-actions">
+        <button type="submit" class="btn btn-success">
+            <i class="fa fa-save" aria-hidden="true"></i>
+            Mentés
+        </button>
+    </div>
+</form>
+{{ form_end(form) }}
+{% endblock %}

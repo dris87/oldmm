@@ -1,0 +1,60 @@
+.m-simple-search-form
+  padding: 0px
+  .input-group
+    margin: 0px
+    .input-group-addon
+      background: #F2F2F2
+      height: 60px
+      font-size: 14px
+      text-transform: uppercase
+      color: black
+      border: none
+      text-align: center
+      position: relative
+      letter-spacing: 0.1px
+      @include border-left-radius(3px)
+      &:after
+        background: #F2F2F2
+        content: ''
+        width: 10px
+        height: 10px
+        z-index: 100
+        position: absolute
+        right: -5px
+        top: 25px
+        transform: rotate(45deg)
+      i
+        font-size: 22px
+        vertical-align: middle
+    .form-control
+      border: 0px
+      height: 60px
+      font-size: 13px
+      @include border-right-radius(3px)
+  button
+    background: black
+    height: 60px
+    width: 60px
+    padding-bottom: 2px
+    cursor: pointer
+    border: 0px
+    color: white
+    display: inline-block
+    text-align: center
+    @include border-radius(3px)
+    .fa
+      color: white
+      font-size: 27px
+      vertical-align: middle
+  .select2-container--default .select2-selection--multiple
+    height: 60px
+    border: none
+    @include border-right-radius(3px)
+  .select2-container--default .select2-search--inline .select2-search__field
+    border: none
+    height: 38px
+  .select2-container--default .select2-selection--multiple .select2-selection__choice
+    line-height: 38px
+  .select2-container--default .select2-selection--multiple .select2-selection__rendered
+    padding: 1px 0px
+    @include border-radius(3px)

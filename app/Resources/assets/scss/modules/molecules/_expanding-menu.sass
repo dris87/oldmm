@@ -1,0 +1,200 @@
+.ball 
+    width: 50px
+    height: 50px
+    background: $ua-orange
+    border-radius: 50%
+    position: fixed
+    z-index: map-get($zindex, menu) 
+    right: 10px
+    bottom: 10px
+    overflow: hidden
+    transition: all 200ms cubic-bezier(.25 .75 .5 1.25)
+    &:before 
+        content: ''
+        width: 50px
+        height: 50px
+        position: absolute
+        margin: auto
+        top: 0 
+        bottom: 0
+        left: 0 
+        right: 0
+        border-radius: 50%
+        background: darken($ua-orange,20%)
+        opacity: 0
+        cursor: pointer
+    &:hover 
+        cursor: pointer
+    &.active 
+        width: 200px
+        height: 200px
+        bottom: -65px
+        right: -65px
+        &:hover 
+            cursor: default 
+        &:before 
+            opacity: 1
+        .fa-bars
+            top: 90px
+            left: 90px
+        & .first 
+            top: 20px
+            opacity: 1
+        & .second 
+            top: 40px
+            left: 50px
+            opacity: 1
+        & .third 
+            left: 30px
+            top: 90px
+            opacity: 1
+    span
+        i
+            opacity: 1
+        .fa-bars 
+            position: absolute
+            margin: auto
+            top: 13px
+            bottom: 0px
+            left: 15px
+            right: 0px
+            transition: all 200ms cubic-bezier(.25,.75,.5,1.25)
+            font-size: 22px
+    & i 
+        color: #fff
+        font-size: 24px
+        position: absolute
+        margin: auto
+        transition: all 200ms cubic-bezier(.25,.75,.5,1.25)
+        opacity: 0
+        &.first 
+            top: -40px
+            left: 0
+            right: 0
+            text-align: center
+        &.second 
+            left: -25px
+            top: -25px
+        &.third 
+            left: -40px
+            top: 0
+            bottom: 0
+    &.expand 
+        width: 200%
+        height: 150%
+        bottom: -25%
+        right: -50%
+        &:before 
+            opacity: 0
+        & > * 
+            display: none
+@keyframes startup 
+    0% 
+        transform: translate(0, 300px)
+        opacity: 0
+    100% 
+        transform: translate(0, 0)
+        opacity: 1
+  
+@-webkit-keyframes startup 
+    0% 
+        transform: translate(0, 300px)
+        opacity: 0
+    100% 
+        transform: translate(0, 0)
+        opacity: 1
+  
+
+
+
+.ball-search
+    width: 50px
+    height: 50px
+    background: $ua-orange
+    border-radius: 50%
+    position: fixed
+    z-index: map-get($zindex, menu)-1
+    right: 70px
+    bottom: 10px
+    overflow: hidden
+    transition: all 200ms cubic-bezier(.25 .75 .5 1.25)
+    &:before 
+        content: ''
+        width: 50px
+        height: 50px
+        position: absolute
+        margin: auto
+        top: 0 
+        bottom: 0
+        left: 0 
+        right: 0
+        border-radius: 50%
+        background: darken($ua-orange,20%)
+        opacity: 0
+        cursor: pointer
+    &:hover 
+        cursor: pointer
+    &.active 
+        width: 200px
+        height: 200px
+        bottom: -65px
+        right: -65px
+        &:hover 
+            cursor: default 
+        &:before 
+            opacity: 1
+        .fa-bars
+            top: 90px
+            left: 90px
+        & .first 
+            top: 20px
+            opacity: 1
+        & .second 
+            top: 40px
+            left: 50px
+            opacity: 1
+        & .third 
+            left: 30px
+            top: 90px
+            opacity: 1
+    span
+        i
+            opacity: 1
+        .fa-search,
+        .fa-close
+            position: absolute
+            margin: auto
+            top: 13px
+            bottom: 0px
+            left: 15px
+            right: 0px
+            transition: all 200ms cubic-bezier(.25,.75,.5,1.25)
+            font-size: 22px
+    & i 
+        color: #fff
+        font-size: 24px
+        position: absolute
+        margin: auto
+        transition: all 200ms cubic-bezier(.25,.75,.5,1.25)
+        opacity: 0
+        &.first 
+            top: -40px
+            left: 0
+            right: 0
+            text-align: center
+        &.second 
+            left: -25px
+            top: -25px
+        &.third 
+            left: -40px
+            top: 0
+            bottom: 0
+    &.expand 
+        width: 200%
+        height: 150%
+        bottom: -25%
+        right: -50%
+        &:before 
+            opacity: 0
+        & > * 
+            display: none

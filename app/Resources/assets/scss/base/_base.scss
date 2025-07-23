@@ -1,0 +1,74 @@
+@viewport { width: device-width; }
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+html {
+  background-color: $color-background;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+* {
+  &:before,
+  &:after { box-sizing: inherit; }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background: $color-background;
+  color: $color-text;
+  font-family: $font-family-default;
+  min-height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+.body-container{
+  margin: 0px auto;
+  padding: 30px 20px;
+}
+.slim-body-container{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 10px;
+  position: relative;
+}
+
+a {
+  background: transparent;
+  color: $color-link;
+  text-decoration: none;
+  @include transition(color .2s);
+  &:hover,
+  &:active,
+  &:focus{
+    outline: none;
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-display;
+  font-weight: normal;
+}
+
+fieldset {
+  border: none;
+}
+
+.b-scroll-to{
+  cursor: pointer;
+}
+
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td{
+      vertical-align: middle;
+}

@@ -1,0 +1,94 @@
+{% extends 'SonataAdminBundle:CRUD:base_list.html.twig' %}
+
+{% block list_table %}
+    {# Statisztikák megjelenítése #}
+    {% if statistics is defined %}
+        <div style="margin-bottom: 20px; padding: 15px; background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px;">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h4 style="color: #28a745;">
+                        <i class="fa fa-check-circle"></i>
+                        Aktív: <span class="badge badge-success">{{ statistics.active }} db</span>
+                    </h4>
+                </div>
+                <div class="col-md-4">
+                    <h4 style="color: #dc3545;">
+                        <i class="fa fa-times-circle"></i>
+                        Inaktív: <span class="badge badge-danger">{{ statistics.inactive }} db</span>
+                    </h4>
+                </div>
+                <div class="col-md-4">
+                    <h4 style="color: #007bff;">
+                        <i class="fa fa-list"></i>
+                        Összes: <span class="badge badge-primary">{{ statistics.total }} db</span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+    {# Eredeti táblázat #}
+    {{ parent() }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            {% if app.request.query.get('show_offers_without_email') and app.session.get('offersWithoutEmail') %}
+                $('#offersWithoutEmailModal').modal('show');
+            {% endif %}
+        });
+    </script>
+{% endblock %}
+
+{% block sonata_page_content %}
+    {{ parent() }}
+    
+    {% if app.request.query.get('show_offers_without_email') and app.session.get('offersWithoutEmail') %}
+        <div class="modal fade" id="offersWithoutEmailModal" tabindex="-1" role="dialog" aria-labelledby="offersWithoutEmailModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="offersWithoutEmailModalLabel">Hirdetések hiányzó e-mail címmel</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-danger">Az alábbi hirdetéseknél nincs kitöltve az e-mail cím, ezért a művelet nem hajtható végre:</p>
+                        
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Azonosító</th>
+                                    <th>Hirdetés címe</th>
+                                    <th>Cég</th>
+                                    <th>Műveletek</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for offer in app.session.get('offersWithoutEmail') %}
+                                    <tr>
+                                        <td>{{ offer.id }}</td>
+                                        <td>{{ offer.title }}</td>
+                                        <td>{{ offer.firm }}</td>
+                                        <td>
+                                            <a href="{{ admin.generateUrl('edit', {'id': offer.id}) }}" class="btn btn-sm btn-default">
+                                                <i class="fa fa-pencil"></i> Szerkesztés
+                                            </a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Bezárás</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        {% set temp = app.session.remove('offersWithoutEmail') %}
+    {% endif %}
+{% endblock %}

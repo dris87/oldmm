@@ -1,0 +1,291 @@
+{% import 'modules/atoms/icon.html.twig' as icon %}
+<div style="text-align:center;padding-top:25px;font-weight:bold;">A csomagok tanácsadó cégek részére nem elérhetők, kérje egyedi ajánlatunkat az ugyfelszolgalat@mumi.hu e-mail címen!</div>
+<div class="m-package-view clearfix" id="firm-purchase-service-packages">
+    
+    <div class="m-package-view--nav col-xs-3">
+
+        {% for package in packages %}
+            <div class="m-package-view--nav-item clearfix  {% if loop.index == 1 %}active{% else %}inactive{% endif %}" id="{{ package.id }}-nav-item">
+                <div class="m-package-view--nav-icon col-xs-4" style="background:#{{ package.color }};">
+                    <div class="m-circle" style="background:#{{ package.color }};">
+                        <p>{{ package.sign }}</p>
+                    </div>
+                </div>
+                <div class="m-package-view--nav-content col-xs-8">
+                    <p class="m-package-view--nav-text" style="margin: 0;">{{ package.name }}</p>
+                   
+                    {% if package.id == 5 %}
+                     <p class="m-package-view--nav-price"> 79.990 Ft + Áfa helyett <br /><span style="color:red"><b>{{ package.price|number_format(0, '.', ' ')  }} {{ 'label.forint_plus_tax'|trans }}</b></span></p>
+                    {% elseif package.id == 2 %}
+                        <p class="m-package-view--nav-price"> 109.990 Ft + Áfa helyett <br /><span style="color:red"><b>{{ package.price|number_format(0, '.', ' ')  }} {{ 'label.forint_plus_tax'|trans }}</b></span></p>
+                    {% elseif package.id == 3 %}
+                        <p class="m-package-view--nav-price"> 129.990 Ft + Áfa helyett <br /><span style="color:red"><b>{{ package.price|number_format(0, '.', ' ')  }} {{ 'label.forint_plus_tax'|trans }}</b></span></p>
+                    {% elseif package.id == 4 %}
+                        <p class="m-package-view--nav-price"> 199.990 Ft + Áfa helyett <br /><span style="color:red"><b>{{ package.price|number_format(0, '.', ' ')  }} {{ 'label.forint_plus_tax'|trans }}</b></span></p>
+                    {% elseif package.id == 107 %}
+                        <p class="m-package-view--nav-price"> 10 DB kredit</p>
+                    {% elseif package.id == 109 %}
+                        <p class="m-package-view--nav-price"> 6 DB kredit</p>
+                    {% elseif package.id == 111 %}
+                        <p class="m-package-view--nav-price"> 6 DB kredit</p>
+                    {% elseif package.id == 113 %}
+                        <p class="m-package-view--nav-price"> 5 DB kredit</p>
+                    {% elseif package.id == 115 %}
+                        <p class="m-package-view--nav-price"> Cégfiók hozzáférés</p>
+                     {% else %}
+                        <p class="m-package-view--nav-price">{{ package.price|number_format(0, '.', ' ')  }} {{ 'label.forint_plus_tax'|trans }}</p>
+                    {% endif %}
+
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+
+    <div class="m-package-view--content col-xs-9 clearfix" style="height: {{ packages|length * 90 }}px">
+
+        {% for package in packages %}
+            <div
+                class="m-package-view--content-box clearfix {% if loop.index == 1 %}active{% else %}inactive{% endif %}"
+                style="border-left-color:#{{ package.color }}"
+                id="{{ package.id }}-content"
+            >
+
+                <div class="clearfix">
+                    <div class="m-package-view--content-details col-xs-4 text-center">
+                        {% if package.id in [2,3,4] %}
+                        <p>
+                            Előszűrt CV küldés
+                            </p>
+                             <span>{{ package.serviceCountByTypeName('cv_count') }} db</span>
+
+                            {% endif %}
+
+
+
+                        <p>Érvényesség</p>
+                        <span>{{ package.timePiece }} {{ package.timeUnit == 'M'
+                            ? 'hónap'
+                            : 'nap'
+                        }}
+                      
+                        {% if package.id in [133,135,148] %}
+                            <br> 30+30 nap
+                        {% endif %}
+
+                        </span>
+                        {% if package.id != 115 %}
+                           {% if package.id == 107 %}
+                                 <p>Egységár</p>
+                                <span> 1 400 Ft + Áfa</span>
+                            {% elseif package.id == 109 %}
+                                <p>Egységár</p>
+                                <span> 3 000 Ft + Áfa</span>
+                            {% elseif package.id == 111 %}
+                                <p>Egységár</p>
+                                <span> 4 000 Ft + Áfa</span>
+                            {% elseif package.id == 113 %}
+                                <p>Egységár</p>
+                                <span> 5 800 Ft + Áfa</span>
+                            {% else%}
+                            {# 
+                            <p>Egységár</p>
+                            <span>{{ (
+                                (package.serviceCountByTypeName('cv_count') > 0)
+                                    ? (package.price // package.serviceCountByTypeName('cv_count'))
+                                    : 0
+                                ) | number_format(0, ',', ' ') }} {{ 'label.forint_plus_tax'|trans }}
+                            </span> #}
+                            {% endif %} 
+                        {% endif %}
+                    </div>
+                    <div class="m-package-view--content-services col-xs-8 mt-10">
+
+                        
+                        {% if package.id in [125,127,129,131] %}
+                            <div class="m-package-view--content-service-item">
+                            {{ icon.fa( 'check' ) }}
+                            <span>Díjvisszafizetési garanciát vállalunk a releváns jelölt önéletrajzokra</span>
+                        </div>
+                            <div class="m-package-view--content-service-item">
+                                {{ icon.fa( 'check' ) }} <span>Hirdetés feladás 1 pozícióra</span>
+                            </div>
+                            <div class="m-package-view--content-service-item">
+                            {{ icon.fa( 'check' ) }} <span>Releváns önéletrajz párosítás/listázás korlátlan darabszámban</span>
+                            </div>
+                            <div class="m-package-view--content-service-item">
+                            {{ icon.fa( 'check' ) }} <span>Korlátlan darabszámban releváns jelölt </span>
+                            </div>
+                            {% if package.id in [125,129] %}
+                                 <div class="m-package-view--content-service-item">
+                                {{ icon.fa( 'check' ) }} <span>Minimum garantált releváns jelöltszám: 3 fő. Korlátlan darabszámú letöltési lehetőséggel!</span>
+                                </div>
+                            {% elseif package.id in [127,131] %}
+                                <div class="m-package-view--content-service-item">
+                                {{ icon.fa( 'check' ) }} <span>Minimum garantált releváns jelöltszám 3 fő. Korlátlan darabszámú letöltési lehetőséggel!</span>
+                                </div>
+                            {% endif %}
+                            {# 
+                            <div class="m-package-view--content-service-item">
+                            {{ icon.fa( 'check' ) }} <span>Díjvisszafizetési garancia </span>
+                            </div>#}
+                        {% elseif package.id in [133,135] %}
+                            <div class="m-package-view--content-service-item">
+                                {{ icon.fa( 'check' ) }} <span>Szűrési paraméterek megadása 1 pozícióra</span>
+                            </div>
+                            <div class="m-package-view--content-service-item">
+                            {{ icon.fa( 'check' ) }} <span>Előszűrés telefonon</span>
+                            </div>
+                            <div class="m-package-view--content-service-item">
+                            {{ icon.fa( 'check' ) }} <span>Előszűrt és megfelelő jelöltek elküldése</span>
+                            </div>
+                            <div class="m-package-view--content-service-item">
+                            {{ icon.fa( 'check' ) }} <span>Minimum garantált releváns jelöltszám: 3 fő. Korlátlan darabszámú letöltési lehetőséggel!</span>
+                            </div>
+                            <div class="m-package-view--content-service-item">
+                            {{ icon.fa( 'check' ) }} <span>Hirdetés megjelenítése Mumi neve alatt</span>
+                            </div>
+                            {# 
+                            <div class="m-package-view--content-service-item">
+                            {{ icon.fa( 'check' ) }} <span>Díjvisszafizetési garancia</span>
+                            </div>#}
+                        {% elseif package.id == 137 %}
+                            
+                            <div class="m-package-view--content-service-item">
+                                {{ icon.fa( 'check' ) }} <span>Keresés bármennyi pozícióra</span>
+                            </div>
+                            <div class="m-package-view--content-service-item">
+                            {{ icon.fa( 'check' ) }} <span>Önéletrajz párosítás/listázás</span>
+                            </div>
+                            <div class="m-package-view--content-service-item">
+                            {{ icon.fa( 'check' ) }} <span> CV-k teljes tartalmának átnézése korlátlan db-számban (kapcsolati adatok nélkül)</span>
+                            </div>
+                            <div class="m-package-view--content-service-item">
+                            {{ icon.fa( 'check' ) }} <span>6 pontos szűrő használata</span>
+                            </div>
+                            <div class="m-package-view--content-service-item">
+                            {{ icon.fa( 'check' ) }} <span>Releváns, megfelelő kiválasztott önéletrajzok feloldási és letöltési lehetősége és a kapcsolati adatok megtekintése: 200 db</span>
+                            </div>
+                            
+                        {% elseif package.id == 139 %}
+                            
+                            <div class="m-package-view--content-service-item">
+                                {{ icon.fa( 'check' ) }} <span>Keresés bármennyi pozícióra</span>
+                            </div>
+                            <div class="m-package-view--content-service-item">
+                            {{ icon.fa( 'check' ) }} <span>Önéletrajz párosítás/listázás</span>
+                            </div>
+                            <div class="m-package-view--content-service-item">
+                            {{ icon.fa( 'check' ) }} <span>CV-k teljes tartalmának átnézése korlátlan db-számban (kapcsolati adatok nélkül)</span>
+                            </div>
+                            <div class="m-package-view--content-service-item">
+                            {{ icon.fa( 'check' ) }} <span>6 pontos szűrő használata</span>
+                            </div>
+                            <div class="m-package-view--content-service-item">
+                            {{ icon.fa( 'check' ) }} <span>Releváns, megfelelő kiválasztott önéletrajzok feloldási és letöltési lehetősége és a kapcsolati adatok megtekintése: 200 db</span>
+                            </div>
+                        {% elseif package.id == 141 %}
+                            <div class="m-package-view--content-service-item">
+                            {{ icon.fa( 'check' ) }}
+                            <span>Díjvisszafizetési garanciát vállalunk a releváns jelölt önéletrajzokra</span>
+                        </div>
+                            <div class="m-package-view--content-service-item">
+                                {{ icon.fa( 'check' ) }} <span>Hirdetés feladás 1 pozícióra</span>
+                            </div>
+                            <div class="m-package-view--content-service-item">
+                            {{ icon.fa( 'check' ) }} <span>Releváns önéletrajz párosítás/listázás korlátlan darabszámban</span>
+                            </div>
+                            <div class="m-package-view--content-service-item">
+                            {{ icon.fa( 'check' ) }} <span> Korlátlan darabszámban releváns jelölt</span>
+                            </div>
+                            <div class="m-package-view--content-service-item">
+                            {{ icon.fa( 'check' ) }} <span>Minimum garantált releváns jelöltszám: 3 fő. Korlátlan darabszámú letöltési lehetőséggel!</span>
+                            </div>
+                        {% else %}   
+                        {% for serviceType in serviceTypes if not serviceType.hasReference%}
+
+                            <div class="m-package-view--content-service-item">
+
+                                {% if package.hasServiceByType(serviceType) %}
+                                    {{ icon.fa( 'check' ) }}
+                                {% else %}
+                                    {{ icon.fa( 'times' ) }}
+                                {% endif %}
+
+                                <span>
+                                {% if package.id in [2,3,4] %}
+                                  {% if serviceType.readable == 'cv_count' %}
+                                        Telefonos előszűrés 1 pozícióra
+                                  {% elseif serviceType.readable == "match" %}
+                                        5 fő előszürt jelölt CV elküldése
+                                  {% else %}
+                                        {{ ('service.name.' ~ serviceType.readable) | trans }}
+                                  {% endif %}
+                                {% else %}
+                                  {{ ('service.name.' ~ serviceType.readable) | trans }}
+                                {% endif %}
+                                </span>
+
+                            </div>
+                        {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+                {#
+                <div class="m-package-view--footer clearfix" data-action="{{ path('firm_purchase_add_package_to_cart_prototype', {
+                    packageId: package.id,
+                }) }}">
+                    <div class="col-xs-3">
+                        <div class="form-group m-quantity-input">
+                            <label for="exampleInputEmail1">Darab</label>
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default btn-number" {% if cartItemsOfPackages[package.id].quantity < 1 %}disabled="disabled"{% endif %} data-type="minus" data-field="quant[1]">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+                            </span>
+                            <input
+                                type="text"
+                                name="quant[1]"
+                                class="form-control input-number"
+                                value="{{ cartItemsOfPackages[package.id].quantity }}"
+                                min="0"
+                                max="100"
+                            >
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <p class="m-package-view--footer-unitprice-label">Egységár ár</p>
+                        <p class="m-package-view--footer-unitprice">
+                            <span data-price="{{ package.price }}">
+                                {{ package.price|number_format(0, '.', ' ') }}
+                            </span>
+                            {{ 'label.forint_plus_tax'|trans }}
+                        </p>
+                    </div>
+                    <div class="col-xs-3">
+                        <p class="m-package-view--footer-price-label">Teljes ár</p>
+                        <p class="m-package-view--footer-price">
+                            <span data-price="{{ package.price }}">
+                                {{ (package.price * cartItemsOfPackages[package.id].quantity) |number_format(0, '.', ' ') }}
+                            </span>
+                            {{ 'label.forint_plus_tax'|trans }}
+                        </p>
+                    </div>
+                 
+                    <div class="col-xs-3 text-right m-package-view--to-cart-button">
+                        <a href="{{ path('firm_cart') }}" class="btn btn-primary btn-lg">Kosárhoz</a>
+                    </div>
+                    
+                </div>
+               #}
+            </div>
+        {% endfor %}
+
+    </div>
+
+</div>

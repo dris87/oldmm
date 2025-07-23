@@ -1,0 +1,11 @@
+{% extends '@SonataAdmin/CRUD/base_list_field.html.twig' %}
+
+{% block field %}
+    <div>
+        {% if value is not empty %}
+
+        <b><a href="mailto:{{ value['email'] }}">{{ value['email'] }}</a></b><br/>
+        {{ value['phoneNumber'] }}
+        {% endif %}
+    </div>
+{% endblock %}

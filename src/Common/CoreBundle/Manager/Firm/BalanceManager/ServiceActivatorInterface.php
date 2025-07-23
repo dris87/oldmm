@@ -1,0 +1,37 @@
+<?php
+
+/*
+ * This file is part of the `All4One/Ujallas.hu` project.
+ *
+ * (c) https://ujallas.hu
+ *
+ * Developed by: Ferencz Dávid Tamás <fdt0712@gmail.com>
+ * Contributed: Sipos Zoltán <sipiszoty@gmail.com>, Pintér Szilárd <leaderlala00@gmail.com >
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace Common\CoreBundle\Manager\Firm\BalanceManager;
+
+use Common\CoreBundle\Entity\Firm\Order\FirmOrderItem;
+use Common\CoreBundle\Entity\Firm\Package\FirmPackageService;
+
+interface ServiceActivatorInterface
+{
+    /**
+     * @param FirmPackageService $service
+     *
+     * @return mixed
+     */
+    public function supportService(FirmPackageService $service);
+
+    /**
+     * @param FirmOrderItem      $orderItem
+     * @param FirmPackageService $service
+     * @param null               $reference
+     *
+     * @return mixed
+     */
+    public function activateService(FirmOrderItem $orderItem, FirmPackageService $service, $reference = null);
+}

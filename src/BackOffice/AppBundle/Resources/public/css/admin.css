@@ -1,0 +1,108 @@
+.payments.expand {
+    display:none;
+}
+.payments.expand.open {
+    display: table-row;
+}
+.payments dl dt {
+    float: left;
+    min-width: 300px;
+}
+.payments dl dt:after {
+    content: ':';
+    display: inline;
+    margin-right: 10px;
+}
+.financial .invoice {
+    background-color :#CFE8EF !important;
+}
+.financial .payment {
+    background-color: #AED1E6 !important;
+}
+.financial .payments {
+    background-color: #85C7DE !important;
+}
+
+
+/** Back office admin part **/
+
+a{
+    color: #29aae2;
+}
+a:hover, a:active, a:focus {
+    outline: none;
+    text-decoration: none;
+    color: #1b75bc;
+}
+
+.login-page, .register-page {
+    background: url(/images/bg/bg_main3.jpg) no-repeat top;
+    background-size: cover;
+    padding: 10px 0;
+}
+.login-logo img{
+    width: 300px!important;
+}
+.login-logo span{
+    display: none;
+}
+
+.breadcrumb>.active {
+    color: #fbaa19;
+}
+
+.logo img {
+    max-width: 120px;
+}
+.skin-black .main-header>.logo:hover {
+    background-color: #000;
+}
+
+.skin-black .main-header >.logo {
+    background-color: #000;
+}
+.skin-black .main-header .navbar {
+    background-color: #000;
+}
+.skin-black .main-header .navbar>.sidebar-toggle {
+    color: #fff;
+    border-right: 1px solid #424242;
+}
+.skin-black .main-header>.logo{
+    border-right: 1px solid #424242;
+}
+
+.skin-black .main-header .navbar .nav>li>a {
+    color: #fff;
+}
+.skin-black .main-header .navbar .navbar-custom-menu .navbar-nav>li>a, .skin-black .main-header .navbar .navbar-right>li>a {
+    border-left: 1px solid #424242;
+}
+
+.skin-black .main-header .navbar .nav>li>a:hover, .skin-black .main-header .navbar .nav>li>a:active, .skin-black .main-header .navbar .nav>li>a:focus, .skin-black .main-header .navbar .nav .open>a, .skin-black .main-header .navbar .nav .open>a:hover, .skin-black .main-header .navbar .nav .open>a:focus, .skin-black .main-header .navbar .nav>.active>a {
+    background: #fff;
+    color: #999;
+}
+.skin-black .main-header .navbar .nav>li>a:hover, .skin-black .main-header .navbar .nav>li>a:active, .skin-black .main-header .navbar .nav>li>a:focus, .skin-black .main-header .navbar .nav .open>a, .skin-black .main-header .navbar .nav .open>a:hover, .skin-black .main-header .navbar .nav .open>a:focus, .skin-black .main-header .navbar .nav>.active>a {
+    background: #3c3c3c;
+    color: #fbaa19;
+}
+.skin-black .main-header .navbar .sidebar-toggle:hover {
+    background: #3c3c3c;
+    color: #fbaa19;
+}
+
+
+.skin-black .sidebar-menu>li:hover>a, .skin-black .sidebar-menu>li.active>a{
+    color: #fff;
+    background: #fbaa19;
+    border-left-color: #fbaa19;
+}
+
+.sonata-collection-row{
+    border: 1px solid #b5b5b5;
+    background: #dadada;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 20px 0px;
+}

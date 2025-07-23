@@ -1,0 +1,16 @@
+swiftmailer:
+    transport: '%mailer_transport%'
+    host: '%mailer_host%'
+#    username: '%mailer_user%'
+#    password: '%mailer_password%'
+#    encryption: '%mailer_encrypt%'
+#    port: '%mailer_port%'
+#    auth_mode: '%mailer_mode%'
+    logging: true
+    spool:
+        type: 'memory'
+    stream_options:
+        ssl:
+            allow_self_signed: true
+            verify_peer: false
+            verify_peer_name: false

@@ -1,0 +1,175 @@
+{% macro print_collection(collection) %}
+    {% for obj in collection %}
+        {{ obj.value }}{% if loop.index != loop.last %}, {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+{% macro print_skill(collection) %}
+    {% for obj in collection %}
+        {% if obj.level is not empty %}
+            <div class="item">
+                <h3 class="level-title">{{ obj.dictionary.value }}</h3>
+                <div class="skills-container">
+                    <div class="skills skill-{{ obj.level.skillLevel }}">{{ obj.level.value }}</div>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+{% macro print_item(title, collection, comment) %}
+    {% import _self as self %}
+    {% if collection is not empty and collection is iterable %}
+        <div class="item">
+            <span class="project-title">
+                <a href="#">{{ title }}</a>
+            </span> -
+            <span class="project-tagline">
+                {{ self.print_collection(collection) }}
+                {% if comment is not null and comment is not empty %}
+                    <br/>
+                    <span class="comment"><i class="icon fas fa-info-circle"></i> {{ comment }}</span>
+                {% endif %}
+            </span>
+        </div>
+    {% endif %}
+
+{% endmacro %}
+
+{% macro print_will_to_travel(collection, distance) %}
+    {% import _self as self %}
+    {% if collection is not empty and collection is iterable %}
+        <div class="item">
+            <span class="project-title">
+                <a href="#">Utazási hajlandóság</a>
+            </span> -
+            <span class="project-tagline">
+                {% if collection is not empty %}
+                    Ha szükséges, a lakhelyemtől számítva utazom <strong>{{ distance }}km</strong>-t.
+                {% endif %}
+
+                {% if collection is not empty %}
+                    Ha szükséges, utazom az alábbi településekre:
+                    {{ self.print_collection(collection) }}
+                {% endif %}
+            </span>
+        </div>
+    {% endif %}
+
+{% endmacro %}
+
+{% macro print_will_to_move(collection, willToMove) %}
+    {% import _self as self %}
+    {% if willToMove is not empty %}
+        <div class="item">
+            <span class="project-title">
+                <a href="#">Költözési hajlandóság</a>
+            </span> -
+            <span class="project-tagline">
+                {% if willToMove.readable == "by_location" and collection is not empty %}
+                    Ha szükséges, költözöm az alábbi településekre:
+                    {{ _self.print_collection(collection) }}
+                {% else %}
+                    Ha szükséges bárhova költöznék.
+                {% endif %}
+            </span>
+        </div>
+    {% endif %}
+{% endmacro %}
+
+{% macro print_experiences_or_education(collection) %}
+    {% for obj in collection %}
+        <div class="item">
+            <div class="meta">
+                <div class="upper-row">
+                    <h3 class="job-title">
+                        {% if obj.experience is defined %}
+                            {{ obj.experience.value }}
+                        {% elseif obj.category is defined %}
+                            {{ obj.category.value }}
+                            {% if obj.educationLevel is not empty %}
+                                , {{ obj.educationLevel.value }}
+                            {% endif %}
+                        {% endif %}
+                    </h3>
+                    <div class="time">
+                        <div class="time-container">
+                            {{ obj.fromDate|date("Y") }}
+                            -
+                            {{ obj.fromDate|localizeddate('long', 'none', 'hu', 'Europe/Budapest', 'MMMM' )|upper }}
+                            <b class="right-caret"></b>
+                            {% if obj.inProgress  %}
+                                {{ obj.toDate|date("Y") }}
+                                -
+                                {{ obj.toDate|localizeddate('long', 'none', 'hu', 'Europe/Budapest', 'MMMM' )|upper }}
+                            {% else %}
+                                Jelenleg is
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="company">
+                    {% if obj.companyName is defined %}
+                        {{ obj.companyName }}
+                    {% elseif obj.school is defined %}
+                        {{ obj.school.value }}
+                    {% endif %}
+                    , {{ obj.location.city.value }}
+                </div>
+            </div>
+            <div class="details">
+                <p>{{ obj.comment }}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% endmacro %}
+
+
+{% macro sidebar_item_collection(title, collection) %}
+
+    {% if collection is not empty %}
+
+        {% import _self as self %}
+        <div class="item">
+            <h4 class="degree">{{ title }}</h4>
+            {% for obj in collection %}
+                <h5 class="meta">
+                    {% if obj.dictionary is defined %}
+                        {{ obj.dictionary.value }}
+                        {% if obj.level is not empty %}
+                            ({{ obj.level.value }})
+                        {% endif %}
+                    {% else %}
+                        {{ obj.value }}
+                    {% endif %}
+                </h5>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+{% endmacro %}
+{% macro sidebar_item_collection_level(title, collection) %}
+
+    {% if collection is not empty %}
+
+        {% import _self as self %}
+
+        <div class="languages-container container-block">
+            <h2 class="container-block-title">{{ title }}</h2>
+            <ul class="list-unstyled interests-list">
+                {% for obj in collection %}
+                    <li>
+                        {{ obj.dictionary.value }}
+                        {% if obj.level is not empty %}
+                            <span class="lang-desc">
+                                ({{ obj.level.value }})
+                            </span>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    {% endif %}
+
+{% endmacro %}
